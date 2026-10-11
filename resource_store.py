@@ -6,11 +6,12 @@
 import os
 import sqlite3
 
-BGM_AREAS = ('蒙德', '璃月', '稻妻')
 GREETING_FILES = ('早上好.mp3', '中午好.mp3', '晚上好.mp3', '晚安.mp3')
 # 问候语关键词：语音文件可能带角色后缀（如「早上好问候菲谢尔.mp3」），
 # 不能只做全等匹配，否则这类文件会被判为无分类，问候功能直接失效。
 GREETING_KEYWORDS = ('早上好', '中午好', '晚上好', '晚安')
+# 背景音乐地区**不写死**：地区名就是 music/<目录> 的目录名，素材包可自定义
+# （旧版本曾硬编码 ('蒙德','璃月','稻妻')，现已改为按实际目录/库表枚举）。
 
 
 def _classify_voice(filename):
@@ -30,10 +31,12 @@ def _classify_voice(filename):
 class ResourceStore:
     """统一资源入口。backend 为 'sqlite' 或 'filesystem'。"""
 
-    def __init__(self, base_dir, img_dir='png', music_dir='music', db_name='assets.db'):
+    def __init__(self, base_dir, img_dir='png', music_dir='music', db_name='assets.db',
+                 apng_dir='apng'):
         self.base_dir = base_dir
         self.img_dir = img_dir
         self.music_dir = music_dir
+        self.apng_dir = apng_dir
         self.db_path = os.path.join(base_dir, db_name)
         self._conn = None
         if os.path.isfile(self.db_path):
@@ -54,6 +57,11 @@ class ResourceStore:
             ).fetchall()
             return [r[0] for r in rows]
         role_dir = os.path.join(self.base_dir, self.img_dir, role)
+        # ⚠️ 角色可能只有 apng/ 没有 png/（素材包里只放了动画），
+        # 此时目录不存在，返回空列表而不是抛 FileNotFoundError——
+        # 调用方（pilot 的角色切换）靠这个空列表判断「回退到别的人物」。
+        if not os.path.isdir(role_dir):
+            return []
         return sorted(n for n in os.listdir(role_dir) if n.lower().endswith('.png'))
 
     def read_frame(self, role, name):
@@ -66,6 +74,38 @@ class ResourceStore:
                 raise FileNotFoundError(f'assets.db 中不存在帧: {role}/{name}')
             return row[0]
         with open(os.path.join(self.base_dir, self.img_dir, role, name), 'rb') as f:
+            return f.read()
+
+    # ---------- APNG 动画 ----------
+
+    def list_apng(self, role):
+        """返回角色的APNG 文件名列表（已排序）。
+
+        APNG 与普通帧（``png/``）并存于同一角色：前者自带帧时长与循环语义，
+        后者按固定 interval 播放。两者都存在时优先用 APNG。
+        """
+        if self._conn:
+            rows = self._conn.execute(
+                "SELECT name FROM assets WHERE role=? AND kind='apng' ORDER BY name",
+                (role,),
+            ).fetchall()
+            return [r[0] for r in rows]
+        role_dir = os.path.join(self.base_dir, self.apng_dir, role)
+        if not os.path.isdir(role_dir):
+            return []
+        return sorted(n for n in os.listdir(role_dir)
+                      if n.lower().endswith('.png'))
+
+    def read_apng(self, role, name):
+        if self._conn:
+            row = self._conn.execute(
+                "SELECT data FROM assets WHERE role=? AND kind='apng' AND name=?",
+                (role, name),
+            ).fetchone()
+            if row is None:
+                raise FileNotFoundError(f'assets.db 中不存在 APNG: {role}/{name}')
+            return row[0]
+        with open(os.path.join(self.base_dir, self.apng_dir, role, name), 'rb') as f:
             return f.read()
 
     # ---------- 角色语音 ----------
@@ -85,6 +125,9 @@ class ResourceStore:
                 ).fetchall()
             return [r[0] for r in rows]
         role_dir = os.path.join(self.base_dir, self.music_dir, role)
+        # 同list_frames：只有 png/apng、没有语音的角色不该在这里崩
+        if not os.path.isdir(role_dir):
+            return []
         names = sorted(n for n in os.listdir(role_dir) if n.lower().endswith('.mp3'))
         if category is None:
             return names
@@ -105,7 +148,7 @@ class ResourceStore:
     # ---------- 背景音乐 ----------
 
     def read_bgm(self, area):
-        """读取区域背景音乐（蒙德/璃月/稻妻）。"""
+        """读取指定地区的背景音乐（``<地区>/background.mp3``）。"""
         if self._conn:
             row = self._conn.execute(
                 "SELECT data FROM assets WHERE role=? AND kind='bgm' AND name='background.mp3'",
@@ -127,6 +170,9 @@ class ResourceStore:
             ).fetchall()
             return [r[0] for r in rows]
         music_root = os.path.join(self.base_dir, self.music_dir)
+        # 素材包里可能只有 png/apng、没有 music 目录（如纯动画角色包）
+        if not os.path.isdir(music_root):
+            return []
         areas = []
         for d in os.listdir(music_root):
             dpath = os.path.join(music_root, d)
@@ -135,14 +181,24 @@ class ResourceStore:
         return sorted(areas)
 
     def list_roles(self):
-        """返回全部有帧资源的角色名。"""
+        """返回全部有帧资源的角色名。
+
+        ⚠️ APNG 角色（``apng/``）**也算角色**——只有 APNG 没有 png 帧的角色
+        同样是可选人物，否则它会既不能被选中、也不会出现在人物菜单里。
+        """
         if self._conn:
             rows = self._conn.execute(
-                "SELECT DISTINCT role FROM assets WHERE kind='frame' ORDER BY role"
+                "SELECT DISTINCT role FROM assets WHERE kind IN ('frame','apng')"
+                " ORDER BY role"
             ).fetchall()
             return [r[0] for r in rows]
-        png_root = os.path.join(self.base_dir, self.img_dir)
-        return sorted(d for d in os.listdir(png_root) if os.path.isdir(os.path.join(png_root, d)))
+        roles = set()
+        for root in (self.img_dir, self.apng_dir):
+            base = os.path.join(self.base_dir, root)
+            if os.path.isdir(base):
+                roles.update(d for d in os.listdir(base)
+                             if os.path.isdir(os.path.join(base, d)))
+        return sorted(roles)
 
     # ---------- 管理（统计/删除） ----------
 
@@ -153,9 +209,11 @@ class ResourceStore:
                 'SELECT kind, COUNT(*) FROM assets GROUP BY kind').fetchall())
             size_mb = os.path.getsize(self.db_path) / 1024 / 1024
         else:
+            roles = self.list_roles()
             counts = {
-                'frame': sum(len(self.list_frames(r)) for r in self.list_roles()),
-                'voice': sum(len(self.list_voices(r)) for r in self.list_roles()
+                'frame': sum(len(self.list_frames(r)) for r in roles),
+                'apng': sum(len(self.list_apng(r)) for r in roles),
+                'voice': sum(len(self.list_voices(r)) for r in roles
                              if os.path.isdir(os.path.join(self.base_dir, self.music_dir, r))),
                 'bgm': len(self.list_bgm_areas()),
             }
@@ -165,18 +223,20 @@ class ResourceStore:
             'roles': len(self.list_roles()),
             'areas': len(self.list_bgm_areas()),
             'frames': counts.get('frame', 0),
+            'apngs': counts.get('apng', 0),
             'voices': counts.get('voice', 0),
             'bgms': counts.get('bgm', 0),
             'db_size_mb': size_mb,
         }
 
     def delete_role(self, role):
-        """删除角色的全部帧与语音（仅 sqlite 后端）。返回删除行数。"""
+        """删除角色的全部帧、APNG 与语音（仅 sqlite 后端）。返回删除行数。"""
         if not self._conn:
             raise RuntimeError('仅 assets.db 后端支持删除操作')
         with self._conn:
             cur = self._conn.execute(
-                "DELETE FROM assets WHERE role=? AND kind IN ('frame', 'voice')", (role,))
+                "DELETE FROM assets WHERE role=? AND kind IN ('frame', 'voice', 'apng')",
+                (role,))
         return cur.rowcount
 
     def delete_area(self, area):

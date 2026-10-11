@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<title>原神桌面伙伴{{APP_VERSION}} · 帮助文档</title>
+<title>Pilot{{APP_VERSION}} · 帮助文档</title>
 <style>
 body { font-family: "Microsoft YaHei", "微软雅黑", sans-serif; font-size: 10pt;
        line-height: 1.75; color: #24292f; padding: 0 4px; }
@@ -29,7 +29,7 @@ hr { border: none; border-top: 1px solid #e1e4e8; margin: 20px 0; }
 </head>
 <body>
 
-<h2>原神桌面伙伴 v{{APP_VERSION}} · 帮助文档</h2>
+<h2>Pilot v{{APP_VERSION}} · 帮助文档</h2>
 
 <div class="toc">
 <b>目录</b>
@@ -102,7 +102,6 @@ hr { border: none; border-top: 1px solid #e1e4e8; margin: 20px 0; }
 <tr><td>知识图谱</td>
 <td>搜索实体后展示以该实体为中心的自我中心网；<b>单击</b>节点看属性与关系清单，
 <b>双击</b>节点以它为中心重新展开，滚轮缩放、拖拽平移。
-关系是<b>有向</b>的：出边为实线、箭头指向邻居，入边为虚线、箭头指回中心。
 右侧可新增 / 编辑 / 删除<b>实体</b>与<b>关系</b>。首次打开该页时才加载图谱数据。</td></tr>
 <tr><td>窗口与状态</td>
 <td><b>窗口操作</b>：最小化、最大化 / 还原、全屏 / 退出全屏、隐藏面板，
@@ -205,16 +204,6 @@ hr { border: none; border-top: 1px solid #e1e4e8; margin: 20px 0; }
 以该实体为中心画出<b>自我中心网</b>；</li>
 <li><b>单击</b>节点看属性与关系清单；<b>双击</b>节点以它为中心重新展开；</li>
 <li>滚轮缩放、拖拽平移；节点颜色代表实体类型（图例见页面底部）。</li>
-</ul>
-
-<h4>关系是有向的</h4>
-<p>关系存的是<b>有向三元组</b>（源 → 关系 → 目标），画布也按方向显示，
-所以「钟离衍生自岩之契约」与反向是两条不同的关系：</p>
-<ul>
-<li><b>出边</b>（本实体 → 对端）：<b>实线</b>，箭头落在邻居那一头；</li>
-<li><b>入边</b>（对端 → 本实体）：<b>虚线</b>，箭头落在中心节点这一头；</li>
-<li>边上的关系名前也带 <code>→</code> / <code>←</code> 标记，
-缩放到看不清箭头时仍能读出方向。</li>
 </ul>
 
 <h4>编辑</h4>
@@ -368,8 +357,8 @@ hr { border: none; border-top: 1px solid #e1e4e8; margin: 20px 0; }
 
 <h3 id="s7">七、卸载与清理</h3>
 
-<p>安装目录默认为 <code>%LOCALAPPDATA%\Programs\原神桌面伙伴</code>
-（即 <code>C:\Users\你的用户名\AppData\Local\Programs\原神桌面伙伴</code>），
+<p>安装目录默认为 <code>%LOCALAPPDATA%\Programs\Pilot</code>
+（即 <code>C:\Users\你的用户名\AppData\Local\Programs\Pilot</code>），
 安装到用户目录因此<b>无需管理员权限</b>，程序也能正常读写自己的数据。</p>
 
 <h4>卸载会做什么</h4>
@@ -386,7 +375,7 @@ hr { border: none; border-top: 1px solid #e1e4e8; margin: 20px 0; }
 <ul>
 <li>选择<b>「否」</b>：彻底删除三个数据库（约 460MB，不可恢复）；</li>
 <li>选择<b>「是」</b>：把它们复制到
-<code>%APPDATA%\原神桌面伙伴-备份\</code> 后再删除程序目录，
+<code>%APPDATA%\Pilot-备份\</code> 后再删除程序目录，
 卸载完成后会提示备份位置；重装后把该目录下的三个 <code>.db</code> 拷回
 安装目录的 <code>_internal</code> 子目录即可恢复。</li>
 </ul>
@@ -416,7 +405,7 @@ hr { border: none; border-top: 1px solid #e1e4e8; margin: 20px 0; }
 已有的问候语；若一个都没有则跳过，不会出错。</td></tr>
 <tr><td>人物不见了 / 帧播不出来</td><td>多半是误删了 <code>assets.db</code>。
 重新导入素材包即可；配置里该人物的登记会自动补齐。</td></tr>
-<tr><td>双击系统菜单的“原神桌面伙伴”没有反应</td><td>程序是单实例的。若已在运行，托盘里已有图标，
+<tr><td>双击系统菜单的“Pilot”没有反应</td><td>程序是单实例的。若已在运行，托盘里已有图标，
 重复启动会直接退出。</td></tr>
 <tr><td>升级后图谱编辑不见了</td><td>旧版本安装器会用包内出厂图谱覆盖
 <code>kg.db</code>。本版本已改为「仅当文件不存在时才写入」，升级不会再动你的数据；

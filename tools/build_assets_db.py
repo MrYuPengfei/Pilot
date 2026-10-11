@@ -5,8 +5,9 @@
     python tools/build_assets_db.py --src . --output assets.db -v
 
 目录约定（相对 --src）：
-    png/<角色>/*.png                 -> kind='frame'
-    music/<角色>/*.mp3               -> kind='voice'，按文件名前缀归类 category
+    png/<角色>/*.png                 -> kind='frame'（普通帧，按固定帧率播放）
+    apng/<角色>/*.png                -> kind='apng'（动画 PNG，自带帧时长与循环）
+    music/<角色>/*.mp3-> kind='voice'，按文件名前缀归类 category
     music/<区域>/background.mp3      -> kind='bgm'（区域：蒙德/璃月/稻妻）
 
 category 取值：greeting（早/中/晚/晚安）、chat（闲聊*）、know（想要了解*）。
@@ -45,8 +46,14 @@ def classify_voice(filename):
     return None
 
 
-def iter_assets(src_root, img_dir='png', music_dir='music'):
-    """遍历资源目录，产出 (role, kind, name, category, abs_path)。"""
+def iter_assets(src_root, img_dir='png', music_dir='music', apng_dir='apng'):
+    """遍历资源目录，产出 (role, kind, name, category, abs_path)。
+
+    三类图片目录：
+    * ``png/<角色>/*.png``  -> kind='frame'（普通帧，按固定帧率播放）
+    * ``apng/<角色>/*.png`` -> kind='apng'（动画 PNG，自带帧时长与循环次数）
+    * ``music/...``         -> kind='voice' / kind='bgm'
+    """
     png_root = os.path.join(src_root, img_dir)
     if os.path.isdir(png_root):
         for role in sorted(os.listdir(png_root)):
@@ -56,6 +63,16 @@ def iter_assets(src_root, img_dir='png', music_dir='music'):
             for name in sorted(os.listdir(role_dir)):
                 if name.lower().endswith('.png'):
                     yield role, 'frame', name, None, os.path.join(role_dir, name)
+
+    apng_root = os.path.join(src_root, apng_dir)
+    if os.path.isdir(apng_root):
+        for role in sorted(os.listdir(apng_root)):
+            role_dir = os.path.join(apng_root, role)
+            if not os.path.isdir(role_dir):
+                continue
+            for name in sorted(os.listdir(role_dir)):
+                if name.lower().endswith('.png'):
+                    yield role, 'apng', name, None, os.path.join(role_dir, name)
 
     music_root = os.path.join(src_root, music_dir)
     if os.path.isdir(music_root):
@@ -74,7 +91,8 @@ def iter_assets(src_root, img_dir='png', music_dir='music'):
                     yield role, 'voice', name, classify_voice(name), os.path.join(role_dir, name)
 
 
-def build_db(src_root, output, img_dir='png', music_dir='music', verbose=False):
+def build_db(src_root, output, img_dir='png', music_dir='music', verbose=False,
+             apng_dir='apng'):
     """构建 assets.db，返回写入的记录数。"""
     if os.path.exists(output):
         os.remove(output)
@@ -83,7 +101,8 @@ def build_db(src_root, output, img_dir='png', music_dir='music', verbose=False):
         conn.executescript(SCHEMA)
         count = 0
         with conn:
-            for role, kind, name, category, path in iter_assets(src_root, img_dir, music_dir):
+            for role, kind, name, category, path in iter_assets(
+                    src_root, img_dir, music_dir, apng_dir):
                 with open(path, 'rb') as f:
                     data = f.read()
                 conn.execute(
@@ -106,11 +125,13 @@ def main(argv=None):
     parser.add_argument('--output', default=None, help='输出数据库路径（默认 <src>/assets.db）')
     parser.add_argument('--img-dir', default='png', help='帧图片目录名（默认 png）')
     parser.add_argument('--music-dir', default='music', help='音频目录名（默认 music）')
+    parser.add_argument('--apng-dir', default='apng', help='APNG 动画目录名（默认 apng）')
     parser.add_argument('-v', '--verbose', action='store_true', help='打印导入进度')
     args = parser.parse_args(argv)
 
     output = args.output or os.path.join(args.src, 'assets.db')
-    count = build_db(args.src, output, args.img_dir, args.music_dir, args.verbose)
+    count = build_db(args.src, output, args.img_dir, args.music_dir, args.verbose,
+                     args.apng_dir)
     size_mb = os.path.getsize(output) / 1024 / 1024
     print(f'完成：{count} 条资源 -> {output}（{size_mb:.1f} MB）')
     return 0

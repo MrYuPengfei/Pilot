@@ -2,6 +2,7 @@ import io
 import os
 import random
 import sys
+import time
 import pygame.mixer as mixer
 from PySide6 import QtWidgets
 from PySide6.QtCore import QTimer, Qt
@@ -9,10 +10,17 @@ from PySide6.QtGui import QPixmap, QIcon, QCursor, QAction
 from PySide6.QtWidgets import (QSystemTrayIcon, QMenuBar, QMenu, QApplication, QMainWindow)
 import datetime
 
-from asset_importer import import_assets
+from asset_importer import import_assetsy
+from tools.apng_codec import ApngError, decode as apng_decode
 from config_store import ConfigStore
 from manager_panel import ManagerPanel
 from resource_store import ResourceStore
+
+# APNG 单次最多解码多少帧。`animated.png` 有 339 帧，全解要十几秒且占上百MB，
+# 而桌宠循环播放用前 60 帧已经足够顺滑，超出部分按需再放开。
+APNG_MAX_FRAMES = 60
+# 单帧解码超过这个毫秒数就放弃并回退到普通帧，避免启动被一个坏素材卡住
+APNG_DECODE_BUDGET_MS = 4000
 
 # 单实例互斥量名字，**必须与 setup.iss 的 AppMutex 完全一致**（含 Global\ 前缀）。
 # 安装/卸载向导据此判断程序是否在运行：没这个互斥量时 Inno 只能靠进程名
@@ -134,8 +142,10 @@ class Pilot(QMainWindow):
         if config_store.ensure_roles(available):
             config['frame_scale'] = config_store.load()['frame_scale']
         # 配置里的人物可能没有资源（如导入了他人配置），回退到第一个可用人物，
-        # 否则后续读帧会 IndexError 直接崩在启动阶段
-        if not self.store.list_frames(self.role_name):
+        # 否则后续读帧会 IndexError 直接崩在启动阶段。
+        # ⚠️ 有APNG 的角色也算「有资源」——只有 apng/ 没有 png/ 的角色同样能显示。
+        if not (self.store.list_frames(self.role_name)
+                or self.store.list_apng(self.role_name)):
             if not available:
                 raise RuntimeError('资源库中没有任何人物资源，请先导入素材包')
             self.role_name = available[0]
@@ -159,7 +169,7 @@ class Pilot(QMainWindow):
             self._play_bgm(self.bg_music)
 
         self.tp = QSystemTrayIcon(self)  # 初始化系统托盘
-        self.tp.setToolTip('原来你也玩原神')
+        self.tp.setToolTip('Pilot')
         # 顺序要紧：先 init_window()（它负责 setIcon），再 tray()（内部会 show()）。
         # 反过来托盘会在还没有图标时被显示，Qt 打印
         # 「QSystemTrayIcon::setVisible: No Icon set」。
@@ -252,16 +262,61 @@ class Pilot(QMainWindow):
         self.save_config()
 
     def _load_frame_cache(self):
-        """把当前角色的全部帧解码、缩放好并缓存 mask，act() 只做内存切换。"""
+        """把当前角色的全部帧解码、缩放好并缓存 mask，act() 只做内存切换。
+
+        两种素材来源：
+        * **APNG**（``apng/<角色>/``，优先）——单文件内含多帧且**每帧时长不同**，
+          按文件自带的时间轴播放，还原动画原本的节奏。
+        * **普通帧**（``png/<角色>/``）——按固定 ``interval`` 匀速播放。
+        两者都归一到 ``self._frames``，下游（缩放/遮罩/托盘图标）无需区分。
+        """
         w = int(self.scale * self.wt)
         h = int(self.scale * self.wt)
-        frames = []
-        for name in self.file_list:
-            pm = QPixmap()
-            pm.loadFromData(self.store.read_frame(self.role_name, name))
-            pm = pm.scaled(w, h)
-            frames.append((pm, pm.mask()))
+        self._frame_durations = None    # None 表示匀速（普通帧）
+        frames = self._load_apng_cache(w, h)
+        if not frames:
+            for name in self.file_list:
+                pm = QPixmap()
+                pm.loadFromData(self.store.read_frame(self.role_name, name))
+                pm = pm.scaled(w, h)
+                frames.append((pm, pm.mask()))
         self._frames = frames
+
+    def _load_apng_cache(self, w, h):
+        """解码当前角色的 APNG 成缩放后的帧缓存；无APNG 或解码失败返回 []。
+
+        解码失败（文件损坏、非APNG、耗时超预算）时返回空列表，
+        由调用方回退到普通帧——桌宠不该因为一个坏素材就起不来。
+        """
+        names = self.store.list_apng(self.role_name)
+        if not names:
+            return []
+        data = self.store.read_apng(self.role_name, names[0])
+        started = time.monotonic()
+        try:
+            decoded = apng_decode(data, max_frames=APNG_MAX_FRAMES)
+        except ApngError as e:
+            print(f'[apng] {self.role_name}/{names[0]} 解码失败，回退普通帧: {e}',
+                  file=sys.stderr)
+            return []
+        if not decoded:
+            return []
+        elapsed_ms = (time.monotonic() - started) * 1000
+        if elapsed_ms > APNG_DECODE_BUDGET_MS:
+            print(f'[apng] {self.role_name}/{names[0]} 解码耗时 {elapsed_ms:.0f}ms '
+                  f'超预算，回退普通帧', file=sys.stderr)
+            return []
+
+        out = []
+        for fr in decoded:
+            pm = QPixmap()
+            if not pm.loadFromData(fr.png, 'PNG'):
+                continue
+            pm = pm.scaled(w, h)
+            out.append((pm, pm.mask()))
+        if out:
+            self._frame_durations = [f.duration_ms for f in decoded[:len(out)]]
+        return out
 
     def _play_bgm(self, area):
         """从资源库读取背景音乐并循环播放。"""
@@ -278,7 +333,7 @@ class Pilot(QMainWindow):
 
     def act(self):
         """
-        切换缓存中的帧，实现动画效果
+        切换缓存中的帧，实现动画效果。
         """
         if not self._frames:
             return
@@ -286,6 +341,11 @@ class Pilot(QMainWindow):
         # 也保证只有 1~2 帧时仍能正常播放（原先固定从 1 起，2 帧角色会卡在第 2 帧）。
         self.index = (self.index + 1) % len(self._frames)
         self._apply_frame(self.index)
+        # APNG 各帧时长不同：切到下一帧后按**那一帧**的时长重设定时器，
+        # 才能还原素材原本的节奏。普通帧保持配置里的固定 interval。
+        durs = self._frame_durations
+        if durs:
+            self.timer.start(durs[self.index])
 
     def _apply_frame(self, index=0):
         """把指定帧套用到窗口（供初始化与切换后立即显示）。
@@ -505,8 +565,9 @@ class Pilot(QMainWindow):
         config['frame_scale'].setdefault(name, [60, 1.0])  # 新导入角色可能没有登记
         self.scale = config['frame_scale'][self.role_name][1]
         self.file_list = self.store.list_frames(self.role_name)
-        if not self.file_list:
-            # 该人物没有帧资源：回退到第一个可用人物，避免动画循环取帧越界
+        # ⚠️ 只有 APNG、没有 png 帧的角色是合法的，不能因此判定「无资源」
+        if not self.file_list and not self.store.list_apng(self.role_name):
+            # 该人物既无帧也无 APNG：回退到第一个可用人物，避免动画循环取帧越界
             fallback = self.store.list_roles()
             if not fallback:
                 raise RuntimeError('资源库中没有任何人物资源，请先导入素材包')

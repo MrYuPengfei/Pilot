@@ -37,7 +37,7 @@ from kg_store import (NODE_TYPES, get_default_store, reset_default_store,
 from kg_editor import NodeEditDialog, EdgeEditDialog
 from kg_view import KGCanvas
 
-APP_VERSION = '3.8.3'
+APP_VERSION = '3.8.4'
 REPO_URL = 'https://github.com/MrYuPengfei/Pilot-KG-Genshin.git'
 
 
@@ -515,8 +515,8 @@ class ManagerPanel(QMainWindow):
         self._kg_update_status()
         self._kg_refresh_legend()
         self.kg_detail.setHtml(
-            '<h3>原神知识图谱</h3>'
-            '<p>在上方搜索框输入实体名称开始探索，例如：钟离、蒙德、护摩之杖。</p>'
+            '<h3>知识图谱</h3>'
+            '<p>在上方搜索框输入实体名称开始探索，例如：机器学习、数据库、深度学习。</p>'
             '<p>也可直接新增实体与关系，或用「导入 CSV」合并外部图谱数据。</p>')
         self._kg_ready = True
         self._sync_kg_buttons()
@@ -1228,12 +1228,14 @@ class ManagerPanel(QMainWindow):
         self.stat_roles = QLabel('-')
         self.stat_areas = QLabel('-')
         self.stat_frames = QLabel('-')
+        self.stat_apngs = QLabel('-')
         self.stat_voices = QLabel('-')
         self.stat_size = QLabel('-')
         stats_form.addRow('存储后端:', self.stat_backend)
         stats_form.addRow('人物数量:', self.stat_roles)
         stats_form.addRow('地区数量:', self.stat_areas)
         stats_form.addRow('帧总数:', self.stat_frames)
+        stats_form.addRow('动画(APNG)数:', self.stat_apngs)
         stats_form.addRow('语音总数:', self.stat_voices)
         stats_form.addRow('数据库大小:', self.stat_size)
         root.addWidget(stats_box)
@@ -1246,7 +1248,7 @@ class ManagerPanel(QMainWindow):
         import_zip_btn.setToolTip('从 zip 素材包导入人物帧、语音与地区背景音乐')
         import_zip_btn.clicked.connect(self._import_zip)
         import_dir_btn = QPushButton('导入素材目录')
-        import_dir_btn.setToolTip('从 png/ 与 music/ 目录树导入')
+        import_dir_btn.setToolTip('从 png/、apng/ 与 music/ 目录树导入')
         import_dir_btn.clicked.connect(self._import_dir)
         refresh_btn = QPushButton('刷新统计')
         refresh_btn.setToolTip('重新读取资源库并刷新上方统计')
@@ -1257,7 +1259,7 @@ class ManagerPanel(QMainWindow):
         import_row.addStretch(1)   # 按钮保持自身尺寸，不被拉伸填满整行
         root.addWidget(import_box)
 
-        export_box = QGroupBox('导出素材（还原为 png/ 与 music/ 目录，可直接再导入或分享）')
+        export_box = QGroupBox('导出素材（还原为 png/、apng/ 与 music/ 目录，可直接再导入或分享）')
         export_row = QHBoxLayout(export_box)
         # 范围选择放在按钮之前：先限定范围再点导出，符合「先选后做」的顺序
         self.export_scope_combo = QComboBox()
@@ -1272,7 +1274,7 @@ class ManagerPanel(QMainWindow):
             '「仅当前背景音乐」只导出音乐管理页选中的那个地区的背景音乐')
         self.export_scope_combo.setFixedSize(BTN_W, BTN_H)
         export_dir_btn = QPushButton('导出为目录')
-        export_dir_btn.setToolTip('写出 png/<角色>、music/<角色>、music/<地区> 目录树')
+        export_dir_btn.setToolTip('写出 png/<角色>、apng/<角色>、music/<角色>、music/<地区> 目录树')
         export_dir_btn.clicked.connect(lambda: self._export_assets(as_zip=False))
         export_zip_btn = QPushButton('导出为 zip')
         export_zip_btn.setToolTip('打包成单个 zip，体积不变但便于传输')
@@ -1492,7 +1494,8 @@ class ManagerPanel(QMainWindow):
         self.refresh()
         QMessageBox.information(
             self, '导入完成',
-            f"帧 {report['frames']} / 语音 {report['voices']} / BGM {report['bgms']}\n"
+            f"帧 {report['frames']} / 动画 {report.get('apngs', 0)}"
+            f" / 语音 {report['voices']} / BGM {report['bgms']}\n"
             f"新角色: {', '.join(report['new_roles']) or '无'}\n"
             f"地区: {', '.join(report['areas']) or '无'}")
 
@@ -1531,6 +1534,7 @@ class ManagerPanel(QMainWindow):
         self.stat_roles.setText(str(s['roles']))
         self.stat_areas.setText(str(s['areas']))
         self.stat_frames.setText(str(s['frames']))
+        self.stat_apngs.setText(str(s.get('apngs', 0)))
         self.stat_voices.setText(str(s['voices']))
         # db_size_mb 是 float | None（文件后端无库文件），先判空再格式化
         size_mb = s['db_size_mb']

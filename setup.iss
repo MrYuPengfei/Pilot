@@ -1,18 +1,18 @@
 ; =============================================================
-; 桌面伙伴-Pilot 安装脚本（Inno Setup 6）
+; Pilot 安装脚本（Inno Setup 6）
 ;
 ; 前置步骤（PyInstaller 6+，onedir 模式）：
-;   uv run --with pyinstaller pyinstaller 桌面伙伴-Pilot.spec
+;   uv run --with pyinstaller pyinstaller Pilot.spec
 ;
 ;   等价的命令行写法（建议直接用 spec，datas 已含下面几项）：
 ;   uv run --with pyinstaller pyinstaller pilot.py ^
-;       --name "桌面伙伴-Pilot" --onedir --noconsole ^
-;       --icon=ico/icon256.ico --noconfirm ^
+;       --name "Pilot" --onedir --noconsole ^
+;       --icon=res/icon256.ico --noconfirm ^
 ;       --add-data "assets.db;." ^
 ;       --add-data "kg.db;." ^
 ;       --add-data "config.db;." ^
 ;       --add-data "res/help.html;." ^
-;       --add-data "ico/icon256.ico;."
+;       --add-data "res/icon256.ico;."
 ;
 ; 编译：
 ;   "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" setup.iss
@@ -37,11 +37,11 @@
 ;        ④ 卸载前询问是否保留用户数据（三个 .db），可选择留作备份。
 ; =============================================================
 
-#define AppName "桌面伙伴-Pilot"
-#define AppVersion "3.8.3"
+#define AppName "Pilot"
+#define AppVersion "3.8.4"
 #define AppPublisher "于鹏飞"
 #define AppURL "https://github.com/MrYuPengfei/Pilot-KG-Genshin"
-#define AppExeName "桌面伙伴-Pilot.exe"
+#define AppExeName "Pilot.exe"
 ; 卸载时判断「程序是否在运行」用；与 pilot.py 的 create_app_mutex 保持一致。
 ; 注意 Inno 的 { } 与常量展开会互相干扰，这里把整个名字定义成一个常量，
 ; 不要写成 Global\{#AppName}_... —— 前缀的 Global\{ 会被当成常量起始而报错。
@@ -81,15 +81,15 @@ UninstallLogging=yes
 
 ; 界面与外观
 LicenseFile=LICENSE
-SetupIconFile=ico\icon256.ico
-WizardImageFile=ico\icon256.bmp
-WizardSmallImageFile=ico\icon256.bmp
+SetupIconFile=res\icon256.ico
+WizardImageFile=res\icon256.bmp
+WizardSmallImageFile=res\icon256.bmp
 WizardStyle=modern
 UninstallDisplayIcon={app}\icon256.ico
 
 ; 输出
 OutputDir=./inno_build
-OutputBaseFilename=桌面伙伴-Pilot安装向导
+OutputBaseFilename=Pilot安装向导
 
 ; 压缩：资源本身已压缩（PNG/MP3），normal 级别在体积和构建速度间较均衡
 Compression=lzma2/normal
@@ -117,11 +117,11 @@ Name: "startupicon"; Description: "开机自动启动"; GroupDescription: "其�
 ;
 ; 代价是新版本附带的出厂图谱/出厂配置不会自动更新到已安装的机器上。
 ; 需要恢复出厂值时删掉对应的 .db 再重新安装即可（帮助页有说明）。
-Source: "dist\桌面伙伴-Pilot\桌面伙伴-Pilot.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "dist\桌面伙伴-Pilot\_internal\*"; DestDir: "{app}\_internal"; Flags: ignoreversion recursesubdirs; Excludes: "config.db,kg.db"
-Source: "dist\桌面伙伴-Pilot\_internal\config.db"; DestDir: "{app}\_internal"; Flags: onlyifdoesntexist
-Source: "dist\桌面伙伴-Pilot\_internal\kg.db"; DestDir: "{app}\_internal"; Flags: onlyifdoesntexist
-Source: "ico\icon256.ico"; DestDir: "{app}"; Flags: ignoreversion
+Source: "dist\Pilot\Pilot.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "dist\Pilot\_internal\*"; DestDir: "{app}\_internal"; Flags: ignoreversion recursesubdirs; Excludes: "config.db,kg.db"
+Source: "dist\Pilot\_internal\config.db"; DestDir: "{app}\_internal"; Flags: onlyifdoesntexist
+Source: "dist\Pilot\_internal\kg.db"; DestDir: "{app}\_internal"; Flags: onlyifdoesntexist
+Source: "res\icon256.ico"; DestDir: "{app}"; Flags: ignoreversion
 
 [InstallDelete]
 ; v3.8：安装时清掉旧版本遗留。升级前若上一版有卸载没删干净的文件，
@@ -136,7 +136,7 @@ Type: filesandordirs; Name: "{app}\__pycache__"
 Type: filesandordirs; Name: "{app}\_internal\__pycache__"
 Type: filesandordirs; Name: "{app}\.build_tmp"
 Type: files; Name: "{app}\config.yaml"
-Type: files; Name: "{app}\桌面伙伴-Pilot.old"
+Type: files; Name: "{app}\Pilot.old"
 
 [Icons]
 ; 开始菜单
@@ -212,7 +212,7 @@ begin
     // 也避免无人值守时被静默删掉 460MB 素材）。
     if SuppressibleMsgBox(Msg, mbConfirmation, MB_YESNO, IDYES) = IDYES then
     begin
-      DataDir := ExpandConstant('{userappdata}\桌面伙伴-Pilot-备份');
+      DataDir := ExpandConstant('{userappdata}\Pilot-备份');
       if not DirExists(DataDir) then CreateDir(DataDir);
       Names[0] := 'assets.db';
       Names[1] := 'kg.db';
@@ -232,7 +232,7 @@ begin
   if (CurUninstallStep = usPostUninstall) and (UserDataKeptDir <> '') then
   begin
     Msg := '已保留你的数据备份：' + Nl + UserDataKeptDir + Nl + Nl +
-           '重装桌面伙伴-Pilot 后，把该目录下的三个 .db 文件拷回' +
+           '重装 Pilot 后，把该目录下的三个 .db 文件拷回' +
            '安装目录的 _internal 子目录即可恢复。';
     SuppressibleMsgBox(Msg, mbInformation, MB_OK, 0);
   end;

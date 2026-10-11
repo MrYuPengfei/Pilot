@@ -1,7 +1,9 @@
 [project]
-name = "pilot"
-version = "3.8.3"
+name = "Pilot"
+version = "3.8.4"
 requires-python = ">=3.14"
+# ⚠️ 运行时**故意不含** apng：桌宠播放 APNG 走apng_codec（纯标准库、零依赖），
+#    这是为了不给 PyInstaller 打包增加体积，也避开 pyAPNG 停更 6 年的风险。
 dependencies = [
 	"PySide6>=6.8",
 	"pygame-ce>=2.5",
@@ -10,4 +12,7 @@ dependencies = [
 [dependency-groups]
 dev = [
 	"pytest>=8.3",
+	# 仅 tools/apng_extract_frames.py 用它做 chunk 解析的交叉校验；
+	# 没装也能跑（脚本会自动回退到纯 apng_codec），故为可选开发依赖。
+	"apng>=0.3.4",
 ]

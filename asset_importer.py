@@ -4,10 +4,11 @@
 
     素材包/
       png/<角色>/*.png                 -> 角色帧（可选）
+      apng/<角色>/*.png                -> 角色动画 PNG（可选，自带帧时长与循环）
       music/<角色>/*.mp3               -> 角色语音（可选，命名遵循 早上好/闲聊*/想要了解* 约定自动分类）
       music/<地区>/background.mp3      -> 地区背景音乐（目录含 background.mp3 即识别为地区）
 
-png/ 与 music/ 可只提供其一；已有资源同名覆盖，新增资源直接并入。
+png/ 、apng/ 与 music/ 可只提供其一；已有资源同名覆盖，新增资源直接并入。
 新角色会自动在配置库（config.db）的 frame_scale 中登记默认值 [60, 1.0]。
 """
 
@@ -43,7 +44,8 @@ def _extract_if_zip(src):
         entries = os.listdir(tmp.name)
         if len(entries) == 1 and os.path.isdir(os.path.join(tmp.name, entries[0])):
             inner = os.path.join(tmp.name, entries[0])
-            if os.path.isdir(os.path.join(inner, 'png')) or os.path.isdir(os.path.join(inner, 'music')):
+            if any(os.path.isdir(os.path.join(inner, d))
+                   for d in ('png', 'apng', 'music')):
                 return inner, tmp
         return tmp.name, tmp
     if os.path.isdir(src):
@@ -51,14 +53,15 @@ def _extract_if_zip(src):
     raise FileNotFoundError(f'素材包不存在或格式不支持: {src}')
 
 
-def import_assets(src, db_path, config_store=None, img_dir='png', music_dir='music'):
+def import_assets(src, db_path, config_store=None, img_dir='png', music_dir='music',
+                  apng_dir='apng'):
     """导入素材包，返回导入报告 dict。
 
     ``config_store`` 为 :class:`config_store.ConfigStore` 实例（v3.4 起配置走
     SQLite）；传入时会为新角色登记默认帧率/缩放。
 
     report = {
-        'frames': 新增/更新帧数, 'voices': ..., 'bgms': ...,
+        'frames': 新增/更新帧数, 'apngs': ..., 'voices': ..., 'bgms': ...,
         'roles':  [涉及的角色], 'areas': [涉及的地区],
         'new_roles': [本次新出现的角色],
     }
@@ -68,12 +71,14 @@ def import_assets(src, db_path, config_store=None, img_dir='png', music_dir='mus
         conn = sqlite3.connect(db_path)
         try:
             conn.executescript(ENSURE_SCHEMA)
-            report = {'frames': 0, 'voices': 0, 'bgms': 0,
+            report = {'frames': 0, 'apngs': 0, 'voices': 0, 'bgms': 0,
                       'roles': set(), 'areas': set(), 'new_roles': set()}
+            # 已有角色同时看 frame 与 apng——只导入 APNG 的角色也是「新角色」
             existing_roles = {r[0] for r in conn.execute(
-                "SELECT DISTINCT role FROM assets WHERE kind='frame'")}
+                "SELECT DISTINCT role FROM assets WHERE kind IN ('frame','apng')")}
             with conn:
-                for role, kind, name, category, path in iter_assets(src_dir, img_dir, music_dir):
+                for role, kind, name, category, path in iter_assets(
+                        src_dir, img_dir, music_dir, apng_dir):
                     with open(path, 'rb') as f:
                         data = f.read()
                     conn.execute(
@@ -83,6 +88,11 @@ def import_assets(src, db_path, config_store=None, img_dir='png', music_dir='mus
                     )
                     if kind == 'frame':
                         report['frames'] += 1
+                        report['roles'].add(role)
+                        if role not in existing_roles:
+                            report['new_roles'].add(role)
+                    elif kind == 'apng':
+                        report['apngs'] += 1
                         report['roles'].add(role)
                         if role not in existing_roles:
                             report['new_roles'].add(role)
@@ -98,9 +108,10 @@ def import_assets(src, db_path, config_store=None, img_dir='png', music_dir='mus
         if tmp is not None:
             tmp.cleanup()
 
-    total = report['frames'] + report['voices'] + report['bgms']
+    total = report['frames'] + report['apngs'] + report['voices'] + report['bgms']
     if total == 0:
-        raise ValueError(f'素材包中未找到可导入的资源（需要 png/ 或 music/ 目录）: {src_dir}')
+        raise ValueError(
+            f'素材包中未找到可导入的资源（需要 png/ 、apng/ 或 music/ 目录）: {src_dir}')
 
     if config_store is not None and report['roles']:
         for role in report['roles']:

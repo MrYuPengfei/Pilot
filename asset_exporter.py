@@ -4,6 +4,7 @@
 
     <导出目录>/
       png/<角色>/*.png                 角色帧
+      apng/<角色>/*.png                角色动画 PNG
       music/<角色>/*.mp3              角色语音
       music/<地区>/background.mp3     地区背景音乐
 
@@ -18,6 +19,7 @@ import zipfile
 
 # 与 asset_importer.iter_assets 的识别规则保持一致
 FRAME_DIR = 'png'
+APNG_DIR = 'apng'
 MUSIC_DIR = 'music'
 BGM_NAME = 'background.mp3'
 # 语音分类由文件名约定（见 resource_store._classify_voice），无需额外记录
@@ -47,10 +49,12 @@ def export_assets(store, out_dir, roles=None, areas=None, as_zip=False,
     areas = list(areas) if areas is not None else all_areas
 
     # 先把要导出的条目收集齐，才能给 zip 报进度
-    items = []   # (归档内相对路径, 读取字节的函数, 分类)
+    items = []   # (归档内相对路径, 分类, role, name)
     for role in roles:
         for name in store.list_frames(role):
             items.append((f'{FRAME_DIR}/{role}/{name}', 'frame', role, name))
+        for name in store.list_apng(role):
+            items.append((f'{APNG_DIR}/{role}/{name}', 'apng', role, name))
         for name in store.list_voices(role):
             items.append((f'{MUSIC_DIR}/{role}/{name}', 'voice', role, name))
     for area in areas:
@@ -61,6 +65,7 @@ def export_assets(store, out_dir, roles=None, areas=None, as_zip=False,
 
     readers = {
         'frame': lambda r, n: store.read_frame(r, n),
+        'apng': lambda r, n: store.read_apng(r, n),
         'voice': lambda r, n: store.read_voice(r, n),
         'bgm': lambda r, n: store.read_bgm(r),
     }

@@ -29,13 +29,16 @@ import os
 import sqlite3
 
 # 内置默认配置：种子文件缺失时的兜底，保证程序总能启动
+# ⚠️ ``role`` 只是占位：真实角色取决于 assets.db 里有哪些帧。
+# pilot 启动时若发现该角色无帧会**自动回退到第一个可用人物**，
+# 故这里不该写死某个具体角色名（旧版本写的是「七七」，换素材后就不存在了）。
 DEFAULTS = {
     'audio': True,
     'bg_music': False,
     'img_path': 'png',
     'music_path': 'music',
-    'role': '七七',
-    'frame_scale': {'七七': [60, 1.0]},
+    'role': 'default',
+    'frame_scale': {},
 }
 
 # 标量型配置项（存 kv 表）；不在此列的键会被忽略，防止脏数据混入

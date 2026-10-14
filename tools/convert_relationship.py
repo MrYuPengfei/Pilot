@@ -1,193 +1,39 @@
-"""把各 label 表按外键拼成关系表（rel-*.csv）。
+"""按外键拼装关系表（rel-*.csv）（已停用，v5.0 起不再保留任何特定游戏的数据源）。
 
-v3.4：由 GenshinKG/utils/ 迁入 tools/，输出目录 ../kg_data/done → <项目根>/data/csv。
+历史上本脚本按各实体表的外键拼出 11 类关系表（角色↔食物↔材料、
+武器↔突破材料、遗物↔实例等），产物是 ``data/csv`` 下的关系表。
+其数据源涉及**未获授权的第三方版权素材**，与本项目当前的闭源许可声明不相容，
+故在此版本中移除其实现。
 
-注意：这是原项目的历史数据加工脚本。输入仍指向原仓库的 rec_intention/kg_data
-（早已不在本仓库内），故当前**无法直接运行**；此处仅保留输出路径常量与逻辑供追溯。
-本项目实际消费的是 data/csv 下已生成好的 CSV（见 kg_store.py）。
+⚠️ 该脚本此前还有两处问题，一并说明以免有人照抄：
+
+1. 输入路径硬编码为 ``../../rec_intention/kg_data``——那个目录早已不在本仓库内，
+   脚本**根本无法运行**；
+2. 依赖 ``pandas``，而项目运行时依赖只有 PySide6 + pygame-ce，pandas 并不在其中。
+
+关系表的现役构建方式是**直接编辑 CSV**，再由 ``kg_store`` 导入::
+
+    data/csv-edu/rel-*.csv ──[tools/build_databases.py]──▶ kg.db
+
+关系表的三列约定：``名称A, 关系名, 名称B``；引用的是**中文名**，
+导入时端点解析会同时匹配 ``name`` 与 ``name_cn``（见 ``kg_store._import_endpoint``）。
 """
 
 import os
-import pprint
-import re
+import sys
 
-import pandas as pd
-
-ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-KG_CSV = os.path.join(ROOT_DIR, 'data', 'csv')
-
-def country2rel():
-    df = pd.read_csv('../../rec_intention/kg_data/mhy-id/area-id.csv')
-    df.columns=['mhy_id','area','place','country']
-    df.drop(['mhy_id'],inplace=True,axis=1)
-    df.to_csv(str(KG_CSV) + '/done/rel-area-place.csv',index=False,encoding='utf-8')
-
-def char2rel():
-    df = pd.read_csv('../../rec_intention/kg_data/done/label-character.csv')
-    df = df[~df['name'].isin(['旅行者（荧）','旅行者（空）'])]
-    df = df[['name','element','country','break_material','instance_material','weapon_choice']]
-
-    # df1 = df[['name','element']]
-    # df1['rel'] = 'element_is'
-    # df1.to_csv(str(KG_CSV) + '/done/rel-character-element.csv',index=False,encoding='utf-8')
-    #
-    # df2 = df[['name', 'country']]
-    # df2['rel'] = 'from'
-    # df2.to_csv(str(KG_CSV) + '/done/rel-character-country.csv',index=False,encoding='utf-8')
-
-    # df3 = df[['name','weapon_choice']]
-    # df3['weapon_choice'] = df3['weapon_choice'].apply(lambda x:list(eval(x).keys()))
-    # data = []
-    # for _,row in df3.iterrows():
-    #     weapons = row['weapon_choice']
-    #     name = row['name']
-    #     for w in weapons:
-    #         data.append({'name':name,'rel':'using','weapon':w})
-    # df3_cp = pd.DataFrame(data=data)
-    # df3_cp.to_csv(str(KG_CSV) + '/done/rel-character-weapon.csv', index=False, encoding='utf-8')
-
-    # break_material,skill_material
-    for mat in ['break_material','instance_material']:
-        df6 = df[['name',mat]]
-        data = []
-        for _,row in df6.iterrows():
-            name = row['name']
-            breaking = eval(row[mat])
-            for b in breaking:
-                b = re.sub(r'\*\d+','',b)
-                data.append({'name':name,'rel':mat,'material':b})
-        pprint.pprint(data)
-        df6_cp = pd.DataFrame(data=data)
-        df6_cp.to_csv(f'{KG_CSV}/done/rel-character-{mat}.csv', index=False, encoding='utf-8')
+#: 关系表 CSV 目录，与 ``tools/build_databases.py`` 的 CSV_DIR 保持一致。
+KG_CSV = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+    'data', 'csv-edu')
 
 
-def char2food():
-    df = pd.read_csv('../../rec_intention/kg_data/label-food.csv')
-    df = df[['name','description']]
-    data = []
-    for _,row in df.iterrows():
-        role = re.findall('(.*?)的特色料理',row['description'])
-        name = row['name']
-        if role:
-            data.append({'name':role[0],'rel':'characteristics_of_food','food':name})
-    pprint.pprint(data)
-    df_cp = pd.DataFrame(data=data)
-    df_cp.to_csv(str(KG_CSV) + '/done/rel-character-food.csv',index=False,encoding='utf-8')
+def main():
+    print(__doc__.strip())
+    print('\n如需新增关系：直接编辑 CSV 后运行'
+          ' python tools/build_databases.py --only kg --force')
+    return 0
 
-def food2material():
-    df = pd.read_csv('../../rec_intention/kg_data/label-food.csv')
-    df = df[['name', 'ingredient']]
-    data = []
-    for _,row in df.iterrows():
-        material = eval(row['ingredient'])
-        food = row['name']
-        for m in material:
-            m = re.sub(r'\*\d+','',m)
-            data.append({'food':food,'rel':'ingredient','material':m})
-    df_cp = pd.DataFrame(data=data)
-    df_cp.to_csv(str(KG_CSV) + '/done/rel-food-material.csv',index=False,encoding='utf-8')
-
-
-def master2material():
-    df = pd.read_csv('../../rec_intention/kg_data/done/label-master.csv')
-    df = df[['name','dropping']]
-    data=[]
-    for _,row in df.iterrows():
-        master = row['name']
-        for m in eval(row['dropping']):
-            data.append({'master':master,'rel':'drop_from','material':m})
-    df_cp = pd.DataFrame(data=data)
-    df_cp.to_csv(str(KG_CSV) + '/done/rel-master-material.csv',index=False,encoding='utf-8')
-
-
-def weapon2material():
-    df = pd.read_csv('../../rec_intention/kg_data/done/label-weapon.csv')
-    df = df[['name','material']]
-    data = []
-    for _,row in df.iterrows():
-        weapon = row['name']
-        for m in eval(row['material']):
-            m= re.sub(r'\*\d+','',m)
-            data.append({'weapon':weapon,'rel':'breaking_material','material':m})
-    df_cp = pd.DataFrame(data=data)
-    df_cp.to_csv(str(KG_CSV) + '/done/rel-weapon-material.csv',index=False,encoding='utf-8')
-
-
-def look4material():
-    df = pd.read_csv('../../rec_intention/kg_data/done/label-character.csv')
-    df1 = pd.read_csv('../../rec_intention/kg_data/label-food.csv')
-    df2 = pd.read_csv('../../rec_intention/kg_data/done/label-material.csv')
-    material = []
-    for _,row in df.iterrows():
-        m1 = [re.sub(r'\*[\d]+','',i) for i in eval(row['break_material'])]
-        m2 = [re.sub(r'\*[\d]+','',i) for i in eval(row['skill_material'])]
-        material.extend(m1)
-        material.extend(m2)
-    for _,row in df1.iterrows():
-        m3 = [re.sub(r'\*[\d]+','',i) for i in eval(row['ingredient'])]
-        material.extend(m3)
-
-    mat = [i.replace('「','').replace('」','') for i in list(df2['name'])]
-    add_material = list(set(material)-set(mat))
-    df3 = pd.read_csv('../../rec_intention/kg_data/master2.csv')
-    df5 = pd.read_csv('../../rec_intention/kg_data/materials.csv')
-    data = []
-    for _,row in df3.iterrows():
-        id = row['id']
-        name = row['name']
-        if name in add_material:
-            data.append({'mhy_id':id,'name':name})
-            add_material.remove(name)
-    for _,row in df5.iterrows():
-        name = row['name']
-        if name in add_material:
-            data.append({'mhy_id':0,'name':name})
-            add_material.remove(name)
-    for n in add_material:
-        data.append({'mhy_id':-1,'name':n})
-    df4 = pd.DataFrame(data=data)
-    print(add_material)
-    df4.to_csv(str(KG_CSV) + '/add_material.csv', index=False, encoding='utf-8')
-
-def instance2material():
-    df = pd.read_csv('../../rec_intention/kg_data/done/label-instance.csv')
-    data = []
-    for _,row in df.iterrows():
-        if row['sec_instance']!='暂无':
-            for i in eval(row['prob_product']):
-                data.append({'node1':i,'rel':'get_from','node2':row['name']})
-    df1 = pd.DataFrame(data=data)
-    df1.to_csv(str(KG_CSV) + '/done/rel-instance-material.csv', index=False, encoding='utf-8')
-
-def character2artifacts():
-    df= pd.read_csv('../../rec_intention/kg_data/done/label-artifacts.csv')
-    data = []
-    for idx,row in df.iterrows():
-        relic = row['name']
-        roles = eval(row['role'])
-        if roles:
-            for r in roles:
-                data.append({'node1':r,'rel':'artifacts','node2':relic})
-    df1 = pd.DataFrame(data=data)
-    df1.to_csv(str(KG_CSV) + '/done/rel-character-artifacts.csv', index=False, encoding='utf-8')
-
-def artifacts2instance():
-    df = pd.read_csv('../../rec_intention/kg_data/done/label-artifacts.csv')
-    data = []
-    for idx, row in df.iterrows():
-        relic = row['name']
-        getting = eval(row['getting'])
-        if getting:
-            for r in getting:
-                data.append({'node1': relic, 'rel': 'get_from', 'node2': r})
-    df1 = pd.DataFrame(data=data)
-    df1.to_csv(str(KG_CSV) + '/done/rel-instance-artifacts.csv', index=False, encoding='utf-8')
 
 if __name__ == '__main__':
-    # df= pd.read_csv(str(KG_CSV) + '/done/label-master.csv')
-    # # mhy_id, name, dropping, attack, element, weakness, introduction, label
-    # df['attack'] = df['attack'].apply(lambda x:re.sub(r'\'\[]','',x))
-    # df['weakness'] = df['weakness'].apply(lambda x:''.join(eval(x)))
-    # df['introduction'] = df['introduction'].apply(lambda x:''.join(eval(x)))
-    # df.to_csv(str(KG_CSV) + '/done/label-master.csv', index=False, encoding='utf-8')
-    food2material()
+    sys.exit(main())

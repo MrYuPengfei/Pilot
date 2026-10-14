@@ -172,8 +172,8 @@ def node_label_html(name, cn_name, center=False):
     max_lines = CENTER_LABEL_MAX_LINES if center else NODE_LABEL_MAX_LINES
     size = 11 if center else 9
     sub_size = 9 if center else 7.5
-    # ⚠️ 主名与中文名相同时**只显示一次**。原神实体的主键就是中文名
-    # （暂无官方译名），若不去重，标签会变成「阿贝多 / 阿贝多」两行重复。
+    # ⚠️ 主名与中文名相同时**只显示一次**。主键为中文名的实体
+    # （暂无官方译名）若不去重，标签会出现两行重复的同一名字。
     show_cn = bool(cn_name) and cn_name != name
     parts = [f'<div style="color:{LABEL_MAIN}; font-size:{size}px;">']
     for i, line in enumerate(wrap_label(name, limit, max_lines)):
@@ -234,7 +234,7 @@ class NodeItem(QGraphicsEllipseItem):
         # 提示框给全名（标签是折行显示的，完整名字放提示里）
         type_label = NODE_TYPES.get(ntype, (ntype,))[0]
         tip = f'{type_label} · {name}'
-        # 中文名与主名相同时不重复（原神实体主键即中文名）
+        # 中文名与主名相同时不重复（主键即中文名的情况）
         if cn_name and cn_name != name:
             tip += f'\n{cn_name}'
         self.setToolTip(tip)

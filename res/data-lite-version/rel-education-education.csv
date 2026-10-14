@@ -1,0 +1,3197 @@
+﻿node1,rel,rel_cn,node2,weight
+intrinsic cognitive load,component_of,组成部分,cognitive load,0.92
+cognitive demand,determines,决定,cognitive load,0.72
+working memory,constrained_by,受限于,cognitive load,0.72
+retrieval practice,strengthens,强化,working memory,0.5
+retrieval practice,exerts,施加,desirable difficulty,0.72
+testing effect,result_of,是……的结果,retrieval practice,0.92
+generation effect,supports,支持,long-term retention,0.72
+effortful processing,underlies,构成基础,desirable difficulty,0.72
+generation effect,enacts,践行,effortful processing,0.5
+distributed practice,mitigates,缓解,cognitive load,0.5
+scaffolding,reduces,降低,cognitive load,0.72
+fading,successor_of,后继于,scaffolding,0.92
+worked example,variant_of,变体,scaffolding,0.72
+faded worked example,variant_of,变体,worked example,0.92
+self-explanation,exerts,施加,desirable difficulty,0.5
+self-explanation effect,result_of,是……的结果,self-explanation,0.92
+elaborative interrogation,variant_of,变体,self-explanation,0.28
+concept question,triggers,触发,self-explanation,0.5
+direct instruction,reduces,降低,intrinsic cognitive load,0.5
+discovery learning,increases,增加,intrinsic cognitive load,0.5
+cognitive apprenticeship,bridges,桥接,discovery learning,0.5
+expertise reversal effect,conditions,以……为条件,scaffolding,0.5
+redundancy effect,challenges,挑战,multi-modal learning,0.28
+segmenting principle,supports,支持,scaffolding,0.28
+worked example effect,explains_by,由……解释,expertise reversal effect,0.5
+cognitive load,moderates,调节,worked example effect,0.28
+multimedia learning,builds_on,建立在……之上,dual coding,0.28
+split-attention effect,threatens,威胁,multimedia learning,0.28
+modality effect,supports,支持,multimedia learning,0.28
+signaling principle,supports,支持,scaffolding,0.28
+metacognition,monitors,监测,self-regulated learning,0.92
+self-monitoring,part_of,属于,metacognition,0.92
+self-evaluation,part_of,属于,metacognition,0.72
+self-instruction,part_of,属于,self-regulated learning,0.5
+self-regulated behavior,encompasses,涵盖,self-regulated learning,0.92
+metacognitive strategy,facilitates,促进,self-regulated learning,0.72
+metacognitive prompts,elicit,引出,metacognitive strategy,0.72
+metacognitive feedback,delivers,提供,metacognitive prompts,0.72
+feedback,supports,支持,self-evaluation,0.72
+uptake of feedback,enables,使能,self-regulated learning,0.72
+feedback literacy,enables,使能,uptake of feedback,0.72
+evaluative judgment,enables,使能,feedback literacy,0.72
+formative feedback,supports,支持,self-evaluation,0.5
+self-scaffolding,instance_of,实例,scaffolding,0.72
+dual regulatory demand,threatens,威胁,metacognition,0.72
+metacognitive symbiosis,instances,实例化,dual regulatory demand,0.72
+epistemic auditing,instance_of,实例,verification-driven learning,0.72
+reflective use,instance_of,实例,epistemic auditing,0.5
+epistemic friction,induces,诱发,reflective use,0.72
+epistemic proactivity,promotes,促进,reflective use,0.72
+verification-driven learning,contrasts_with,与……形成对比,answer offloading,0.72
+instrumental help-seeking,beneficial_to,有益于,self-regulated learning,0.72
+executive help-seeking,undermines,削弱,self-regulated learning,0.72
+help-seeking,subdivided_into,细分为,instrumental help-seeking,0.72
+help-seeking,subdivided_into,细分为,executive help-seeking,0.72
+cognitive offloading,threatens,威胁,self-regulated learning,0.72
+answer offloading,instance_of,实例,cognitive offloading,0.92
+substitutive offloading,harms,损害,skill formation,0.92
+duplicative offloading,benefits,有益于,skill acquisition,0.5
+cognitive outsourcing,aggravates,加重,deskilling,0.92
+cognitive surrender,instance_of,实例,deskilling,0.92
+deskilling,threatens,威胁,skill acquisition,0.92
+cognitive offloading,leads_to,导致,deskilling,0.92
+crutch,metaphor_for,是……的隐喻,answer offloading,0.72
+exoskeleton,metaphor_for,是……的隐喻,deskilling,0.72
+offloading decision,mediates,中介,cognitive offloading,0.72
+offloading score,measures,度量,offloading decision,0.72
+cognitive offloading,reduces,降低,cognitive engagement,0.92
+homework outsourcing,instance_of,实例,answer offloading,0.92
+epistemic debt,accumulates_from,积累自,cognitive outsourcing,0.92
+comprehension debt,accumulates_from,积累自,answer offloading,0.92
+epistemic overreliance,instance_of,实例,cognitive overreliance,0.92
+epistemic overreliance,harms,损害,skill formation,0.72
+cognitive overreliance,threatens,威胁,independent judgment,0.72
+collective over-reliance,group_level_form_of,群体层面的形态,cognitive overreliance,0.72
+illusion of competence,result_of,是……的结果,cognitive offloading,0.92
+fluency illusion,subtype_of,子类型,illusion of competence,0.72
+LLM fallacy,misattributes,错误归因,skill acquisition,0.92
+misattribution,mechanism_of,是……的机制,LLM fallacy,0.72
+illusion of competence,caused_by,由……引起,fluency illusion,0.5
+speedup illusion,miscalibrates,校准失当,unaided performance,0.72
+efficiency-gain illusion,variant_of,变体,speedup illusion,0.72
+self-estimate miscalibration,underlies,构成基础,efficiency-gain illusion,0.92
+need for cognition,moderates,调节,speedup illusion,0.5
+calibration,opposite_of,与……相反,miscalibration,0.92
+metacognitive miscalibration,forms_when,形成于……时,scaffolding,0.5
+supportive practice,inflates,抬高,metacognitive miscalibration,0.5
+metacognitive laziness,reduces,降低,self-regulated learning,0.92
+need for cognition,buffers,缓冲,metacognitive laziness,0.5
+generative AI learning penalty,manifests,显现,performance-learning gap,0.92
+performance-competence divide,states,陈述,performance-learning gap,0.72
+performance-learning gap,evidenced_by,以……为据,unaided performance,0.92
+unaided test,measures,度量,unaided performance,0.92
+unaided assessment,instance_of,实例,unaided test,0.72
+unaided performance,contrasts_with,与……形成对比,immediate performance,0.72
+performance while practicing,contrasts_with,与……形成对比,unaided performance,0.5
+crutch,explains,解释,performance-learning gap,0.72
+learning-performance paradox,states,陈述,performance-competence divide,0.92
+mastery gain paradox,variant_of,变体,learning-performance paradox,0.72
+crowding out,mechanism_of,是……的机制,performance-competence divide,0.72
+crowding-out effect,variant_of,变体,crowding out,0.92
+transfer test,measures,度量,performance-competence divide,0.72
+retention test,contrasts_with,与……形成对比,immediate performance,0.72
+long-term retention,contrasts_with,与……形成对比,unaided performance,0.72
+short-term gain,contrasts_with,与……形成对比,long-term retention,0.72
+productive struggle,supports,支持,long-term retention,0.72
+deep learning,strengthens,强化,long-term retention,0.5
+mastery learning,prioritizes,优先考虑,long-term retention,0.72
+answer over-disclosure,erodes,侵蚀,productive struggle,0.92
+hint abuse,causes,引起,mastery gain paradox,0.92
+system gaming,causes,引起,hint abuse,0.72
+erosion of productive struggle,results_from,源自,answer over-disclosure,0.92
+fluency illusion,reinforces,强化,answer over-disclosure,0.72
+skilful performance,contrasts_with,与……形成对比,durable learning,0.72
+mastery learning,contrasts_with,与……形成对比,discovery learning,0.72
+direct instruction,contrasts_with,与……形成对比,discovery learning,0.72
+constructivism,theory_under,……的理论基础,discovery learning,0.72
+constructivism,theory_under,……的理论基础,inquiry learning,0.72
+constructivism,theory_under,……的理论基础,cognitive apprenticeship,0.5
+situated learning,theory_under,……的理论基础,cognitive apprenticeship,0.72
+active learning,umbrella_for,是……的总称,inquiry-based learning,0.5
+active learning,umbrella_for,是……的总称,project-based learning,0.5
+active learning,umbrella_for,是……的总称,cooperative learning,0.72
+active learning,contrasts_with,与……形成对比,direct instruction,0.72
+flipped classroom,enables,使能,active learning,0.5
+problem-based learning,subset_of,子集,inquiry-based learning,0.72
+project-based learning,related_to,与……相关,problem-based learning,0.72
+inquiry-based learning,promotes,促进,conceptual change,0.72
+cognitive conflict,drives,驱动,conceptual change,0.72
+cognitive conflict,arises_from,源于,misconception,0.72
+conceptual change,eliminates,消除,misconception,0.92
+misconception,impedes,阻碍,conceptual change,0.92
+metacognitive prompts,elicit,引出,conceptual change,0.5
+deceptive overgeneralization,instance_of,实例,misconception,0.72
+cognitive conflict,triggered_by,由……触发,deceptive overgeneralization,0.5
+peer instruction,elicit,引出,conceptual change,0.72
+collaborative knowledge construction,emerges_from,源于,collaborative learning,0.92
+collaborative learning,umbrella_for,是……的总称,cooperative learning,0.72
+cooperative learning,requires,需要,collaborative knowledge construction,0.72
+peer assessment,promotes,促进,evaluative judgment,0.72
+peer feedback,instance_of,实例,feedback,0.72
+collaborative writing,facilitates,促进,collaborative knowledge construction,0.72
+dialogic argument,requires,需要,collaborative knowledge construction,0.72
+dialogic teaching,uses,使用,dialogic argument,0.92
+dialogic teaching,promotes,促进,argumentation,0.72
+classroom discourse,context_for,是……的语境,dialogic teaching,0.5
+wait time,increases,增加,student participation,0.5
+wait time,facilitates,促进,peer instruction,0.5
+scientific reasoning,exemplifies,例示,argumentation,0.72
+argumentation,deepens,加深,conceptual change,0.72
+Socratic questioning,elicits,引出,argumentation,0.72
+direct guidance,contrasts_with,与……形成对比,Socratic questioning,0.72
+collative variable,triggers,触发,curiosity gap,0.72
+curiosity gap,motivates,激励,inquiry-based learning,0.72
+observable curiosity,operationalizes,操作化,curiosity gap,0.72
+exploratory questioning,operationalizes,操作化,curiosity gap,0.72
+vibe coding,instance_of,实例,collaborative knowledge construction,0.1
+vibe coding,instance_of,实例,AI-assisted writing,0.28
+formative assessment,provides,提供,formative feedback,0.92
+formative assessment,contrasts_with,与……形成对比,summative assessment,0.92
+assessment for learning,embodies,体现,formative assessment,0.72
+peer assessment,contributes_to,有助于,formative assessment,0.5
+summative assessment,uses,使用,automated scoring,0.28
+automated scoring,facilitates,促进,summative assessment,0.72
+fifth generation of automated scoring,succeeds,后于,automated scoring,0.72
+construct validity,grounds,为……奠基,evidence-centered design,0.72
+evidence-centered design,strengthens,强化,construct validity,0.72
+consequential validity,complements,互补于,construct validity,0.72
+validity failure,threatens,威胁,construct validity,0.92
+integrity failure,threatens,威胁,academic integrity,0.92
+validity failure,contrasts_with,与……形成对比,integrity failure,0.92
+academic integrity,undermined_by,被……削弱,agentic completion,0.92
+AI detector,implements,实现,academic integrity monitoring,0.72
+detector false-positive bias,threatens,威胁,construct validity,0.92
+AI detector,exhibits,展现,detector false-positive bias,0.92
+construct validity,affected_by,受……影响,AI detector,0.5
+hidden rubric,underlies,构成基础,LLM-as-a-Judge for grading,0.5
+academic integrity monitoring,aims_at,旨在,academic integrity,0.92
+stealth assessment,contrasts_with,与……形成对比,summative assessment,0.72
+conversation-based assessment,variant_of,变体,stealth assessment,0.72
+process-based assessment,contrasts_with,与……形成对比,summative assessment,0.72
+process-based evaluation,variant_of,变体,process-based assessment,0.72
+process-based assessment,requires,需要,responsibility accounting,0.5
+human-production assumption,underlies,构成基础,responsibility accounting,0.92
+responsibility accounting,invalidates,使……失效,validity failure,0.72
+oral defense,instance_of,实例,process-based assessment,0.72
+viva,form_of,形式,oral defense,0.92
+evaluation literacy,enables,使能,evaluative judgment,0.72
+automated scoring,requires,需要,evaluation literacy,0.28
+curriculum,defines,界定,formative assessment,0.28
+instructional design,uses,使用,formative assessment,0.72
+instructional design,implements,实现,scaffolding,0.5
+task completion,criterion_of,是……的判据,summative assessment,0.5
+deliberate practice,contributes_to,有助于,skill acquisition,0.72
+deliberate practice,contrasts_with,与……形成对比,spaced practice,0.28
+deliberate practice,requires,需要,feedback,0.5
+immediate feedback,part_of,属于,deliberate practice,0.5
+desirable difficulties,contrast_with,与……对比,immediate feedback,0.72
+desirable difficulties,contrast_with,与……对比,answer over-disclosure,0.72
+self-determination theory,theory_under,……的理论基础,intrinsic motivation,0.92
+self-determination theory,theory_under,……的理论基础,extrinsic motivation,0.92
+self-determination theory,theory_under,……的理论基础,autonomous regulation,0.72
+intrinsic motivation,contrasts_with,与……形成对比,extrinsic motivation,0.92
+autonomous regulation,variety_of,是……的种类,motivation,0.72
+controlled regulation,contrasts_with,与……形成对比,autonomous regulation,0.72
+controlled regulation,variant_of,变体,extrinsic motivation,0.72
+motivation,directs,指导,goal orientation,0.5
+achievement goal,subdivided_into,细分为,mastery goal,0.92
+achievement goal,subdivided_into,细分为,performance goal,0.92
+goal orientation,clusters,聚类,achievement goals,0.72
+mastery goal,supports,支持,intrinsic motivation,0.72
+performance goal,undermines,削弱,intrinsic motivation,0.5
+mastery goal,contrasts_with,与……形成对比,performance goal,0.92
+mastery goal,supports,支持,skill acquisition,0.72
+proximal goal,subordinate_to,从属于,distal goal,0.92
+distal goal,achieved_through,通过……实现,proximal goal,0.92
+proximal goal,motivates,激励,immediate performance,0.5
+self-efficacy,predicts,预测,proximal goal,0.5
+self-efficacy,strengthens,强化,self-regulated learning,0.5
+attribution,contributes_to,有助于,locus of control,0.72
+attribution theory,theory_under,……的理论基础,attribution,0.92
+attribution,shapes,塑造,achievement goal,0.5
+self-imposed-contingency,strengthens,强化,self-efficacy,0.72
+self-imposed-contingency,weakens_by,被……削弱,self-handicapping,0.5
+self-handicapping,threatens,威胁,self-worth,0.92
+self-worth,relates_to,与……相关,self-esteem,0.72
+self-worth,buffered_by,被……缓冲,self-efficacy,0.5
+academic self-concept,predicts,预测,achievement goal,0.5
+academic self-concept,relates_to,与……相关,self-worth,0.72
+growth mindset,contrasts_with,与……形成对比,fixed mindset,0.92
+implicit theory of intelligence,theory_under,……的理论基础,growth mindset,0.92
+implicit theory of intelligence,theory_under,……的理论基础,fixed mindset,0.92
+growth mindset,supports,支持,intentional behavior,0.72
+growth mindset,supports,支持,deliberate practice,0.5
+growth mindset,benefits_from,受益于,desirable difficulties,0.5
+human intelligence,modulates,调节,speedup illusion,0.1
+growth mindset,contrasts_with,与……形成对比,illusion of competence,0.72
+growth mindset,mitigates,缓解,LLM fallacy,0.5
+stereotype threat,undermines,削弱,self-efficacy,0.72
+stereotype threat,undermines,削弱,sense of belonging,0.72
+sense of belonging,supports,支持,self-regulated learning,0.5
+test anxiety,impairs,损害,retrieval practice,0.5
+test anxiety,amplifies,放大,performance-competence divide,0.5
+academic procrastination,reduces,降低,proximal goal attainment,0.5
+academic procrastination,harms,损害,unaided performance,0.5
+resilience,buffers,缓冲,test anxiety,0.5
+social-emotional learning,develops,发展,emotional intelligence,0.92
+emotional intelligence,supports,支持,collaborative learning,0.5
+learning-oriented engagement,contrast_with,与……对比,behavioural engagement,0.72
+passive consumption,contrast_with,与……对比,learning-oriented engagement,0.92
+learning-oriented engagement,requires,需要,student agency,0.72
+student agency,drives,驱动,learning-oriented engagement,0.72
+learner agency,drives,驱动,student agency,0.72
+teacher agency,supports,支持,learner agency,0.72
+student agency,facilitates,促进,epistemic proactivity,0.92
+reflection,manifests_as,表现为,reflective use,0.5
+reflection,contrast_with,与……对比,passive consumption,0.72
+teacher AI adoption,predicts,预测,teacher workload,0.28
+teacher AI adoption,changes,改变,instructional design,0.72
+teacher AI adoption,requires,需要,AI literacy,0.92
+teacher AI adoption,shaped_by,由……塑造,AI literacy,0.92
+teacher workload,affected_by,受……影响,teacher AI adoption,0.72
+teacher professional development,facilitates,促进,teacher AI adoption,0.92
+cognitive choreographer,role_of,是……的作用,teacher agency,0.92
+AI literacy,facilitates,促进,AI-TPACK,0.92
+AI competency,subcomponent_of,子组成部分,AI literacy,0.72
+TPACK,extended_by,由……扩展,AI-TPACK,0.72
+AI verification literacy,part_of,属于,AI literacy,0.92
+GenAI literacy,specialization_of,具体形态,AI literacy,0.92
+AI literacy over tool design,contends,主张,instructional design,0.5
+student self-governance,underlies,构成基础,AI literacy over tool design,0.92
+human-GAI engagement paradigm,framework_for,是……的框架,teacher AI adoption,0.72
+symbiotic literacy,extends,扩展,AI literacy,0.92
+AI-Assisted Research Competency,specialization_of,具体形态,AI literacy,0.72
+AI literacy,measured_by,由……测量,AI competency,0.5
+human-centred learning analytics,principle_of,是……的原则,learning analytic,0.92
+learning analytic,part_of,属于,human-centred learning analytics,0.72
+learning analytic,informs,为……提供依据,instructional design,0.72
+learning analytic,supports,支持,feedback enactment,0.72
+human-centred learning analytics design,ensures,确保,learner agency,0.92
+stakeholders,affected_by,受……影响,learning analytic,0.5
+knowledge tracing,estimating,估计,learner modelling,0.92
+learner modelling,basis_of,是……的基础,knowledge tracing,0.92
+cognitive model of the learner,type_of,类型,learner modelling,0.72
+knowledge tracing,enables,使能,adaptive learning,0.72
+knowledge tracing,enables,使能,personalized learning,0.72
+adaptive learning,driven_by,由……驱动,learner modelling,0.72
+personalized learning,implemented_by,由……实现,learner modelling,0.5
+interpretable knowledge tracing,variant_of,变体,explainable knowledge tracing,0.92
+neural-symbolic knowledge tracing,improves,改善,responsible deep knowledge tracing,0.72
+responsible deep knowledge tracing,embodies,体现,temporal reliability,0.92
+temporal reliability,criterion_of,是……的判据,responsible deep knowledge tracing,0.92
+difficulty-aware,improves,改善,interpretable knowledge tracing,0.92
+tutor-turn difficulty,operationalizes,操作化,difficulty-aware,0.92
+concept-level deficiency prediction,extension_of,扩展,knowledge tracing,0.72
+phase-aware knowledge tracing,extension_of,扩展,knowledge tracing,0.72
+multi-domain knowledge tracing,extension_of,扩展,knowledge tracing,0.72
+cross-domain knowledge transfer,modelled_by,由……建模,multi-domain knowledge tracing,0.92
+hyperbolic curvature optimization,improves,改善,multi-domain knowledge tracing,0.72
+student-AI interaction competency,assessed_by,由……评估,conversation-based assessment,0.72
+epistemic auditing,complements,互补于,knowledge tracing,0.5
+skill acquisition,outcome_of,是……的结果,learning,0.72
+learning,outcome_of,是……的结果,acquisition,0.92
+acquisition,process_in,……中的过程,skill acquisition,0.92
+skill,object_of,是……的对象,skill acquisition,0.92
+skill acquisition,requires,需要,deliberate practice,0.72
+professional skill acquisition,variant_of,变体,skill acquisition,0.72
+skill formation,process_in,……中的过程,skill acquisition,0.92
+skill formation,measured_by,由……测量,unaided test,0.72
+learning,measured_by,由……测量,retention test,0.72
+learning,manifests_in,体现于,skill formation,0.5
+acquisition,contextualized_by,由……提供语境,task completion,0.28
+stakeholders,evaluate,评估,task completion,0.5
+sustainability,requires,需要,task completion,0.28
+e-learning,delivers,提供,instructional design,0.5
+e-learning,relates_to,与……相关,asynchronous learning,0.72
+asynchronous learning,variant_of,变体,e-learning,0.5
+synchronous learning,variant_of,变体,e-learning,0.5
+collative variable,amplifies,放大,curiosity gap,0.5
+human-plus,instances,实例化,AI-assisted writing,0.5
+human-plus,instances,实例化,vibe coding,0.5
+vibe coding,threatens,威胁,coding skill acquisition,0.72
+codependency,threatens,威胁,skill formation,0.72
+AI learning companion,instantiates,实例化,AI tutor,0.72
+GenAI SRL scaffolding,variant_of,变体,scaffolding,0.92
+metacognitive scaffolding,targeting,针对,metacognition,0.72
+assessment-aware tutor,variant_of,变体,AI tutor,0.72
+guardrailed AI assistant,variant_of,变体,AI tutor,0.72
+Socratic-Guidance tutor,variant_of,变体,AI tutor,0.5
+Prompt-Refinement tutor,variant_of,变体,AI tutor,0.5
+deterministic orchestration,orchestrates,编排,AI tutor,0.5
+ensemble of specialised LLMs,instantiates,实例化,AI tutor,0.5
+AI-free zone,counterpart_of,对应物,AI tutor,0.5
+AI-blackout task,operationalizes,操作化,AI-free zone,0.72
+tool-invariant assessment,operationalizes,操作化,AI-free zone,0.5
+teach-back protocol,triggers,触发,self-explanation,0.72
+understanding-driven prompting,supports,支持,reflective use,0.5
+explanation-seeking depth,predicts,预测,understanding-driven prompting,0.5
+fragile expert,risks,冒……的风险,illusion of competence,0.72
+abdication of scaffolding,instance_of,实例,answer over-disclosure,0.72
+declarative knowledge,contrasts_with,与……形成对比,procedural knowledge,0.92
+procedural knowledge,supports,支持,skill acquisition,0.5
+conceptual inquiry,contrasts_with,与……形成对比,answer offloading,0.92
+Generation-Then-Comprehension,contrasts_with,与……形成对比,answer offloading,0.72
+self-estimate,predicts,预测,self-estimate miscalibration,0.72
+session-level carryover effect,reinforces,强化,overreliance feedback loop,0.72
+overreliance feedback loop,reinforces,强化,answer offloading,0.5
+directive,broader_than,范围更广,direct instruction,0.5
+scripted learning,contrasts_with,与……形成对比,discovery learning,0.72
+peer tutoring,instance_of,实例,tutoring,0.92
+tutoring,subdivided_into,细分为,peer tutoring,0.92
+peer tutoring,requires,需要,collaborative learning,0.28
+goal,subdivided_into,细分为,proximal goal,0.5
+approach,contrasts_with,与……形成对比,avoidance,0.92
+avoidance,contrast_with,与……对比,approach,0.92
+approach,motivates,激励,mastery goal,0.5
+enacted feedback,workflow_of,是……的流程,feedback enactment,0.92
+directed feedback,workflow_of,是……的流程,feedback enactment,0.92
+self-directed feedback,workflow_of,是……的流程,feedback enactment,0.92
+sequenced AI feedback,workflow_of,是……的流程,feedback enactment,0.72
+academic writing,affected_by,受……影响,AI-assisted writing,0.92
+dual coding principle,theory_under,……的理论基础,dual coding,0.72
+collative variables,variant_of,变体,collative variable,0.92
+independent reasoning,contrasts_with,与……形成对比,answer offloading,0.72
+LLM-as-a-Judge for grading,instance_of,实例,fifth generation of automated scoring,0.72
+assessment literacy,uses,使用,relevance judgment,0.92
+assessment literacy,supports,支持,construct validity,0.72
+automated scoring,implemented_by,由……实现,fifth generation of automated scoring,0.92
+reasoning,part_of,属于,higher-order thinking,0.72
+reasoning,related_to,与……相关,scientific reasoning,0.5
+reasoning,enables,使能,问题解决,0.72
+System One,contrasts_with,与……形成对比,System Two,0.92
+System One,related_to,与……相关,AI intuition,0.5
+System One,part_of,属于,thinking,0.5
+System Two,enables,使能,metacognition,0.5
+System Two,constrained_by,受限于,cognitive load,0.72
+overt strategy,contrasts_with,与……形成对比,covert strategy,0.92
+overt strategy,part_of,属于,metacognitive strategy,0.5
+overt strategy,enables,使能,self-monitoring,0.5
+covert strategy,subtype_of,子类型,隐性学习策略,0.72
+covert strategy,related_to,与……相关,procedural knowledge,0.5
+well-defined problem,contrasts_with,与……形成对比,ill-defined problem,0.92
+well-defined problem,enables,使能,direct instruction,0.5
+well-defined problem,related_to,与……相关,问题表征,0.5
+ill-defined problem,requires,需要,inquiry,0.72
+ill-defined problem,requires,需要,问题创设,0.5
+mastery,part_of,属于,mastery learning,0.92
+mastery,enables,使能,mastery-based grading,0.5
+mastery,measured_by,由……测量,topic mastery,0.5
+low-level question,subtype_of,子类型,concept question,0.72
+low-level question,part_of,属于,Bloom's taxonomy,0.72
+low-level question,contrasts_with,与……形成对比,higher-level question,0.92
+higher-level question,subtype_of,子类型,concept question,0.72
+higher-level question,part_of,属于,Bloom's taxonomy,0.72
+higher-level question,elicits,引出,higher-order thinking,0.72
+inquiry,contrasts_with,与……形成对比,directive,0.5
+inquiry,contrasts_with,与……形成对比,direct instruction,0.72
+inquiry,part_of,属于,inquiry learning,0.72
+inquiry,elicits,引出,问题创设,0.5
+collaborative activity,instance_of,实例,collaborative learning,0.72
+collaborative activity,part_of,属于,cooperative learning,0.5
+collaborative activity,enables,使能,relational epistemic agency,0.5
+frustration tolerance,mitigated_by,被……缓解,productive struggle,0.5
+frustration tolerance,part_of,属于,resilience,0.5
+frustration tolerance,related_to,与……相关,学习情绪,0.5
+reliance,related_to,与……相关,cognitive offloading,0.28
+overreliance on autopilot,subtype_of,子类型,cognitive overreliance,0.92
+overreliance on autopilot,manifestation_of,表现,epistemic delegation,0.72
+overreliance on autopilot,related_to,与……相关,illusion of competence,0.5
+behavioural traces,part_of,属于,human-centred learning analytics,0.72
+behavioural traces,measures,度量,cognitive engagement,0.5
+behavioural traces,stored_in,存储于,过程性数据,0.5
+AI literacy framework,part_of,属于,AI literacy,0.72
+AI literacy framework,contrasts_with,与……形成对比,AI literacy over tool design,0.5
+AI literacy framework,informs,为……提供依据,学习目标,0.5
+AI intuition,affected_by,受……影响,fluency illusion,0.5
+AI intuition,leads_to,导致,epistemic dependence,0.5
+AI intuition,contrasts_with,与……形成对比,independent judgment,0.5
+relational epistemic agency,subtype_of,子类型,epistemic agency,0.92
+relational epistemic agency,enabled_by,由……启用,collaborative activity,0.5
+relational epistemic agency,enables,使能,collaborative knowledge construction,0.5
+epistemic dependence,subtype_of,子类型,epistemic overreliance,0.72
+epistemic delegation,derived_from,衍生自,epistemic dependence,0.72
+epistemic dependence,related_to,与……相关,overreliance feedback loop,0.5
+epistemic co-agency,contrasts_with,与……形成对比,epistemic delegation,0.72
+epistemic co-agency,enables,使能,epistemic augmentation,0.5
+epistemic co-agency,enabled_by,由……启用,conversational agency,0.72
+epistemic entanglement,related_to,与……相关,epistemic debt,0.5
+epistemic entanglement,impairs,损害,independent judgment,0.5
+epistemic entanglement,caused_by,由……引起,cognitive offloading,0.5
+epistemic augmentation,contrasts_with,与……形成对比,epistemic debt,0.72
+epistemic augmentation,measured_by,由……测量,capability residual,0.5
+epistemic augmentation,enabled_by,由……启用,epistemic co-agency,0.72
+epistemic integration,enables,使能,durable learning,0.72
+epistemic integration,part_of,属于,知识建构,0.72
+epistemic integration,contrasts_with,与……形成对比,cognitive surrender,0.5
+epistemic delegation,instance_of,实例,cognitive outsourcing,0.5
+epistemic delegation,constrained_by,受限于,delegation boundary,0.72
+epistemic delegation,leads_to,导致,cognitive surrender,0.5
+epistemic condition,subtype_of,子类型,epistemology,0.5
+epistemic condition,context_for,是……的语境,epistemic plurality,0.5
+epistemic plurality,contrasts_with,与……形成对比,contextual sycophantic dependence,0.5
+epistemic plurality,enables,使能,epistemic agency,0.5
+epistemic plurality,requires,需要,claim test,0.5
+distributed responsibility,related_to,与……相关,responsibility accounting,0.5
+distributed responsibility,part_of,属于,多主体协同教学,0.5
+distributed responsibility,contrasts_with,与……形成对比,认知责任,0.5
+judgement-bearing assistance,contrasts_with,与……形成对比,epistemic delegation,0.72
+judgement-bearing assistance,enables,使能,independent judgment,0.72
+instrumental assistance,contrasts_with,与……形成对比,judgement-bearing assistance,0.72
+instrumental assistance,part_of,属于,cognitive offloading,0.5
+instrumental assistance,exemplifies,例示,instrumental help-seeking,0.5
+ecological co-agency framework,framework_for,是……的框架,多主体协同教学,0.5
+ecological co-agency framework,draws_from,借鉴自,human-GAI engagement paradigm,0.5
+ecological co-agency framework,basis_for,是……的依据,epistemic co-agency,0.5
+pedagogical symbiosis,supports,支持,durable learning,0.72
+pedagogical symbiosis,enables,使能,unaided performance,0.72
+ecological co-agency framework,informs,为……提供依据,pedagogical symbiosis,0.72
+post-human learner,theory_under,……的理论基础,distributed cognition,0.5
+human-plus,informs,为……提供依据,post-human learner,0.5
+post-human learner,related_to,与……相关,epistemic entanglement,0.5
+GenAI as epistemic condition,subtype_of,子类型,epistemic condition,0.72
+GenAI as epistemic condition,affects,影响,systems of inference,0.5
+conversational agency,part_of,属于,learner agency,0.72
+conversational agency,enables,使能,epistemic co-agency,0.72
+conversational agency,enables,使能,对话式导学,0.5
+conversational agency,evidenced_by,以……为据,behavioural traces,0.5
+Tutor CoPilot,subtype_of,子类型,AI tutoring,0.72
+Tutor CoPilot,enables,使能,teacher professional development,0.5
+topic mastery,measures,度量,mastery,0.72
+topic mastery,modelled_by,由……建模,item response theory,0.72
+cognitive diagnosis,informs,为……提供依据,topic mastery,0.5
+interactive scaffolding,subtype_of,子类型,scaffolding,0.92
+interactive scaffolding,implemented_by,由……实现,adaptive learning,0.5
+interactive scaffolding,requires,需要,fading,0.72
+learner modelling,informs,为……提供依据,interactive scaffolding,0.5
+assessment literacy,informs,为……提供依据,responsible assessment,0.5
+responsible assessment,contrasts_with,与……形成对比,automated scoring,0.5
+systems of inference,manifests_in,体现于,classroom discourse,0.5
+epistemology,informs,为……提供依据,systems of inference,0.5
+systems of inference,contrasts_with,与……形成对比,epistemic condition,0.5
+AI-use declaration,part_of,属于,responsible assessment,0.72
+AI-use declaration,enables,使能,academic integrity monitoring,0.5
+AI-use declaration,mitigates,缓解,integrity failure,0.5
+assessment reform,contrasts_with,与……形成对比,summative assessment,0.5
+assessment reform,enabled_by,由……启用,AI输出作为评价对象,0.5
+assessment reform,enabled_by,由……启用,mastery-based grading,0.5
+assessment reform,requires,需要,teacher professional development,0.5
+durable skills,instance_of,实例,durable learning,0.72
+durable skills,measured_by,由……测量,unaided test,0.72
+durable skills,bounded_by,受限于,capability residual,0.5
+claim test,instance_of,实例,inquiry,0.72
+claim test,develops,发展,critical thinking,0.72
+claim test,enabled_by,由……启用,systems of inference,0.5
+delegation boundary,constrains,约束,epistemic delegation,0.92
+delegation boundary,enables,使能,认知责任,0.5
+cognitive stewardship,mitigates,缓解,epistemic dependence,0.72
+cognitive stewardship,instance_of,实例,metacognition,0.5
+cognitive stewardship,enables,使能,unaided performance,0.5
+proxy failure,instance_of,实例,error carryover,0.5
+proxy failure,evidenced_by,以……为据,unaided performance,0.5
+proxy failure,related_to,与……相关,generative AI learning penalty,0.5
+capability residual,measured_by,由……测量,unaided test,0.72
+capability residual,contrasts_with,与……形成对比,illusion of competence,0.5
+capability residual,related_to,与……相关,performance-competence divide,0.5
+artifact residual,measured_by,由……测量,process-based evaluation,0.72
+curriculum-grounded marking pipeline,implements,实现,rubric-based grading,0.72
+curriculum-grounded marking pipeline,part_of,属于,automated scoring,0.72
+curriculum-grounded marking pipeline,constrained_by,受限于,curriculum,0.5
+psychometrically-aware AI,uses,使用,item response theory,0.92
+psychometrically-aware AI,part_of,属于,automated scoring,0.5
+psychometrically-aware AI,contrasts_with,与……形成对比,传统心理测量,0.72
+inter-rater reliability,informs,为……提供依据,rubric-based grading,0.72
+inter-rater reliability,required_by,为……所需,curriculum-grounded marking pipeline,0.5
+inter-rater reliability,contrasts_with,与……形成对比,LLM-as-a-Judge for grading,0.5
+item response theory,contrasts_with,与……形成对比,传统心理测量,0.72
+item response theory,modelled_by,由……建模,Rasch model,0.72
+item response theory,informs,为……提供依据,knowledge tracing,0.5
+Rasch model,subtype_of,子类型,item response theory,0.92
+Rasch model,used_by,被……使用,psychometrically-aware AI,0.5
+differential item functioning,threatens,威胁,construct validity,0.72
+differential item functioning,phenomenon_in,……中的现象,item response theory,0.5
+cognitive diagnosis,enables,使能,adaptive learning,0.72
+cognitive diagnosis,contrasts_with,与……形成对比,传统心理测量,0.5
+knowledge tracing,informs,为……提供依据,cognitive diagnosis,0.5
+rubric-based grading,part_of,属于,automated scoring,0.5
+rubric-based grading,requires,需要,inter-rater reliability,0.72
+rubric-based grading,contrasts_with,与……形成对比,mastery-based grading,0.72
+mastery-based grading,part_of,属于,mastery learning,0.72
+mastery,informs,为……提供依据,mastery-based grading,0.72
+mastery-based grading,enables,使能,assessment for learning,0.5
+STEM教育,part_of,属于,跨学科,0.5
+STEM教育,requires,需要,inquiry,0.5
+STEM教育,exemplifies,例示,project-based learning,0.5
+跨学科,enables,使能,cross-domain knowledge transfer,0.72
+跨学科,informs,为……提供依据,curriculum,0.5
+跨学科,related_to,与……相关,交叉科学,0.5
+交叉科学,manifestation_of,表现,范式转换,0.5
+交叉科学,requires,需要,理论转译,0.5
+人工智能+教育,enables,使能,智能教育,0.72
+人工智能+教育,requires,需要,digital infrastructure,0.5
+智能教育,instance_of,实例,人工智能+教育,0.72
+智能教育,enabled_by,由……启用,adaptive learning,0.5
+智能教育,requires,需要,学生画像,0.5
+计算教育学,part_of,属于,学习科学,0.72
+计算教育学,uses,使用,learner modelling,0.72
+计算教育学,uses,使用,learning analytic,0.5
+数字胜任力,broader_than,范围更广,AI competency,0.5
+AI literacy,informs,为……提供依据,数字胜任力,0.72
+数字胜任力,requires,需要,AI literacy framework,0.5
+智能导师,enables,使能,对话式导学,0.72
+智能导师,requires,需要,learner modelling,0.72
+儿童具身学习,part_of,属于,active learning,0.5
+儿童具身学习,requires,需要,bodily activity,0.5
+师生脑耦合,measured_by,由……测量,fNIRS,0.72
+师生脑耦合,manifests_in,体现于,joint attention,0.5
+情感状态,part_of,属于,emotional activity,0.5
+情感状态,measured_by,由……测量,情绪监测,0.5
+学习投入,affects,影响,情感状态,0.72
+执行功能,part_of,属于,metacognition,0.5
+执行功能,required_by,为……所需,self-regulated learning,0.72
+cognitive load,impairs,损害,执行功能,0.5
+适应性教学策略,instance_of,实例,adaptive learning,0.92
+适应性教学策略,implemented_by,由……实现,智能导师,0.5
+适应性教学策略,enabled_by,由……启用,learner modelling,0.5
+适应性教学策略,contrasts_with,与……形成对比,shallow adaptivity,0.72
+多主体协同教学,instance_of,实例,collaborative learning,0.5
+多主体协同教学,enables,使能,distributed responsibility,0.5
+多主体协同教学,part_of,属于,人工智能+教育,0.5
+认知神经机制,enables,使能,brain activity,0.5
+fNIRS,informs,为……提供依据,认知神经机制,0.5
+认知神经机制,explains,解释,问题表征,0.5
+知识建构,part_of,属于,constructivism,0.72
+知识建构,broader_than,范围更广,collaborative knowledge construction,0.5
+知识建构,facilitates,促进,知识重构,0.72
+知识精细加工,part_of,属于,deep learning,0.72
+elaborative interrogation,elicits,引出,知识精细加工,0.72
+自我参照,elicits,引出,知识精细加工,0.72
+知识精细加工,manifests_as,表现为,self-explanation,0.5
+最近发展区,grounds,为……奠基,scaffolding,0.72
+最近发展区,informs,为……提供依据,差异化,0.5
+对话式导学,part_of,属于,dialogic teaching,0.72
+对话式导学,requires,需要,Socratic questioning,0.72
+对话式导学,enabled_by,由……启用,conversational agency,0.5
+视频学习,instance_of,实例,multimedia learning,0.92
+视频学习,enabled_by,由……启用,signaling principle,0.72
+segmenting principle,informs,为……提供依据,视频学习,0.5
+知识迁移,measured_by,由……测量,transfer test,0.72
+知识迁移,requires,需要,知识重构,0.5
+知识迁移,broader_than,范围更广,cross-domain knowledge transfer,0.5
+自我参照,part_of,属于,知识精细加工,0.72
+自我参照,enhances,增强,memory recall,0.5
+问题创设,enables,使能,exploratory questioning,0.5
+问题创设,part_of,属于,inquiry-based learning,0.5
+问题创设,elicits,引出,higher-order thinking,0.5
+学习情绪,affects,影响,注意力,0.72
+学习情绪,part_of,属于,emotional activity,0.5
+学习情绪,affects,影响,frustration tolerance,0.5
+学习投入,measured_by,由……测量,behavioural engagement,0.72
+学习投入,affected_by,受……影响,immediate feedback,0.28
+long-term retention,affects,影响,学习投入,0.5
+任务表现,measured_by,由……测量,immediate performance,0.5
+任务表现,related_to,与……相关,performance-competence divide,0.5
+任务表现,contrasts_with,与……形成对比,durable learning,0.5
+问题表征,part_of,属于,问题解决,0.72
+declarative knowledge,informs,为……提供依据,问题表征,0.5
+问题表征,enabled_by,由……启用,worked example,0.5
+问题解决,part_of,属于,higher-order thinking,0.72
+问题解决,requires,需要,执行功能,0.72
+worked example,facilitates,促进,问题解决,0.5
+高阶能力,instance_of,实例,higher-order thinking,0.72
+高阶能力,measured_by,由……测量,高阶思维评价,0.5
+高阶能力,part_of,属于,核心素养,0.5
+高阶思维评价,instance_of,实例,process-based evaluation,0.5
+高阶思维评价,operationalizes,操作化,Bloom's taxonomy,0.72
+高阶思维评价,requires,需要,rubric-based grading,0.72
+人机共构,requires,需要,artifact residual,0.5
+人机共构,exemplifies,例示,post-human learner,0.5
+认知责任,contrasts_with,与……形成对比,cognitive surrender,0.5
+认知责任,requires,需要,delegation boundary,0.72
+认知责任,enabled_by,由……启用,cognitive stewardship,0.5
+认知责任,measured_by,由……测量,capability residual,0.5
+学习者先生成,part_of,属于,Generation-Then-Comprehension,0.92
+学习者先生成,mitigates,缓解,cognitive surrender,0.5
+学习者先生成,enables,使能,claim test,0.5
+AI输出作为评价对象,instance_of,实例,process-based evaluation,0.92
+AI输出作为评价对象,requires,需要,AI-use declaration,0.5
+AI输出作为评价对象,requires,需要,AI verification literacy,0.5
+AI作为认知挑战者,instance_of,实例,Socratic questioning,0.5
+AI作为认知挑战者,elicits,引出,cognitive conflict,0.72
+AI作为认知挑战者,enables,使能,independent reasoning,0.5
+知识重构,subtype_of,子类型,conceptual change,0.72
+问题表征,informs,为……提供依据,知识重构,0.5
+知识重构,part_of,属于,epistemic integration,0.5
+学习目标,part_of,属于,instructional design,0.92
+学习目标,operationalizes,操作化,Bloom's taxonomy,0.5
+学习目标,derived_from,衍生自,curriculum,0.5
+教育实验,tests,检验,机制假设,0.92
+教育实验,enables,使能,机制检验,0.5
+教育实验,basis_for,是……的依据,规模化循证,0.5
+传统心理测量,contrasts_with,与……形成对比,生成式心理测量,0.72
+传统心理测量,informs,为……提供依据,summative assessment,0.5
+传统心理测量,superseded_by,被……取代,psychometrically-aware AI,0.5
+生成式心理测量,enables,使能,对话式测量,0.72
+生成式心理测量,operationalizes,操作化,item response theory,0.5
+对话式测量,part_of,属于,conversation-based assessment,0.92
+对话式测量,enabled_by,由……启用,conversational agency,0.5
+对话式测量,requires,需要,rubric-based grading,0.5
+动态心理表征,subtype_of,子类型,learner modelling,0.5
+behavioural traces,informs,为……提供依据,动态心理表征,0.5
+动态心理表征,enables,使能,adaptive learning,0.5
+competency-based education,requires,需要,mastery,0.72
+competency-based education,part_of,属于,assessment reform,0.5
+高阶能力,informs,为……提供依据,competency-based education,0.5
+question group abstraction,part_of,属于,context tree weighting,0.72
+question group abstraction,contrasts_with,与……形成对比,item response theory,0.5
+item response theory,informs,为……提供依据,question group abstraction,0.5
+local irreducible uncertainty,constrains,约束,learner modelling,0.5
+local irreducible uncertainty,informs,为……提供依据,context tree weighting,0.5
+local irreducible uncertainty,affects,影响,任务表现,0.28
+context tree weighting,informs,为……提供依据,adaptive learning,0.5
+forgetting pattern,undermines,削弱,long-term retention,0.5
+forgetting pattern,measured_by,由……测量,retention test,0.5
+forgetting pattern,affects,影响,spaced practice,0.5
+shallow adaptivity,subtype_of,子类型,adaptive learning,0.5
+shallow adaptivity,contrasts_with,与……形成对比,personalized learning,0.5
+shallow adaptivity,undermines,削弱,learner modelling,0.5
+Bloom's taxonomy,framework_for,是……的框架,higher-order thinking,0.92
+Bloom's taxonomy,manifests_in,体现于,low-level question,0.5
+Bloom's taxonomy,underpins,支撑,高阶思维评价,0.5
+higher-order thinking,contrasts_with,与……形成对比,fluency illusion,0.72
+dialogic teaching,promotes,促进,higher-order thinking,0.5
+higher-order thinking,evidenced_by,以……为据,concept question,0.5
+critical thinking,part_of,属于,higher-order thinking,0.92
+critical thinking,develops,发展,independent reasoning,0.5
+critical thinking,enables,使能,claim test,0.5
+dialogic argument,develops,发展,critical thinking,0.72
+规模应用与数据反哺,constrained_by,受限于,teacher workload,0.5
+理论转译,enables,使能,跨学科,0.5
+理论转译,contrasts_with,与……形成对比,理论修正,0.5
+理论转译,supports,支持,知识生产,0.5
+机制检验,operationalizes,操作化,机制假设,0.5
+机制检验,supports,支持,理论修正,0.5
+可复现研究证据,informs,为……提供依据,规模化循证,0.5
+规模化循证,requires,需要,teacher professional development,0.5
+规模化循证,enables,使能,teacher AI adoption,0.5
+学习科学,draws_from,借鉴自,cognitive processing theory,0.5
+学习科学,enables,使能,instructional design,0.5
+可复现研究证据,informs,为……提供依据,学习科学,0.5
+教师参与的课堂设计,requires,需要,teacher agency,0.72
+教师参与的课堂设计,enables,使能,pedagogical symbiosis,0.5
+差异化,instance_of,实例,personalized learning,0.72
+差异化,enabled_by,由……启用,learner modelling,0.5
+cognitive diagnosis,informs,为……提供依据,差异化,0.5
+仿真,enables,使能,教育实验,0.5
+仿真,broader_than,范围更广,发展模拟,0.5
+机制假设,grounds,为……奠基,教育实验,0.5
+理论修正,informs,为……提供依据,机制假设,0.5
+机制假设,grounds,为……奠基,instructional design,0.5
+理论修正,required_by,为……所需,规模化循证,0.5
+理论修正,requires,需要,可复现研究证据,0.5
+学习科学,informs,为……提供依据,理论修正,0.5
+实证校准,part_of,属于,机制检验,0.5
+实证校准,part_of,属于,教育实验,0.28
+实证校准,informs,为……提供依据,理论修正,0.28
+实证校准,related_to,与……相关,calibration,0.28
+多场景仿真,subtype_of,子类型,仿真,0.72
+多场景仿真,part_of,属于,机制检验,0.5
+多场景仿真,complements,互补于,发展模拟,0.5
+多场景仿真,related_to,与……相关,机制假设,0.28
+决策模型,models,建模,行为选择,0.5
+决策模型,enables,使能,发展模拟,0.28
+发展模拟,subtype_of,子类型,仿真,0.5
+发展模拟,part_of,属于,机制检验,0.28
+发展模拟,models,建模,状态演化,0.5
+行为选择,operationalizes,操作化,意志活动,0.5
+行为选择,part_of,属于,状态演化,0.28
+状态演化,part_of,属于,学习状态追踪,0.72
+状态演化,related_to,与……相关,forgetting pattern,0.5
+学习机制,mechanism_of,是……的机制,能力增强,0.72
+学习机制,basis_for,是……的依据,学习力,0.5
+学习机制,part_of,属于,学习科学,0.5
+自主学习,subtype_of,子类型,self-regulated learning,0.5
+自主学习,related_to,与……相关,autonomous regulation,0.28
+自主学习,requires,需要,学生数字素养,0.28
+自主学习,contributes_to,有助于,学习力,0.28
+群体学习,subtype_of,子类型,collaborative learning,0.5
+群体学习,contrasts_with,与……形成对比,自主学习,0.28
+群体学习,uses,使用,peer instruction,0.28
+群体学习,part_of,属于,跨时空多主体协同教学,0.5
+学习状态追踪,subtype_of,子类型,knowledge tracing,0.72
+学习状态追踪,uses,使用,Learner State Representations,0.72
+学习状态追踪,enables,使能,因材施教,0.5
+学习状态追踪,part_of,属于,human-centred learning analytics,0.28
+高阶学习状态表征,subtype_of,子类型,学生表征,0.72
+高阶学习状态表征,enables,使能,适应性教学策略,0.5
+高阶学习状态表征,related_to,与……相关,cognitive structure,0.28
+学生表征,subtype_of,子类型,cognitive model of the learner,0.5
+学生表征,related_to,与……相关,learner modelling,0.5
+学生表征,informs,为……提供依据,因材施教,0.72
+学生表征,related_to,与……相关,学生画像,0.5
+学习力,part_of,属于,核心素养,0.5
+学习力,enables,使能,能力增强,0.5
+学习力,enhances,增强,学业水平,0.5
+学习力,related_to,与……相关,self-efficacy,0.28
+教育科研诚信审查,subtype_of,子类型,academic integrity monitoring,0.72
+教育科研诚信审查,supports,支持,可复现研究证据,0.5
+教育科研诚信审查,part_of,属于,教育科研,0.5
+可复现研究证据,requires,需要,验证工具,0.72
+可复现研究证据,part_of,属于,教育科研,0.5
+可复现研究证据,supports,支持,evidence-based practice,0.28
+重复刻板行为,manifestation_of,表现,ASD,0.72
+重复刻板行为,subtype_of,子类型,刻板行为,0.72
+重复刻板行为,assessed_by,由……评估,ADOS-2,0.5
+神经发育障碍,broader_than,范围更广,ASD,0.92
+神经发育障碍,assessed_by,由……评估,DSM-5,0.5
+神经发育障碍,mitigated_by,被……缓解,康复技术,0.5
+公共卫生,provides,提供,患病负担,0.72
+公共卫生,related_to,与……相关,诊断延迟,0.28
+公共卫生,complements,互补于,临床经验,0.5
+患病负担,phenomenon_in,……中的现象,公共卫生,0.5
+患病负担,related_to,与……相关,神经发育障碍,0.5
+患病负担,informs,为……提供依据,社会创新需求,0.28
+临床经验,subtype_of,子类型,缄默知识,0.5
+临床经验,contrasts_with,与……形成对比,可复现研究证据,0.5
+临床经验,related_to,与……相关,经验,0.5
+诊断延迟,phenomenon_in,……中的现象,ASD,0.72
+诊断延迟,impedes,阻碍,康复技术,0.28
+病理机制,basis_for,是……的依据,康复技术,0.5
+病理机制,contrasts_with,与……形成对比,神经心理机制,0.5
+病理机制,related_to,与……相关,ASD,0.5
+神经心理机制,related_to,与……相关,认知神经机制,0.72
+神经心理机制,basis_for,是……的依据,言语加工,0.5
+神经心理机制,related_to,与……相关,superior temporal gyrus,0.5
+言语加工,basis_for,是……的依据,picture description,0.5
+言语加工,related_to,与……相关,superior temporal gyrus,0.72
+言语加工,required_by,为……所需,storytelling,0.5
+康复技术,mitigates,缓解,社交障碍,0.72
+康复技术,enables,使能,能力增强,0.5
+康复技术,supported_by,由……支撑,社会创新需求,0.28
+刻板行为,manifestation_of,表现,ASD,0.92
+刻板行为,assessed_by,由……评估,rating scale,0.28
+刻板行为,impairs,损害,学习投入,0.28
+感知测量,operationalizes,操作化,心理活动,0.5
+感知测量,measures,度量,社会性,0.5
+自闭症儿童组,contrasts_with,与……形成对比,典型发展对照组,0.72
+自闭症儿童组,related_to,与……相关,autistic peers,0.5
+自闭症儿童组,assessed_by,由……评估,ADOS-2,0.28
+典型发展对照组,part_of,属于,control group,0.5
+典型发展对照组,synonym_of,同义词,neurotypical,0.5
+高孤独症特质,contrasts_with,与……形成对比,ASD,0.72
+高孤独症特质,manifestation_of,表现,ASD,0.28
+基线,synonym_of,同义词,baseline,0.72
+基线,related_to,与……相关,任务态基线,0.72
+基线,required_by,为……所需,显著性差异,0.5
+任务态,contrasts_with,与……形成对比,任务态基线,0.72
+任务态,related_to,与……相关,基线,0.72
+任务态,recorded_by,由……记录,fNIRS,0.28
+社会性,measured_by,由……测量,joint attention,0.5
+社会性,manifests_in,体现于,storytelling,0.28
+社会性,part_of,属于,高阶学习状态表征,0.28
+显著性差异,requires,需要,基线,0.5
+显著性差异,supports,支持,可复现研究证据,0.5
+显著性差异,contrasts_with,与……形成对比,mastery gain paradox,0.28
+认知资源清单,operationalizes,操作化,cognitive load,0.5
+认知资源清单,method_of,是……的方法,认知裂缝,0.5
+认知资源清单,related_to,与……相关,cognitive demand,0.28
+社交障碍,symptom_of,是……的症状,ASD,0.92
+社交障碍,measured_by,由……测量,social disengagement,0.28
+社交障碍,related_to,与……相关,social use of communication,0.5
+任务态基线,subtype_of,子类型,基线,0.72
+任务态基线,enables,使能,显著性差异,0.28
+任务态基线,related_to,与……相关,familiarization,0.28
+自然互动,contrasts_with,与……形成对比,formal conversation task,0.5
+自然互动,elicits,引出,joint attention,0.72
+自然互动,context_for,是……的语境,social use of language,0.28
+数智时代知识转型,affects,影响,知识生产,0.5
+数智时代知识转型,contrasts_with,与……形成对比,大传统,0.28
+数智时代知识转型,related_to,与……相关,数智化,0.5
+多模态探究,subtype_of,子类型,inquiry,0.72
+多模态探究,part_of,属于,深度融合,0.28
+认知裂缝,part_of,属于,performance-competence divide,0.72
+认知裂缝,manifestation_of,表现,illusion of competence,0.5
+认知裂缝,related_to,与……相关,unaided performance,0.5
+大传统,related_to,与……相关,科学编史学,0.5
+大传统,supports,支持,知识谱系,0.28
+大传统,part_of,属于,知识生产,0.28
+概念判断,synonym_of,同义词,logical judgment,0.72
+概念判断,part_of,属于,知识哲学,0.5
+概念判断,basis_for,是……的依据,知识体系,0.5
+经验综合,contrasts_with,与……形成对比,演绎推理,0.72
+经验综合,part_of,属于,科学解释,0.5
+经验综合,related_to,与……相关,经验,0.28
+科学编史学,supports,支持,知识谱系,0.5
+科学编史学,informs,为……提供依据,范式转换,0.28
+科学编史学,part_of,属于,教育科研,0.28
+知识哲学,synonym_of,同义词,epistemology,0.92
+知识哲学,framework_for,是……的框架,知识谱系,0.5
+知识哲学,broader_than,范围更广,概念判断,0.5
+知识谱系,part_of,属于,知识体系,0.5
+知识谱系,traces,追溯,知识生产,0.28
+知识谱系,supported_by,由……支撑,科学编史学,0.5
+知识生产,part_of,属于,知识生态,0.72
+知识生产,assessed_by,由……评估,可复现研究证据,0.5
+知识生产,driven_by,由……驱动,大学组织理念,0.5
+演绎推理,part_of,属于,抽象思维,0.5
+演绎推理,basis_for,是……的依据,验证工具,0.5
+数学主义,contrasts_with,与……形成对比,连接主义,0.5
+数学主义,exemplifies,例示,抽象思维,0.28
+数学主义,basis_of,是……的基础,知识体系,0.28
+连接主义,explains,解释,学习机制,0.72
+连接主义,part_of,属于,deep learning,0.5
+人类知识,part_of,属于,知识生态,0.28
+人类知识,related_to,与……相关,知识体系,0.5
+人类知识,related_to,与……相关,知识分工,0.28
+证据链,part_of,属于,可复现研究证据,0.5
+证据链,supports,支持,科学解释,0.5
+文化基因,part_of,属于,人类知识,0.5
+文化基因,related_to,与……相关,social learning theory,0.5
+文化基因,manifests_in,体现于,近邻繁殖,0.5
+文化认同,related_to,与……相关,文化理解,0.5
+文化认同,motivates,激励,学习投入,0.5
+文化认同,affects,影响,学业认同,0.5
+认知对象,object_of,是……的对象,抽象思维,0.5
+认知对象,related_to,与……相关,心理活动,0.5
+认知对象,related_to,与……相关,概念判断,0.28
+科学解释,part_of,属于,知识体系,0.5
+科学解释,related_to,与……相关,范式转换,0.5
+科学解释,supported_by,由……支撑,证据链,0.5
+议题驱动,part_of,属于,课程设置,0.72
+议题驱动,motivated_by,由……激励,社会创新需求,0.5
+议题驱动,part_of,属于,项目研究,0.28
+验证工具,part_of,属于,科学解释,0.5
+验证工具,addresses,针对,认知裂缝,0.5
+人机协同结构,operationalizes,操作化,delegation boundary,0.72
+人机协同结构,grounds,为……奠基,责任归属,0.5
+人机协同结构,related_to,与……相关,不可替代学习,0.28
+不可替代学习,part_of,属于,AI-free zone,0.5
+不可替代学习,principle_of,是……的原则,tool-invariant assessment,0.5
+不可替代学习,supports,支持,认知责任,0.5
+深度融合,part_of,属于,人工智能+教育,0.72
+深度融合,related_to,与……相关,数智化,0.5
+深度融合,requires,需要,教师数字素养,0.5
+深度融合,enables,使能,因材施教,0.5
+条件反射,synonym_of,同义词,conditioned reflex,0.92
+条件反射,phenomenon_in,……中的现象,学习机制,0.5
+条件反射,supported_by,由……支撑,兴奋与抑制,0.28
+兴奋与抑制,synonym_of,同义词,excitation and inhibition,0.92
+兴奋与抑制,part_of,属于,身体活动,0.5
+兴奋与抑制,phenomenon_in,……中的现象,brain activity,0.5
+心理活动,synonym_of,同义词,mental activity,0.92
+心理活动,encompasses,涵盖,情感活动,0.72
+心理活动,encompasses,涵盖,意志活动,0.5
+心理活动,related_to,与……相关,身体活动,0.5
+情感活动,synonym_of,同义词,emotional activity,0.92
+情感活动,manifests_in,体现于,学习情绪,0.5
+意志活动,synonym_of,同义词,volitional activity,0.92
+意志活动,develops,发展,自我管理,0.5
+意志活动,related_to,与……相关,学习力,0.5
+实践活动,synonym_of,同义词,practical activity,0.92
+实践活动,enables,使能,能力增强,0.5
+实践活动,operationalizes,操作化,做中学,0.5
+身体活动,synonym_of,同义词,bodily activity,0.92
+身体活动,grounds,为……奠基,心理活动,0.5
+身体活动,affects,影响,执行功能,0.5
+对象性化活动,synonym_of,同义词,object-oriented activity,0.92
+对象性化活动,contrasts_with,与……形成对比,自主学习,0.5
+对象性化活动,phenomenon_in,……中的现象,伦理关系,0.5
+抽象思维,enables,使能,科学解释,0.5
+抽象思维,assessed_by,由……评估,Bloom's taxonomy,0.5
+抽象思维,requires,需要,语言运用,0.28
+能力压缩,manifestation_of,表现,cognitive offloading,0.72
+能力压缩,leads_to,导致,deskilling,0.5
+能力压缩,mitigated_by,被……缓解,不可替代学习,0.5
+近邻繁殖,related_to,与……相关,social learning theory,0.5
+近邻繁殖,explains,解释,知识谱系,0.5
+知识分工,part_of,属于,知识生态,0.5
+知识分工,contrasts_with,与……形成对比,人类知识,0.28
+知识分工,requires,需要,语言运用,0.28
+能力增强,manifestation_of,表现,学习力,0.5
+能力增强,assessed_by,由……评估,transfer test,0.72
+能力增强,contrasts_with,与……形成对比,speedup illusion,0.5
+文化理解,part_of,属于,文化认同,0.5
+文化理解,enables,使能,cross-cultural communication,0.28
+文化理解,contrasts_with,与……形成对比,cultural encoding,0.28
+跨时空多主体协同教学,subtype_of,子类型,多主体协同教学,0.72
+跨时空多主体协同教学,part_of,属于,深度融合,0.5
+跨时空多主体协同教学,enables,使能,asynchronous learning,0.28
+跨时空多主体协同教学,requires,需要,教师数字素养,0.28
+教师数字素养,subtype_of,子类型,TPACK,0.72
+教师数字素养,subtype_of,子类型,AI-TPACK,0.72
+教师数字素养,affects,影响,teacher AI adoption,0.5
+教师数字素养,part_of,属于,教师素养,0.5
+学生数字素养,subtype_of,子类型,数字素养,0.72
+学生数字素养,subtype_of,子类型,AI literacy,0.72
+学生数字素养,related_to,与……相关,数字胜任力,0.5
+学生数字素养,mitigates,缓解,academic integrity,0.28
+数字素养,umbrella_for,是……的总称,AI literacy,0.72
+数字素养,subtype_of,子类型,数字胜任力,0.5
+数字素养,part_of,属于,核心素养,0.5
+数字素养,required_by,为……所需,智能教育,0.28
+教-学协同,mechanism_of,是……的机制,教学评一致性,0.5
+教-学协同,informs,为……提供依据,因材施教,0.5
+教-学协同,related_to,与……相关,formative assessment,0.5
+教-学协同,related_to,与……相关,学习状态追踪,0.5
+课程设置,part_of,属于,curriculum,0.72
+课程设置,constrained_by,受限于,课程标准,0.5
+课程设置,part_of,属于,课程知识体系,0.72
+课程知识体系,subtype_of,子类型,知识体系,0.72
+课程知识体系,part_of,属于,curriculum,0.5
+知识体系,contrasts_with,与……形成对比,人类知识,0.5
+知识体系,part_of,属于,知识生态,0.28
+知识生态,part_of,属于,教育生态,0.5
+知识生态,related_to,与……相关,产学研融合,0.5
+教师角色,related_to,与……相关,人机协同中的教师角色,0.72
+教师角色,affected_by,受……影响,深度融合,0.5
+教师角色,related_to,与……相关,teacher agency,0.5
+大学组织形态,part_of,属于,组织底座,0.5
+大学组织形态,derived_from,衍生自,大学组织理念,0.5
+大学组织形态,affects,影响,教师角色,0.5
+大学组织理念,governs,支配,课程设置,0.5
+大学组织理念,governs,支配,人才培养模式,0.5
+大学组织理念,contrasts_with,与……形成对比,社会创新需求,0.28
+社会创新需求,motivates,激励,课程设置,0.5
+社会创新需求,motivates,激励,人才培养模式,0.5
+社会创新需求,part_of,属于,产学研融合,0.28
+人才培养模式,part_of,属于,curriculum,0.5
+人才培养模式,related_to,与……相关,competency-based education,0.5
+人才培养模式,enables,使能,能力增强,0.28
+范式转换,related_to,与……相关,知识谱系,0.28
+范式转换,related_to,与……相关,学习科学,0.28
+结构性挑战,exemplifies,例示,评价方式单一,0.5
+结构性挑战,aggravates,加重,资源不均衡,0.5
+结构性挑战,impedes,阻碍,人才培养模式,0.5
+经验,contrasts_with,与……形成对比,演绎推理,0.5
+经验,part_of,属于,人类知识,0.5
+经验,related_to,与……相关,语言经验,0.28
+经验传承的局限,problem_of,是……的问题,经验,0.5
+经验传承的局限,basis_for,是……的依据,缄默知识,0.72
+经验传承的局限,mitigated_by,被……缓解,cognitive apprenticeship,0.5
+因材施教,implemented_by,由……实现,personalized learning,0.72
+因材施教,enabled_by,由……启用,学习状态追踪,0.72
+因材施教,related_to,与……相关,差异化,0.5
+缄默知识,part_of,属于,人类知识,0.5
+缄默知识,related_to,与……相关,隐性知识,0.5
+缄默知识,manifests_in,体现于,临床经验,0.5
+实践关系,synonym_of,同义词,practical relation,0.72
+实践关系,grounds,为……奠基,实践活动,0.72
+实践关系,contrasts_with,与……形成对比,伦理关系,0.5
+伦理关系,synonym_of,同义词,ethical relation,0.72
+伦理关系,grounds,为……奠基,五育,0.28
+伦理关系,grounds,为……奠基,academic integrity,0.5
+Learner State Representations,subtype_of,子类型,learner modelling,0.72
+Learner State Representations,related_to,与……相关,cognitive model of the learner,0.5
+ASD,subtype_of,子类型,神经发育障碍,0.92
+ASD,assessed_by,由……评估,ADOS-2,0.72
+ASD,part_of,属于,DSM-5,0.5
+ASD,affects,影响,joint attention,0.5
+visual attention,measured_by,由……测量,gaze,0.72
+visual attention,contributes_to,有助于,学习投入,0.5
+active group,contrasts_with,与……形成对比,control group,0.72
+active group,related_to,与……相关,教育实验,0.5
+active group,assessed_by,由……评估,显著性差异,0.28
+control group,part_of,属于,教育实验,0.5
+control group,enables,使能,显著性差异,0.5
+control group,context_for,是……的语境,多场景仿真,0.28
+narrative,used_by,被……使用,shared reading,0.5
+narrative,contrasts_with,与……形成对比,formal conversation task,0.28
+narrative,part_of,属于,storytelling,0.5
+picture description,elicits,引出,语言运用,0.5
+picture description,measures,度量,言语加工,0.5
+picture description,addresses,针对,社交障碍,0.28
+storytelling,variant_of,变体,narrative,0.5
+storytelling,requires,需要,语言运用,0.28
+storytelling,assessed_by,由……评估,rubric,0.28
+sample stimulus,used_by,被……使用,familiarization,0.5
+sample stimulus,precedes,先于,任务态,0.28
+neurotypical,instance_of,实例,典型发展对照组,0.28
+neurotypical,contrasts_with,与……形成对比,ASD,0.5
+parent-child dialogue,instance_of,实例,linguistic communication,0.72
+parent-child dialogue,enables,使能,语言运用,0.5
+parent-child dialogue,related_to,与……相关,vocabulary,0.28
+shared reading,supports,支持,vocabulary,0.72
+shared reading,enables,使能,深度阅读,0.5
+shared reading,related_to,与……相关,parent-child dialogue,0.5
+memory recall,related_to,与……相关,retrieval practice,0.72
+memory recall,measured_by,由……测量,retention test,0.72
+memory recall,affected_by,受……影响,forgetting pattern,0.5
+memory recall,requires,需要,working memory,0.28
+rubric,used_for,用于,rubric-based grading,0.72
+rubric,used_for,用于,formative assessment,0.5
+rubric,broader_than,范围更广,hidden rubric,0.5
+rating scale,contrasts_with,与……形成对比,rubric,0.72
+rating scale,used_for,用于,self-evaluations,0.72
+rating scale,used_for,用于,confidence level,0.5
+rating scale,used_by,被……使用,定性评估,0.28
+confidence level,part_of,属于,calibration,0.72
+confidence level,assessed_by,由……评估,self-evaluations,0.5
+confidence level,related_to,与……相关,miscalibration,0.5
+confidence level,related_to,与……相关,metacognition,0.28
+social disengagement,symptom_of,是……的症状,ASD,0.72
+social disengagement,contrasts_with,与……形成对比,joint attention,0.5
+social disengagement,measured_by,由……测量,gaze,0.72
+social disengagement,related_to,与……相关,social use of communication,0.5
+social use of language,subtype_of,子类型,linguistic communication,0.72
+social use of language,part_of,属于,言语加工,0.72
+social use of language,related_to,与……相关,language level,0.5
+social use of language,assessed_by,由……评估,conversation evaluation,0.5
+language level,used_for,用于,learner modelling,0.5
+language level,part_of,属于,Learner State Representations,0.5
+language level,related_to,与……相关,母语能力,0.5
+language level,assessed_by,由……评估,conversation evaluation,0.28
+social use of communication,part_of,属于,社会性,0.5
+social use of communication,measured_by,由……测量,joint attention,0.72
+social use of communication,contrasts_with,与……形成对比,social disengagement,0.5
+social use of communication,assessed_by,由……评估,formal conversation task,0.5
+vocabulary,part_of,属于,language level,0.5
+vocabulary,enables,使能,深度阅读,0.5
+vocabulary,related_to,与……相关,母语能力,0.5
+vocabulary,supports,支持,读写迁移,0.28
+behavior recording,used_for,用于,multimodal content analysis,0.72
+behavior recording,records,记录,behavioral streams,0.5
+behavior recording,part_of,属于,过程性数据,0.5
+behavior recording,enabled_by,由……启用,multimodal data collection,0.5
+baseline,part_of,属于,教育实验,0.5
+baseline,related_to,与……相关,control group,0.5
+baseline,contrasts_with,与……形成对比,familiarization,0.28
+baseline,related_to,与……相关,任务态基线,0.5
+familiarization,part_of,属于,教育实验,0.28
+familiarization,context_for,是……的语境,任务态,0.28
+formal conversation task,subtype_of,子类型,conversation-based assessment,0.72
+formal conversation task,contrasts_with,与……形成对比,parent-child dialogue,0.5
+formal conversation task,assessed_by,由……评估,conversation evaluation,0.72
+formal conversation task,part_of,属于,ADOS-2,0.5
+self-evaluations,subtype_of,子类型,self-evaluation,0.72
+self-evaluations,measured_by,由……测量,rating scale,0.5
+self-evaluations,assessed_by,由……评估,calibration,0.72
+self-evaluations,related_to,与……相关,metacognition,0.5
+conversation evaluation,used_for,用于,conversation-based assessment,0.72
+conversation evaluation,subtype_of,子类型,定性评估,0.5
+fNIRS,measures,度量,brain activity,0.92
+fNIRS,part_of,属于,认知神经机制,0.72
+fNIRS,related_to,与……相关,师生脑耦合,0.28
+cerebral cortex,underlies,构成基础,thinking,0.5
+cerebral cortex,supports,支持,执行功能,0.5
+cerebral cortex,affected_by,受……影响,excitation and inhibition,0.5
+superior temporal gyrus,part_of,属于,cerebral cortex,0.72
+superior temporal gyrus,measured_by,由……测量,brain activity,0.5
+multimodal content analysis,uses,使用,multimodal data collection,0.72
+multimodal content analysis,produces,产生,behavioral streams,0.5
+multimodal data collection,enables,使能,multimodal content analysis,0.72
+multimodal data collection,used_for,用于,behavior recording,0.5
+multimodal data collection,part_of,属于,过程性数据,0.5
+gaze,manifestation_of,表现,joint attention,0.72
+gaze,part_of,属于,behavioral streams,0.5
+gaze,related_to,与……相关,social disengagement,0.5
+referential speech,manifestation_of,表现,joint attention,0.72
+referential speech,part_of,属于,言语加工,0.5
+referential speech,measured_by,由……测量,language level,0.28
+referential speech,related_to,与……相关,vocabulary,0.5
+behavioral streams,derived_from,衍生自,behavior recording,0.72
+behavioral streams,part_of,属于,过程性数据,0.5
+behavioral streams,related_to,与……相关,behavioural traces,0.5
+pointing,manifestation_of,表现,joint attention,0.92
+pointing,part_of,属于,behavioral streams,0.5
+pointing,related_to,与……相关,gaze,0.5
+hierarchical joint attention coding,used_for,用于,joint attention,0.72
+hierarchical joint attention coding,enables,使能,social use of communication,0.5
+hierarchical joint attention coding,used_for,用于,ADOS-2,0.28
+joint attention,prerequisite_for,是……的前提,vocabulary,0.72
+joint attention,measured_by,由……测量,gaze,0.72
+joint attention,enabled_by,由……启用,pointing,0.72
+joint attention,prerequisite_for,是……的前提,语言运用,0.5
+autistic peers,instance_of,实例,自闭症儿童组,0.72
+autistic peers,contrasts_with,与……形成对比,neurotypical,0.5
+autistic peers,part_of,属于,自然互动,0.28
+preschool,context_for,是……的语境,joint attention,0.5
+preschool,context_for,是……的语境,shared reading,0.28
+preschool,related_to,与……相关,自闭症儿童组,0.28
+cognitive structure,part_of,属于,知识建构,0.72
+cognitive structure,related_to,与……相关,concept,0.5
+cognitive structure,part_of,属于,学习观,0.5
+cognitive structure,enables,使能,知识生成,0.5
+知识生成,enables,使能,知识建构,0.72
+知识生成,part_of,属于,学习观,0.5
+知识生成,supported_by,由……支撑,知识诊断,0.28
+知识生成,requires,需要,批判性思考,0.5
+隐性学习策略,supports,支持,缄默知识,0.5
+隐性学习策略,contrasts_with,与……形成对比,direct instruction,0.5
+隐性学习策略,part_of,属于,social learning theory,0.5
+传统学习分析,part_of,属于,learning analytic,0.72
+传统学习分析,contrasts_with,与……形成对比,human-centred learning analytics,0.5
+传统学习分析,contrasts_with,与……形成对比,在线学习诊断,0.5
+在线学习诊断,part_of,属于,knowledge tracing,0.72
+在线学习诊断,uses,使用,item response theory,0.5
+在线学习诊断,enables,使能,adaptive learning,0.5
+知识诊断,subtype_of,子类型,cognitive diagnosis,0.92
+知识诊断,uses,使用,item response theory,0.5
+知识诊断,enabled_by,由……启用,在线学习诊断,0.5
+教师素养,part_of,属于,teacher professional development,0.72
+教师素养,includes,包含,数字素养,0.5
+教师素养,related_to,与……相关,TPACK,0.5
+现代教育技术,enables,使能,智慧课堂,0.72
+现代教育技术,part_of,属于,信息化,0.5
+现代教育技术,related_to,与……相关,cognitive load,0.5
+现代教育技术,part_of,属于,digital infrastructure,0.28
+学习环境,part_of,属于,situated learning,0.72
+学习环境,part_of,属于,教育生态,0.5
+学习环境,context_for,是……的语境,cooperative learning,0.5
+学习环境,part_of,属于,智慧课堂,0.5
+课程观,part_of,属于,curriculum,0.72
+课程观,shapes,塑造,instructional design,0.72
+课程观,part_of,属于,课程标准,0.5
+学习观,contrasts_with,与……形成对比,课程观,0.5
+学习观,grounds,为……奠基,constructivism,0.72
+学习观,part_of,属于,learning,0.5
+学习观,shapes,塑造,classroom discourse,0.5
+产学研融合,enables,使能,人才培养模式,0.5
+产学研融合,supports,支持,项目研究,0.5
+产学研融合,related_to,与……相关,教育科研,0.5
+批判性思考,instance_of,实例,critical thinking,0.92
+批判性思考,supported_by,由……支撑,dialogic argument,0.72
+批判性思考,requires,需要,证据链,0.5
+批判性思考,part_of,属于,核心素养,0.5
+主题教学,related_to,与……相关,跨学科,0.72
+主题教学,contrasts_with,与……形成对比,direct instruction,0.5
+主题教学,part_of,属于,project-based learning,0.5
+主题教学,enabled_by,由……启用,问题创设,0.5
+智能备课,part_of,属于,AI collaborative lesson preparation,0.72
+智能备课,part_of,属于,subject-based lesson preparation,0.5
+智能备课,requires,需要,不可替代性,0.5
+智能备课,enables,使能,单元集体备课,0.28
+智能测评,enabled_by,由……启用,生成式心理测量,0.72
+智能测评,requires,需要,construct validity,0.72
+智能测评,uses,使用,item response theory,0.5
+智能测评,part_of,属于,assessment reform,0.5
+核心素养,broader_than,范围更广,关键能力,0.72
+核心素养,part_of,属于,课程标准,0.72
+核心素养,includes,包含,higher-order thinking,0.5
+核心素养,enables,使能,competency-based education,0.5
+语言运用,part_of,属于,母语能力,0.72
+语言运用,part_of,属于,核心素养,0.5
+语言运用,enables,使能,读写迁移,0.5
+智能析课,part_of,属于,智能评课,0.92
+智能析课,evaluates,评估,关键教学行为,0.5
+智能析课,requires,需要,inter-rater reliability,0.28
+整本书阅读,related_to,与……相关,深度阅读,0.72
+整本书阅读,supports,支持,structural understanding,0.72
+整本书阅读,contrasts_with,与……形成对比,群文阅读,0.28
+整本书阅读,part_of,属于,curriculum,0.5
+单元整体教学,part_of,属于,unit-based lesson preparation,0.72
+单元整体教学,contrasts_with,与……形成对比,subject-based lesson preparation,0.5
+单元整体教学,part_of,属于,单元集体备课,0.5
+单元整体教学,enables,使能,教学评一致性,0.5
+深度阅读,related_to,与……相关,学术性阅读,0.72
+深度阅读,supports,支持,批判性思考,0.72
+深度阅读,enabled_by,由……启用,思维外显,0.5
+群文阅读,part_of,属于,inquiry-based learning,0.5
+群文阅读,enables,使能,批判性思考,0.5
+读写迁移,manifestation_of,表现,cross-domain knowledge transfer,0.72
+读写迁移,part_of,属于,academic writing,0.5
+读写迁移,supported_by,由……支撑,collaborative writing,0.5
+读写迁移,requires,需要,深度阅读,0.5
+关键能力,subtype_of,子类型,higher-order thinking,0.72
+关键能力,part_of,属于,核心素养,0.72
+关键能力,enables,使能,知识迁移,0.5
+结构化思维,part_of,属于,higher-order thinking,0.72
+结构化思维,enables,使能,问题解决,0.5
+结构化思维,enables,使能,知识建构,0.5
+结构化思维,related_to,与……相关,思维外显,0.5
+智慧课堂,part_of,属于,smart teaching environment,0.92
+智慧课堂,part_of,属于,现代教育技术,0.72
+智慧课堂,enables,使能,immediate feedback,0.5
+智慧课堂,measured_by,由……测量,参与度,0.5
+随机点名,part_of,属于,关键教学行为,0.72
+随机点名,enables,使能,student participation,0.72
+随机点名,method_of,是……的方法,classroom discourse,0.5
+板书,mitigates,缓解,cognitive load,0.5
+板书,supports,支持,structural understanding,0.5
+板书,part_of,属于,direct instruction,0.28
+分组活动,subtype_of,子类型,cooperative learning,0.92
+分组活动,enables,使能,collaborative knowledge construction,0.72
+分组活动,requires,需要,responsibility accounting,0.72
+分组活动,part_of,属于,collaborative activity,0.5
+数字白板,subtype_of,子类型,digital board,0.72
+数字白板,contrasts_with,与……形成对比,板书,0.72
+数字白板,affected_by,受……影响,split-attention effect,0.5
+数字白板,part_of,属于,smart teaching environment,0.5
+学术性阅读,part_of,属于,critical thinking,0.72
+学术性阅读,requires,需要,证据链,0.5
+学术性阅读,requires,需要,argumentation,0.5
+学术性阅读,part_of,属于,academic writing,0.5
+教学评一致性,principle_of,是……的原则,instructional design,0.92
+教学评一致性,supported_by,由……支撑,evidence-centered design,0.72
+教学评一致性,requires,需要,construct validity,0.5
+教学评一致性,related_to,与……相关,学习目标,0.5
+关键教学行为,instance_of,实例,wait time,0.72
+关键教学行为,part_of,属于,classroom discourse,0.5
+关键教学行为,measured_by,由……测量,智能评课,0.5
+关键教学行为,assessed_by,由……评估,inter-rater reliability,0.5
+单元集体备课,part_of,属于,unit-based lesson preparation,0.5
+单元集体备课,enables,使能,teacher professional development,0.72
+单元集体备课,impairs,损害,因材施教,0.5
+智能评课,part_of,属于,assessment reform,0.5
+智能评课,evaluates,评估,关键教学行为,0.72
+智能评课,related_to,与……相关,智能析课,0.5
+思维外显,enables,使能,self-explanation,0.72
+思维外显,enables,使能,metacognitive scaffolding,0.72
+思维外显,contrasts_with,与……形成对比,隐性学习策略,0.5
+思维外显,supported_by,由……支撑,板书,0.5
+人机共创,enables,使能,AI-assisted writing,0.72
+人机共创,contrasts_with,与……形成对比,answer offloading,0.5
+人机共教,part_of,属于,AI dual-teacher,0.72
+人机共教,related_to,与……相关,教师角色,0.5
+智能学伴,subtype_of,子类型,AI learning companion,0.92
+智能学伴,related_to,与……相关,help-seeking,0.72
+智能学伴,contrasts_with,与……形成对比,answer offloading,0.5
+智能学伴,part_of,属于,智能导师,0.5
+定性评估,synonym_of,同义词,qualitative assessment,0.72
+定性评估,contrasts_with,与……形成对比,summative assessment,0.5
+定性评估,supports,支持,narrative,0.5
+定性评估,assessed_by,由……评估,inter-rater reliability,0.5
+cognitive grounding,grounds,为……奠基,抽象思维,0.72
+cognitive grounding,part_of,属于,儿童具身学习,0.72
+cognitive grounding,related_to,与……相关,practical activity,0.5
+DSM-5,defines,界定,ASD,0.92
+ADOS-2,evaluates,评估,ASD,0.92
+ADOS-2,uses,使用,formal conversation task,0.5
+ADOS-2,assessed_by,由……评估,inter-rater reliability,0.5
+classic developmental theories,umbrella_for,是……的总称,最近发展区,0.72
+classic developmental theories,grounds,为……奠基,cognitive structure,0.5
+classic developmental theories,contrasts_with,与……形成对比,连接主义,0.5
+classic developmental theories,part_of,属于,学习科学,0.5
+SES,related_to,与……相关,资源不均衡,0.72
+SES,affects,影响,stereotype threat,0.5
+SES,constrains,约束,课程设置,0.28
+belief condition,part_of,属于,Conditions of Knowledge,0.92
+belief condition,contrasts_with,与……形成对比,truth condition,0.5
+belief condition,related_to,与……相关,belief system,0.5
+evidence condition,part_of,属于,Conditions of Knowledge,0.92
+evidence condition,requires,需要,fact evidence,0.72
+evidence condition,contrasts_with,与……形成对比,truth condition,0.5
+truth condition,part_of,属于,Conditions of Knowledge,0.92
+truth condition,requires,需要,conceptual proof,0.5
+Conditions of Knowledge,part_of,属于,epistemology,0.92
+Conditions of Knowledge,includes,包含,fact evidence,0.5
+Conditions of Knowledge,problem_of,是……的问题,知识哲学,0.5
+epistemology,related_to,与……相关,知识哲学,0.72
+epistemology,umbrella_for,是……的总称,Conditions of Knowledge,0.72
+epistemology,requires,需要,evidence condition,0.5
+logical judgment,contrasts_with,与……形成对比,empirical verdict,0.72
+logical judgment,part_of,属于,thinking,0.5
+logical judgment,requires,需要,truth condition,0.5
+logical judgment,used_for,用于,批判性思考,0.5
+belief system,part_of,属于,epistemology,0.5
+belief system,contrasts_with,与……形成对比,empirical verdict,0.5
+belief system,related_to,与……相关,subjectivity,0.5
+fact evidence,part_of,属于,evidence condition,0.92
+fact evidence,supports,支持,empirical verdict,0.5
+conceptual proof,contrasts_with,与……形成对比,fact evidence,0.72
+conceptual proof,related_to,与……相关,epistemology,0.5
+conceptual proof,related_to,与……相关,演绎推理,0.5
+truthful assertion,requires,需要,evidence condition,0.5
+truthful assertion,assessed_by,由……评估,epistemic auditing,0.5
+empirical verdict,supported_by,由……支撑,fact evidence,0.72
+empirical verdict,related_to,与……相关,可复现研究证据,0.5
+brain activity,measured_by,由……测量,fNIRS,0.92
+brain activity,part_of,属于,认知神经机制,0.72
+brain activity,related_to,与……相关,情感状态,0.5
+conditioned reflex,subtype_of,子类型,excitation and inhibition,0.5
+conditioned reflex,contrasts_with,与……形成对比,cognitive processing theory,0.5
+conditioned reflex,contrasts_with,与……形成对比,social learning theory,0.5
+excitation and inhibition,part_of,属于,brain activity,0.5
+excitation and inhibition,phenomenon_in,……中的现象,cerebral cortex,0.5
+excitation and inhibition,supports,支持,volitional activity,0.5
+mental activity,includes,包含,cognitive activity,0.92
+mental activity,includes,包含,emotional activity,0.72
+mental activity,includes,包含,volitional activity,0.72
+mental activity,part_of,属于,brain activity,0.5
+cognitive activity,part_of,属于,mental activity,0.92
+cognitive activity,enables,使能,问题解决,0.5
+cognitive activity,related_to,与……相关,学习状态追踪,0.5
+emotional activity,part_of,属于,mental activity,0.92
+emotional activity,affected_by,受……影响,cognitive activity,0.5
+volitional activity,part_of,属于,mental activity,0.92
+volitional activity,requires,需要,执行功能,0.72
+volitional activity,affected_by,受……影响,cognitive load,0.5
+practical activity,part_of,属于,mental activity,0.72
+practical activity,grounds,为……奠基,object-oriented activity,0.72
+practical activity,part_of,属于,practical relation,0.72
+practical activity,contrasts_with,与……形成对比,抽象思维,0.5
+bodily activity,part_of,属于,practical activity,0.72
+bodily activity,part_of,属于,mental activity,0.5
+bodily activity,affects,影响,working memory,0.5
+object-oriented activity,subtype_of,子类型,practical activity,0.92
+practical relation,underlies,构成基础,object-oriented activity,0.72
+object-oriented activity,enables,使能,cognitive grounding,0.5
+gestalt learning theory,contrasts_with,与……形成对比,direct instruction,0.5
+gestalt learning theory,part_of,属于,classic developmental theories,0.28
+gestalt learning theory,related_to,与……相关,结构化思维,0.5
+social learning theory,grounds,为……奠基,隐性学习策略,0.72
+social learning theory,part_of,属于,classic developmental theories,0.5
+cognitive processing theory,part_of,属于,classic developmental theories,0.5
+cognitive processing theory,describes,描述,memory recall,0.72
+cognitive processing theory,contrasts_with,与……形成对比,gestalt learning theory,0.5
+activity theory of learning,grounds,为……奠基,practical activity,0.72
+activity theory of learning,related_to,与……相关,儿童具身学习,0.72
+activity theory of learning,contrasts_with,与……形成对比,cognitive processing theory,0.5
+cognitive extension,part_of,属于,distributed cognition,0.92
+cognitive extension,contrasts_with,与……形成对比,cognitive offloading,0.5
+educative relation,enables,使能,learning,0.72
+educative relation,requires,需要,teacher agency,0.5
+educative relation,contrasts_with,与……形成对比,cognitive outsourcing,0.5
+practical relation,contrasts_with,与……形成对比,educative relation,0.5
+practical relation,contrasts_with,与……形成对比,ethical relation,0.5
+practical relation,related_to,与……相关,subjectivity,0.28
+ethical relation,part_of,属于,educative relation,0.5
+ethical relation,related_to,与……相关,academic integrity,0.5
+ethical relation,related_to,与……相关,责任归属,0.28
+epistemological machine,related_to,与……相关,epistemology,0.5
+subjectivity,part_of,属于,educative relation,0.5
+subjectivity,related_to,与……相关,learner agency,0.72
+structural understanding,part_of,属于,higher-order thinking,0.72
+structural understanding,requires,需要,cognitive structure,0.5
+structural understanding,measured_by,由……测量,concept question,0.5
+apperception,part_of,属于,conceptual change,0.5
+apperception,underlies,构成基础,cognitive structure,0.5
+apperception,part_of,属于,gestalt learning theory,0.5
+imagination,part_of,属于,higher-order thinking,0.72
+imagination,required_by,为……所需,inquiry learning,0.5
+thinking,part_of,属于,cognitive activity,0.72
+thinking,part_of,属于,higher-order thinking,0.5
+thinking,requires,需要,working memory,0.5
+empirical verdict,part_of,属于,实证校准,0.28
+fact evidence,instance_of,实例,证据链,0.5
+social learning theory,explains,解释,self-efficacy,0.5
+subjectivity,contrasts_with,与……形成对比,object-oriented activity,0.28
+truth condition,related_to,与……相关,belief system,0.28
+群文阅读,related_to,与……相关,议题驱动,0.28
+linguistic communication,part_of,属于,dialogic teaching,0.5
+linguistic communication,enables,使能,cultural encoding,0.72
+linguistic communication,related_to,与……相关,语言运用,0.5
+linguistic communication,related_to,与……相关,classroom discourse,0.5
+linguistic communication,required_by,为……所需,cross-cultural communication,0.28
+cultural encoding,related_to,与……相关,文化认同,0.5
+cultural encoding,enables,使能,cultural mediator,0.5
+cultural encoding,related_to,与……相关,文化理解,0.72
+cultural encoding,related_to,与……相关,cross-cultural communication,0.5
+cross-cultural communication,requires,需要,cultural mediator,0.72
+cross-cultural communication,related_to,与……相关,文化理解,0.5
+cross-cultural communication,enables,使能,empathy point,0.5
+cultural mediator,bridges,桥接,文化理解,0.72
+cultural mediator,relates_to,与……相关,empathy point,0.5
+cultural mediator,enables,使能,cross-cultural communication,0.5
+empathy point,enables,使能,social-emotional learning,0.72
+empathy point,related_to,与……相关,emotional intelligence,0.5
+empathy point,related_to,与……相关,classroom discourse,0.5
+digital infrastructure,enables,使能,smart campus,0.72
+digital infrastructure,bounded_by,受限于,资源不均衡,0.5
+digital infrastructure,supports,支持,云课堂,0.5
+smart campus,includes,包含,smart management platform,0.72
+smart campus,includes,包含,smart teaching environment,0.72
+smart campus,enabled_by,由……启用,digital infrastructure,0.72
+smart campus,related_to,与……相关,智慧课堂,0.5
+smart teaching environment,part_of,属于,smart campus,0.72
+smart teaching environment,includes,包含,digital board,0.72
+smart teaching environment,includes,包含,specialized intelligent classroom,0.5
+smart teaching environment,enables,使能,课堂变革,0.5
+smart management platform,part_of,属于,smart campus,0.72
+smart management platform,enables,使能,数智治理,0.72
+smart management platform,uses,使用,digital tab,0.5
+smart security,part_of,属于,smart campus,0.72
+smart outdoor environment,part_of,属于,smart campus,0.72
+smart outdoor environment,enabled_by,由……启用,digital infrastructure,0.5
+smart outdoor environment,related_to,与……相关,smart security,0.5
+digital board,instance_of,实例,教学工具,0.72
+digital board,part_of,属于,smart teaching environment,0.72
+digital board,related_to,与……相关,板书,0.5
+digital tab,part_of,属于,smart management platform,0.5
+digital tab,enables,使能,家校协同,0.5
+digital tab,part_of,属于,smart campus,0.5
+mobile terminal,instance_of,实例,教学工具,0.72
+mobile terminal,enables,使能,云课堂,0.72
+mobile terminal,enables,使能,智慧作业,0.5
+smart teaching assistant,instance_of,实例,AI tutor,0.72
+smart teaching assistant,enables,使能,人机共教,0.5
+AI dual-teacher,exemplifies,例示,多主体协同教学,0.72
+AI collaborative lesson preparation,subtype_of,子类型,单元集体备课,0.72
+AI collaborative lesson preparation,enables,使能,智能备课,0.72
+AI collaborative lesson preparation,related_to,与……相关,跨学科教研共同体,0.5
+qualitative assessment,contrasts_with,与……形成对比,评价方式单一,0.72
+qualitative assessment,related_to,与……相关,学生综合发展评价报告,0.72
+qualitative assessment,part_of,属于,学业评价,0.5
+chapter auto-generation,part_of,属于,content intelligent creation,0.72
+chapter auto-generation,contrasts_with,与……形成对比,教师二次创作,0.5
+instructional resource library,variant_of,变体,校本资源库,0.5
+instructional resource library,supports,支持,云教研,0.5
+learning companion,instance_of,实例,AI learning companion,0.72
+learning companion,contrasts_with,与……形成对比,direct guidance,0.5
+learning companion,enables,使能,Socratic questioning,0.5
+learning companion,supports,支持,self-regulated learning,0.5
+digital partner,part_of,属于,人机共构,0.5
+middle-school entrance exam,related_to,与……相关,学业评价,0.5
+middle-school entrance exam,affects,影响,课程设置,0.5
+middle-school entrance exam,related_to,与……相关,学生评价,0.5
+specialized intelligent classroom,part_of,属于,智慧课堂,0.72
+specialized intelligent classroom,part_of,属于,smart campus,0.5
+specialized intelligent classroom,includes,包含,digital board,0.5
+unit-based lesson preparation,instance_of,实例,单元整体教学,0.72
+unit-based lesson preparation,contrasts_with,与……形成对比,subject-based lesson preparation,0.72
+unit-based lesson preparation,supports,支持,教学评一致性,0.5
+subject-based lesson preparation,part_of,属于,学科教学,0.72
+subject-based lesson preparation,related_to,与……相关,单元集体备课,0.5
+语感,part_of,属于,母语能力,0.72
+语感,derived_from,衍生自,语言经验,0.72
+语感,related_to,与……相关,语言运用,0.5
+语言经验,enables,使能,母语能力,0.72
+语言经验,related_to,与……相关,语言运用,0.72
+语言经验,manifests_in,体现于,真实探究任务,0.28
+母语能力,part_of,属于,核心素养,0.5
+母语能力,enables,使能,语言运用,0.72
+母语能力,related_to,与……相关,文化认同,0.5
+数智场域,part_of,属于,数智化转型,0.72
+数智场域,enabled_by,由……启用,数字化,0.5
+数智场域,manifestation_of,表现,人工智能+教育,0.72
+数智场域,related_to,与……相关,教育生态,0.5
+小学育人场景重构,enables,使能,数智育人,0.72
+小学育人场景重构,part_of,属于,课堂变革,0.5
+小学育人场景重构,related_to,与……相关,五育,0.5
+数智化转型,succeeds,后于,数字化,0.92
+数智化转型,manifestation_of,表现,范式转换,0.72
+数智化转型,enables,使能,数智治理,0.72
+隐性知识,synonym_of,同义词,缄默知识,0.92
+隐性知识,contrasts_with,与……形成对比,declarative knowledge,0.72
+隐性知识,related_to,与……相关,cognitive apprenticeship,0.72
+资源不均衡,causes,引起,结构性挑战,0.72
+资源不均衡,affected_by,受……影响,SES,0.72
+资源不均衡,impairs,损害,因材施教,0.5
+教学模式固化,prevents,防止,课堂变革,0.92
+教学模式固化,contrasts_with,与……形成对比,范式转换,0.72
+教学模式固化,caused_by,由……引起,评价方式单一,0.72
+评价方式单一,contrasts_with,与……形成对比,五育,0.72
+评价方式单一,impairs,损害,探究能力,0.5
+学校数字基建,specialization_of,具体形态,digital infrastructure,0.92
+学校数字基建,enables,使能,智慧课堂,0.5
+学校数字基建,manifests_in,体现于,smart campus,0.5
+智慧评价系统,part_of,属于,智慧课堂,0.5
+智慧评价系统,uses,使用,过程性数据,0.92
+智慧评价系统,enables,使能,成长档案,0.72
+智慧评价系统,related_to,与……相关,智能评价,0.72
+智能微课生成,part_of,属于,content intelligent creation,0.72
+教师二次创作,supports,支持,不可替代性,0.5
+教师二次创作,related_to,与……相关,智能备课,0.5
+课程互动,related_to,与……相关,student participation,0.72
+课程互动,part_of,属于,课堂变革,0.5
+课程互动,enables,使能,学习投入,0.72
+育人伙伴,part_of,属于,协同育人,0.72
+育人伙伴,contrasts_with,与……形成对比,教学工具,0.5
+育人伙伴,related_to,与……相关,心理健康,0.5
+信息化,precedes,先于,数字化,0.92
+信息化,contrasts_with,与……形成对比,数智化,0.72
+数字化,succeeds,后于,信息化,0.92
+数字化,enables,使能,过程性数据,0.72
+数字化,part_of,属于,数智化,0.92
+数智化,part_of,属于,数智化转型,0.92
+数智化,contrasts_with,与……形成对比,数字化,0.72
+数智化,enables,使能,数智导师,0.5
+五育,part_of,属于,核心素养,0.72
+五育,supported_by,由……支撑,育人成效的可计算表征,0.5
+五育,related_to,与……相关,数智育人,0.5
+学生评价,manifestation_of,表现,学业评价,0.72
+学生评价,uses,使用,过程性数据,0.72
+学生评价,enables,使能,成长档案,0.5
+学生评价,part_of,属于,评价技术,0.5
+过程性数据,instance_of,实例,behavioural traces,0.72
+过程性数据,derived_from,衍生自,学习状态追踪,0.72
+过程性数据,enables,使能,knowledge tracing,0.72
+成长档案,enables,使能,personalized learning,0.72
+成长档案,part_of,属于,智慧评价系统,0.72
+成长档案,related_to,与……相关,reflection,0.5
+成长档案,supports,支持,self-evaluation,0.5
+动态数字画像,instance_of,实例,Learner State Representations,0.72
+动态数字画像,subtype_of,子类型,学生画像,0.72
+动态数字画像,enables,使能,personalized learning,0.72
+动态数字画像,enables,使能,数智导师,0.5
+家校数据看板,part_of,属于,家校协同,0.72
+家校数据看板,visualises,可视化,成长档案,0.72
+家校数据看板,enables,使能,协同育人,0.5
+情绪监测,part_of,属于,学习状态追踪,0.72
+情绪监测,related_to,与……相关,学习情绪,0.72
+情绪监测,enables,使能,心理健康,0.5
+协同育人,part_of,属于,教育生态,0.72
+协同育人,requires,需要,家校共育,0.72
+协同育人,related_to,与……相关,stakeholders,0.5
+数据赋分,part_of,属于,智慧作业,0.72
+数据赋分,enables,使能,immediate feedback,0.72
+数据赋分,contrasts_with,与……形成对比,评价方式单一,0.5
+数据赋分,measured_by,由……测量,育人成效的可计算表征,0.5
+家校协同,part_of,属于,家校共育,0.72
+家校协同,enables,使能,协同育人,0.72
+家校协同,requires,需要,家校数据看板,0.5
+家校协同,related_to,与……相关,parent-child dialogue,0.5
+学校专属教育大模型,enabled_by,由……启用,校本资源库,0.72
+学校专属教育大模型,uses,使用,课程标准,0.5
+学校画像,enables,使能,差异化,0.72
+学校画像,related_to,与……相关,因材施教,0.5
+学生画像,enables,使能,personalized learning,0.92
+学生画像,part_of,属于,learner modelling,0.72
+学生画像,uses,使用,过程性数据,0.72
+学生画像,broader_than,范围更广,动态数字画像,0.5
+教师画像,part_of,属于,teacher professional development,0.72
+教师画像,enables,使能,循证教研,0.5
+教师画像,uses,使用,关键教学行为,0.5
+教师画像,mitigates,缓解,teacher workload,0.5
+智能评价,subtype_of,子类型,智慧评价系统,0.72
+智能评价,contrasts_with,与……形成对比,评价方式单一,0.5
+责任归属,part_of,属于,distributed responsibility,0.72
+云教研,enabled_by,由……启用,云课堂,0.5
+云教研,part_of,属于,teacher professional development,0.72
+云教研,enables,使能,跨学科教研共同体,0.5
+云课堂,contrasts_with,与……形成对比,智慧课堂,0.5
+云课堂,related_to,与……相关,e-learning,0.5
+云课堂,enables,使能,云教研,0.5
+校本资源库,related_to,与……相关,单元集体备课,0.5
+校本资源库,enables,使能,教师二次创作,0.5
+校本资源库,enables,使能,学校专属教育大模型,0.72
+组织底座,enables,使能,教师数字素养,0.5
+组织底座,mitigates,缓解,teacher workload,0.5
+一体化顶层设计,part_of,属于,数智治理,0.5
+一体化顶层设计,enables,使能,组织底座,0.5
+一体化顶层设计,manifestation_of,表现,范式转换,0.5
+互动课件,enables,使能,课程互动,0.92
+互动课件,enables,使能,参与度,0.72
+课堂工具,instance_of,实例,教学工具,0.92
+课堂工具,part_of,属于,智慧课堂,0.72
+课堂工具,related_to,与……相关,课堂变革,0.5
+学科教学,part_of,属于,课程设置,0.72
+学科教学,contrasts_with,与……形成对比,跨学科,0.72
+教育科研,enables,使能,循证教研,0.72
+教育科研,uses,使用,教育实验,0.72
+教育科研,related_to,与……相关,教育科研诚信审查,0.72
+心理健康,part_of,属于,五育,0.72
+心理健康,related_to,与……相关,social-emotional learning,0.72
+心理健康,enabled_by,由……启用,情绪监测,0.5
+家校教育,part_of,属于,协同育人,0.72
+家校教育,related_to,与……相关,家校共育,0.5
+家校教育,part_of,属于,教育生态,0.5
+家校教育,related_to,与……相关,parent-child dialogue,0.5
+智慧作业,enables,使能,immediate feedback,0.92
+智慧作业,part_of,属于,智慧课堂,0.72
+智慧作业,uses,使用,knowledge tracing,0.72
+智慧作业,mitigates,缓解,homework outsourcing,0.5
+家校共育,manifestation_of,表现,协同育人,0.72
+家校共育,supported_by,由……支撑,家校协同,0.72
+家校共育,part_of,属于,教育生态,0.5
+育人成效的可计算表征,derived_from,衍生自,可计算性,0.92
+育人成效的可计算表征,measured_by,由……测量,学业质量,0.5
+育人成效的可计算表征,part_of,属于,数智育人,0.5
+人机协同中的教师角色,manifestation_of,表现,教师角色,0.92
+人机协同中的教师角色,contrasts_with,与……形成对比,cognitive offloading,0.5
+人机协同中的教师角色,related_to,与……相关,不可替代性,0.72
+情境化,part_of,属于,situated learning,0.72
+情境化,enables,使能,真实探究任务,0.5
+情境化,uses,使用,scaffolding,0.5
+可计算性,enables,使能,育人成效的可计算表征,0.72
+可计算性,prerequisite_for,是……的前提,evidence-based practice,0.72
+可计算性,part_of,属于,construct validity,0.5
+可计算性,required_by,为……所需,可复现研究证据,0.5
+知识产权归属,contrasts_with,与……形成对比,academic integrity,0.5
+不可替代性,part_of,属于,不可替代学习,0.72
+不可替代性,manifestation_of,表现,认知责任,0.5
+不可替代性,contrasts_with,与……形成对比,deskilling,0.5
+数智导师,instance_of,实例,AI tutor,0.92
+数智导师,enables,使能,personalized learning,0.72
+数智导师,uses,使用,学生画像,0.72
+校本智库,enables,使能,云教研,0.5
+校本智库,part_of,属于,组织底座,0.5
+师徒同课异构,related_to,与……相关,跨学科教研共同体,0.72
+师徒同课异构,reveals,揭示,隐性知识,0.72
+师徒同课异构,part_of,属于,teacher professional development,0.5
+雷达图,visualises,可视化,学生画像,0.72
+雷达图,part_of,属于,家校数据看板,0.5
+雷达图,manifestation_of,表现,育人成效的可计算表征,0.5
+学业质量,part_of,属于,课程标准,0.72
+学业质量,measured_by,由……测量,学业评价,0.72
+学业质量,related_to,与……相关,Bloom's taxonomy,0.5
+学业质量,contrasts_with,与……形成对比,学业水平,0.5
+学业负担,mitigated_by,被……缓解,智慧作业,0.5
+学业负担,affected_by,受……影响,课程设置,0.5
+学业负担,related_to,与……相关,执行功能,0.5
+学业负担,impairs,损害,注意力,0.5
+课程标准,defines,界定,学业质量,0.72
+课程标准,part_of,属于,课程设置,0.72
+课程标准,enables,使能,教学评一致性,0.72
+课程标准,contrasts_with,与……形成对比,评价方式单一,0.5
+学业评价,part_of,属于,学生评价,0.72
+学业评价,assessed_by,由……评估,学业质量,0.5
+学业评价,enables,使能,formative assessment,0.72
+学业评价,uses,使用,学业水平,0.5
+参与度,manifestation_of,表现,learning-oriented engagement,0.5
+参与度,measured_by,由……测量,学习投入,0.72
+参与度,contrasts_with,与……形成对比,passive consumption,0.72
+做中学,instance_of,实例,situated learning,0.72
+做中学,contrasts_with,与……形成对比,direct instruction,0.72
+做中学,part_of,属于,active learning,0.72
+做中学,related_to,与……相关,project-based learning,0.5
+真实探究任务,instance_of,实例,inquiry learning,0.92
+真实探究任务,part_of,属于,project-based learning,0.72
+真实探究任务,requires,需要,情境化,0.72
+真实探究任务,enables,使能,探究能力,0.72
+跨学科教研共同体,part_of,属于,teacher professional development,0.72
+跨学科教研共同体,related_to,与……相关,跨学科,0.72
+跨学科教研共同体,contrasts_with,与……形成对比,学科教学,0.5
+项目研究,instance_of,实例,inquiry learning,0.5
+项目研究,related_to,与……相关,教育科研,0.72
+项目研究,enables,使能,教育科研,0.5
+项目研究,required_by,为……所需,可复现研究证据,0.5
+学生综合发展评价报告,manifestation_of,表现,五育,0.72
+学生综合发展评价报告,contrasts_with,与……形成对比,middle-school entrance exam,0.5
+学生综合发展评价报告,part_of,属于,学业评价,0.5
+学生综合发展评价报告,uses,使用,qualitative assessment,0.72
+自我管理,part_of,属于,self-regulated learning,0.92
+自我管理,manifestation_of,表现,autonomous regulation,0.72
+自我管理,contrasts_with,与……形成对比,homework outsourcing,0.5
+自我管理,enables,使能,self-monitoring,0.72
+学业认同,part_of,属于,academic self-concept,0.92
+学业认同,related_to,与……相关,学习兴趣,0.72
+学业认同,supports,支持,self-efficacy,0.5
+学业认同,contrasts_with,与……形成对比,performance goal,0.5
+探究能力,part_of,属于,scientific reasoning,0.72
+探究能力,manifestation_of,表现,inquiry,0.72
+探究能力,part_of,属于,critical thinking,0.5
+探究能力,related_to,与……相关,argumentation,0.5
+学业水平,measured_by,由……测量,学业评价,0.72
+学业水平,related_to,与……相关,topic mastery,0.5
+学业水平,enables,使能,knowledge tracing,0.5
+智慧职教,related_to,与……相关,人才培养模式,0.72
+智慧职教,manifestation_of,表现,数字化,0.5
+教师教育大模型,enables,使能,teacher professional development,0.72
+教师教育大模型,enables,使能,智能析课,0.72
+循证教研,part_of,属于,teacher professional development,0.72
+循证教研,uses,使用,教育实验,0.72
+循证教研,manifestation_of,表现,evidence-based practice,0.72
+循证教研,mitigates,缓解,教学模式固化,0.72
+评价技术,part_of,属于,学业评价,0.72
+评价技术,includes,包含,智能评价,0.5
+评价技术,evaluated_by,由……评估,evidence-centered design,0.5
+评价技术,related_to,与……相关,传统心理测量,0.5
+学习兴趣,contrasts_with,与……形成对比,extrinsic motivation,0.72
+学习兴趣,manifestation_of,表现,intrinsic motivation,0.92
+学习兴趣,part_of,属于,motivation,0.72
+学习兴趣,related_to,与……相关,student participation,0.5
+学习习惯,part_of,属于,self-regulated learning,0.72
+学习习惯,enabled_by,由……启用,spaced practice,0.92
+学习习惯,contrasts_with,与……形成对比,academic procrastination,0.5
+学习习惯,mitigates,缓解,deskilling,0.5
+注意力,part_of,属于,执行功能,0.92
+注意力,constrained_by,受限于,cognitive load,0.72
+注意力,related_to,与……相关,split-attention effect,0.5
+注意力,affected_by,受……影响,test anxiety,0.5
+学习风格,contrasts_with,与……形成对比,差异化,0.72
+学习风格,related_to,与……相关,学习兴趣,0.5
+学习风格,related_to,与……相关,learner modelling,0.5
+教学工具,includes,包含,课堂工具,0.92
+教学工具,part_of,属于,instructional design,0.72
+教学工具,contrasts_with,与……形成对比,expertise reversal effect,0.5
+数智治理,part_of,属于,教育生态,0.72
+数智治理,uses,使用,学校画像,0.72
+数智治理,addresses,针对,责任归属,0.5
+教育生态,part_of,属于,人工智能+教育,0.72
+教育生态,encompasses,涵盖,协同育人,0.5
+教育生态,related_to,与……相关,stakeholders,0.5
+数智育人,part_of,属于,数智化转型,0.72
+数智育人,enables,使能,五育,0.72
+数智育人,manifestation_of,表现,人机协同中的教师角色,0.72
+数智育人,enables,使能,育人成效的可计算表征,0.5
+课堂变革,manifestation_of,表现,人工智能+教育,0.72
+课堂变革,part_of,属于,数字化,0.5
+课堂变革,contrasts_with,与……形成对比,教学模式固化,0.72
+课堂变革,enables,使能,课程互动,0.5
+substitutive offloading,type_of,类型,cognitive offloading,0.75
+substitutive offloading,contrasts_with,与……形成对比,duplicative offloading,0.6
+duplicative offloading,type_of,类型,cognitive offloading,0.75
+offloading score,related_to,与……相关,metacognitive miscalibration,0.5
+offloading score,used_by,被……使用,epistemic auditing,0.45
+professional skill acquisition,result_of,是……的结果,deliberate practice,0.7
+professional skill acquisition,contrasts_with,与……形成对比,deskilling,0.6
+conceptual inquiry,type_of,类型,inquiry,0.7
+conceptual inquiry,enables,使能,conceptual change,0.55
+exoskeleton,metaphor_for,是……的隐喻,scaffolding,0.55
+exoskeleton,related_to,与……相关,capability residual,0.6
+misattribution,mechanism_of,是……的机制,speedup illusion,0.55
+misattribution,related_to,与……相关,locus of control,0.4
+collective over-reliance,amplifies,放大,epistemic overreliance,0.6
+collective over-reliance,enables,使能,error carryover,0.5
+session-level carryover effect,manifests_as,表现为,error carryover,0.65
+self-estimate,instance_of,实例,self-evaluation,0.7
+self-estimate,related_to,与……相关,calibration,0.6
+self-estimate,enabled_by,由……启用,immediate feedback,0.45
+metacognitive feedback,type_of,类型,formative feedback,0.7
+metacognitive feedback,improves,改善,metacognitive strategy,0.6
+self-regulated behavior,supported_by,由……支撑,scaffolding,0.5
+self-regulated behavior,enables,使能,durable learning,0.5
+self-instruction,enables,使能,self-scaffolding,0.6
+GenAI SRL scaffolding,supports,支持,self-regulated learning,0.7
+GenAI SRL scaffolding,personalises,个性化,metacognitive scaffolding,0.6
+metacognitive symbiosis,part_of,属于,pedagogical symbiosis,0.65
+metacognitive symbiosis,enabled_by,由……启用,metacognitive feedback,0.55
+self-scaffolding,enables,使能,self-regulated learning,0.65
+self-scaffolding,contrasts_with,与……形成对比,GenAI SRL scaffolding,0.45
+explanation-seeking depth,predicts,预测,help-seeking,0.55
+explanation-seeking depth,type_of,类型,epistemic proactivity,0.6
+epistemic friction,triggers,触发,epistemic auditing,0.55
+epistemic friction,contrasts_with,与……形成对比,cognitive surrender,0.5
+crowding-out effect,mechanism_of,是……的机制,generative AI learning penalty,0.65
+crowding-out effect,related_to,与……相关,performance-competence divide,0.5
+unaided assessment,measures,度量,durable learning,0.6
+unaided assessment,operationalizes,操作化,tool-invariant assessment,0.65
+testing effect,explains,解释,long-term retention,0.65
+testing effect,related_to,与……相关,generation effect,0.5
+scripted learning,contrasts_with,与……形成对比,direct instruction,0.5
+scripted learning,threatens,威胁,student agency,0.55
+flipped classroom,requires,需要,asynchronous learning,0.55
+flipped classroom,supports,支持,peer instruction,0.5
+faded worked example,part_of,属于,fading,0.75
+faded worked example,reduces,降低,cognitive load,0.6
+self-explanation effect,supports,支持,conceptual change,0.55
+self-explanation effect,mechanism_of,是……的机制,durable learning,0.55
+self-esteem,shaped_by,由……塑造,locus of control,0.5
+self-esteem,contrasts_with,与……形成对比,illusion of competence,0.45
+locus of control,predicts,预测,achievement goal,0.55
+locus of control,part_of,属于,attribution theory,0.6
+attribution theory,explains,解释,motivation,0.6
+attribution theory,shapes,塑造,achievement goal,0.55
+human intelligence,related_to,与……相关,epistemology,0.45
+goal,part_of,属于,goal orientation,0.55
+goal,motivates,激励,motivation,0.6
+enacted feedback,contrasts_with,与……形成对比,self-directed feedback,0.55
+enacted feedback,requires,需要,uptake of feedback,0.6
+directed feedback,contrasts_with,与……形成对比,self-directed feedback,0.55
+self-directed feedback,enables,使能,learner agency,0.6
+sequenced AI feedback,type_of,类型,formative feedback,0.65
+sequenced AI feedback,operationalizes,操作化,fading,0.55
+viva,instance_of,实例,summative assessment,0.55
+viva,contrasts_with,与……形成对比,unaided assessment,0.4
+consequential validity,informs,为……提供依据,responsibility accounting,0.5
+human-production assumption,underlies,构成基础,AI detector,0.5
+human-production assumption,conflicts_with,与……冲突,agentic completion,0.5
+agentic completion,threatens,威胁,construct validity,0.55
+neural-symbolic knowledge tracing,variant_of,变体,knowledge tracing,0.8
+phase-aware knowledge tracing,enables,使能,learner modelling,0.6
+phase-aware knowledge tracing,informs,为……提供依据,adaptive learning,0.55
+concept-level deficiency prediction,predicts,预测,misconception,0.6
+tutor-turn difficulty,part_of,属于,AI tutoring,0.6
+tutor-turn difficulty,predicts,预测,frustration tolerance,0.45
+student-AI interaction competency,part_of,属于,AI competency,0.75
+comprehension debt,type_of,类型,epistemic debt,0.7
+comprehension debt,mitigated_by,被……缓解,self-explanation,0.55
+assessment-aware tutor,relies_on,依赖,learner modelling,0.65
+assessment-aware tutor,enables,使能,feedback literacy,0.5
+guardrailed AI assistant,supports,支持,pedagogical safety,0.65
+erosion of productive struggle,erodes,侵蚀,productive struggle,0.75
+erosion of productive struggle,threatens,威胁,desirable difficulty,0.5
+Socratic-Guidance tutor,uses,使用,Socratic questioning,0.8
+Socratic-Guidance tutor,variant_of,变体,dialogic teaching,0.6
+fragile expert,causes,引起,deskilling,0.6
+fragile expert,contrasts_with,与……形成对比,durable skills,0.45
+AI-blackout task,enables,使能,unaided performance,0.7
+AI-blackout task,measured_by,由……测量,任务态基线,0.5
+collative variables,improves,改善,curiosity gap,0.6
+collative variables,affects,影响,学习兴趣,0.55
+GenAI literacy,prerequisite_for,是……的前提,数字素养,0.6
+GenAI literacy,contrasts_with,与……形成对比,AI literacy over tool design,0.5
+AI-Assisted Research Competency,improves,改善,可复现研究证据,0.6
+AI-Assisted Research Competency,enables,使能,学术性阅读,0.55
+symbiotic literacy,contrasts_with,与……形成对比,数字素养,0.5
+symbiotic literacy,enables,使能,AI literacy over tool design,0.6
+cognitive choreographer,enables,使能,active learning,0.55
+cognitive choreographer,relates_to,与……相关,distributed cognition,0.55
+human-centred learning analytics design,variant_of,变体,human-centred learning analytics,0.8
+human-centred learning analytics design,contrasts_with,与……形成对比,learning analytic,0.45
+sustainability,underpins,支撑,教育生态,0.6
+sustainability,constrained_by,受限于,规模化循证,0.45
+short-term gain,manifests_in,体现于,immediate performance,0.65
+short-term gain,threatens,威胁,durable learning,0.5
+skilful performance,measured_by,由……测量,performance while practicing,0.7
+skilful performance,opposite_of,与……相反,illusion of competence,0.55
+student self-governance,enables,使能,self-regulated learning,0.7
+student self-governance,manifests_as,表现为,student agency,0.65
+intentional behavior,contrasts_with,与……形成对比,overreliance on autopilot,0.6
+intentional behavior,facilitates,促进,reflective use,0.55
+modality effect,explains,解释,视频学习,0.55
+modality effect,variant_of,变体,split-attention effect,0.5
+redundancy effect,contrast_with,与……对比,modality effect,0.5
+redundancy effect,subconcept_of,子概念,multimedia learning,0.6
+supportive practice,variant_of,变体,worked example,0.6
+supportive practice,specialization_of,具体形态,interactive scaffolding,0.55
+distributed practice,synonym_of,同义词,spaced practice,1.0
+distributed practice,mitigates,缓解,forgetting pattern,0.65
+distributed practice,improves,改善,long-term retention,0.6
+achievement goals,synonym_of,同义词,achievement goal,1.0
+achievement goals,drives,驱动,motivation,0.6
+proximal goal attainment,component_of,组成部分,self-regulated learning,0.6
+proximal goal attainment,mediates,中介,achievement goals,0.55
+observable curiosity,measured_by,由……测量,感知测量,0.6
+observable curiosity,manifests_as,表现为,exploratory questioning,0.55
+peer feedback,enables,使能,uptake of feedback,0.7
+peer feedback,variant_of,变体,directed feedback,0.5
+dual coding principle,supports,支持,multimedia learning,0.6
+dual coding principle,directs,指导,知识精细加工,0.55
+coding skill acquisition,enables,使能,计算教育学,0.7
+coding skill acquisition,outcome_of,是……的结果,skill acquisition,0.65
+codependency,variant_of,变体,cognitive overreliance,0.7
+codependency,aggravates,加重,deskilling,0.6
+student reasoning,manifests_in,体现于,scientific reasoning,0.65
+student reasoning,undermined_by,被……削弱,answer offloading,0.55
+quality of learning materials,measured_by,由……测量,学业质量,0.6
+relevance judgment,enables,使能,retrieval practice,0.5
+relevance judgment,operationalizes,操作化,evaluation literacy,0.65
+cognitive demand,synonym_of,同义词,need for cognition,1.0
+cognitive demand,required_by,为……所需,higher-order thinking,0.55
+offloading decision,affected_by,受……影响,cognitive load,0.6
+offloading decision,predicts,预测,reliance,0.55
+Generation-Then-Comprehension,uses,使用,generation effect,0.7
+Generation-Then-Comprehension,supports,支持,self-explanation,0.6
+deceptive overgeneralization,threatens,威胁,scientific reasoning,0.6
+deceptive overgeneralization,mitigated_by,被……缓解,verification-driven learning,0.55
+contextual sycophantic dependence,threatens,威胁,independent judgment,0.6
+crutch,analogue_of,类比,cognitive offloading,0.6
+crutch,promotes,促进,hint abuse,0.5
+efficiency-gain illusion,contrasts_with,与……形成对比,fluency illusion,0.5
+efficiency-gain illusion,mitigated_by,被……缓解,need for cognition,0.55
+self-estimate miscalibration,subtype_of,子类型,miscalibration,0.8
+self-estimate miscalibration,threatens,威胁,实证校准,0.5
+need for cognition,predicts,预测,critical thinking,0.55
+metacognitive miscalibration,subtype_of,子类型,miscalibration,0.75
+metacognitive miscalibration,leads_to,导致,illusion of competence,0.6
+metacognitive laziness,threatens,威胁,metacognition,0.6
+metacognitive laziness,related_to,与……相关,cognitive offloading,0.55
+metacognitive scaffolding,specialization_of,具体形态,metacognitive prompts,0.75
+metacognitive scaffolding,mitigates,缓解,metacognitive laziness,0.6
+dual regulatory demand,related_to,与……相关,GenAI SRL scaffolding,0.55
+dual regulatory demand,requires,需要,执行功能,0.6
+epistemic proactivity,enables,使能,epistemic agency,0.7
+epistemic proactivity,opposed_to,与……对立,epistemic dependence,0.55
+verification-driven learning,requires,需要,AI verification literacy,0.7
+executive help-seeking,subtype_of,子类型,instrumental help-seeking,0.7
+executive help-seeking,improves,改善,self-monitoring,0.55
+generative AI learning penalty,aggravates,加重,performance-competence divide,0.65
+generative AI learning penalty,measured_by,由……测量,unaided test,0.6
+crowding out,erodes,侵蚀,学习投入,0.55
+crowding out,contrasts_with,与……形成对比,deep learning,0.45
+learning-performance paradox,explains,解释,performance-learning gap,0.7
+learning-performance paradox,manifests_in,体现于,immediate performance,0.55
+generation effect,variant_of,变体,self-explanation effect,0.6
+generation effect,supported_by,由……支撑,retrieval practice,0.65
+effortful processing,variant_of,变体,desirable difficulty,0.75
+effortful processing,requires,需要,知识精细加工,0.6
+tutoring,broader_than,范围更广,AI tutoring,0.6
+tutoring,enables,使能,personalized learning,0.55
+directive,subconcept_of,子概念,direct instruction,0.7
+directive,opposite_of,与……相反,exploratory questioning,0.5
+problem-based learning,promotes,促进,探究能力,0.6
+problem-based learning,differs_from,不同于,project-based learning,0.5
+fading,directs,指导,faded worked example,0.7
+fading,variant_of,变体,adaptive learning,0.5
+peer assessment,differs_from,不同于,peer feedback,0.55
+peer assessment,supports,支持,feedback literacy,0.6
+goal orientation,predicts,预测,proximal goal,0.5
+goal orientation,variant_of,变体,motivation,0.5
+implicit theory of intelligence,affects,影响,motivation,0.55
+implicit theory of intelligence,predicts,预测,goal orientation,0.45
+fixed mindset,undermines,削弱,self-efficacy,0.65
+fixed mindset,reduces,降低,学习投入,0.55
+distal goal,contrasts_with,与……形成对比,proximal goal,0.5
+distal goal,supports,支持,mastery goal,0.6
+self-imposed-contingency,variant_of,变体,attribution theory,0.6
+self-imposed-contingency,relates_to,与……相关,locus of control,0.5
+self-handicapping,mitigates,缓解,test anxiety,0.55
+self-handicapping,exhibits,展现,avoidance,0.6
+avoidance,reduces,降低,student participation,0.55
+avoidance,manifests_as,表现为,academic procrastination,0.6
+sense of belonging,strengthens,强化,self-efficacy,0.6
+sense of belonging,buffers,缓冲,social disengagement,0.5
+feedback literacy,enables,使能,feedback enactment,0.65
+assessment for learning,addresses,针对,评价方式单一,0.6
+assessment for learning,supports,支持,教学评一致性,0.65
+stealth assessment,relies_on,依赖,multimodal data collection,0.55
+stealth assessment,contrasted_by,由……对比,过程性数据,0.6
+oral defense,measures,度量,高阶思维评价,0.55
+oral defense,relates_to,与……相关,deep learning,0.5
+detector false-positive bias,threatens,威胁,academic integrity,0.6
+detector false-positive bias,amplifies,放大,test anxiety,0.5
+evaluation literacy,type_of,类型,assessment literacy,0.75
+tool-invariant assessment,variant_of,变体,unaided assessment,0.8
+tool-invariant assessment,ensures,确保,consequential validity,0.6
+abdication of scaffolding,leads_to,导致,deskilling,0.6
+codependency,risks,冒……的风险,cognitive outsourcing,0.55
+short-term gain,instance_of,实例,fluency illusion,0.6
+redundancy effect,constrains,约束,cognitive load,0.55
+supportive practice,impairs,损害,misattribution,0.5
+proximal goal attainment,improves,改善,self-efficacy,0.55
+peer feedback,enhances,增强,evaluative judgment,0.55
+skilful performance,measured_by,由……测量,任务表现,0.6
+AI-blackout task,ensures,确保,unaided assessment,0.55
+student self-governance,relates_to,与……相关,self-determination theory,0.5
+fragile expert,contrasts_with,与……形成对比,delegation boundary,0.45
+cognitive demand,predicts,预测,学习投入,0.5
+fragile expert,contrasts_with,与……形成对比,AI tutor,0.5
+proximal goal attainment,analogue_of,类比,agentic completion,0.55
+stealth assessment,uses,使用,behavioural traces,0.55
+system gaming,contrasts_with,与……形成对比,learning-oriented engagement,0.5
+system gaming,evidenced_by,以……为据,behavioural traces,0.55
+system gaming,related_to,与……相关,academic integrity,0.45
+direct guidance,variant_of,变体,directive,0.8
+direct guidance,contrasts_with,与……形成对比,inquiry learning,0.5
+Socratic-Guidance tutor,uses,使用,direct guidance,0.7
+understanding-driven prompting,contrasts_with,与……形成对比,answer over-disclosure,0.55
+Prompt-Refinement tutor,uses,使用,understanding-driven prompting,0.6
+explanation gate,requires,需要,self-explanation,0.75
+explanation gate,mitigates,缓解,illusion of competence,0.55
+teach-back protocol,measures,度量,metacognition,0.6
+teach-back protocol,variant_of,变体,peer assessment,0.6
+synchronous learning,contrasts_with,与……形成对比,asynchronous learning,0.55
+synchronous learning,enables,使能,student participation,0.6
+synchronous learning,enables,使能,peer instruction,0.55
+procedural knowledge,underlies,构成基础,skill,0.75
+deskilling,reduces,降低,skill,0.65
+skill,measured_by,由……测量,skilful performance,0.65
+self-efficacy,supports,支持,resilience,0.6
+resilience,buffers,缓冲,academic procrastination,0.5
+collaborative writing,instance_of,实例,collaborative learning,0.75
+collaborative writing,instance_of,实例,collaborative activity,0.6
+performance while practicing,contrasts_with,与……形成对比,skilful performance,0.6
+performance while practicing,leads_to,导致,illusion of competence,0.6
+supportive practice,produces,产生,performance while practicing,0.6
+temporal reliability,required_by,为……所需,knowledge tracing,0.65
+dual coding,exemplifies,例示,multi-modal learning,0.65
+dual coding,mitigates,缓解,working memory,0.6
+segmenting principle,part_of,属于,cognitive processing theory,0.65
+segmenting principle,mitigates,缓解,intrinsic cognitive load,0.7
+signaling principle,part_of,属于,cognitive processing theory,0.65
+signaling principle,reduces,降低,cognitive load,0.65
+signaling principle,complements,互补于,segmenting principle,0.5
+worked example effect,variant_of,变体,worked example,0.7
+worked example effect,supports,支持,faded worked example,0.6
+elaborative interrogation,supports,支持,long-term retention,0.65
+elaborative interrogation,part_of,属于,inquiry learning,0.55
+elaborative interrogation,supports,支持,deep learning,0.6
+controlled regulation,subtype_of,子类型,motivation,0.8
+exploratory questioning,variant_of,变体,concept question,0.72
+exploratory questioning,exemplifies,例示,inquiry,0.7
+exploratory questioning,elicits,引出,conceptual change,0.6
+behavioural engagement,subtype_of,子类型,learning-oriented engagement,0.8
+behavioural engagement,measured_by,由……测量,behavioural traces,0.7
+behavioural engagement,contrasts_with,与……形成对比,cognitive engagement,0.55
+concept,basis_of,是……的基础,conceptual change,0.7
+concept,measured_by,由……测量,knowledge tracing,0.7
+differential item functioning,challenge_in,……领域的挑战,cognitive diagnosis,0.65
+differential item functioning,informs,为……提供依据,difficulty-aware,0.6
+differential item functioning,mitigated_by,被……缓解,Rasch model,0.6
+intrinsic cognitive load,relates_to,与……相关,working memory,0.7
+intrinsic cognitive load,affects,影响,cognitive demand,0.7
+cognitive engagement,predicts,预测,long-term retention,0.65
+cognitive engagement,measured_by,由……测量,behavioral streams,0.7
+procedural knowledge,derived_from,衍生自,deliberate practice,0.65
+homework outsourcing,measured_by,由……测量,behavioral streams,0.6
+homework outsourcing,inflates,抬高,immediate performance,0.65
+homework outsourcing,impairs,损害,unaided performance,0.65
+LLM fallacy,instance_of,实例,illusion of competence,0.75
+LLM fallacy,caused_by,由……引起,AI-assisted writing,0.65
+LLM fallacy,related_to,与……相关,speedup illusion,0.65
+overreliance feedback loop,driven_by,由……驱动,cognitive offloading,0.65
+metacognitive strategy,subtype_of,子类型,metacognition,0.8
+metacognitive strategy,improves,改善,self-evaluation,0.65
+self-monitoring,feeds,供给,self-evaluation,0.7
+self-monitoring,measured_by,由……测量,behavioural traces,0.55
+help-seeking,supported_by,由……支撑,AI tutor,0.6
+help-seeking,contrasts_with,与……形成对比,answer offloading,0.55
+help-seeking,depends_on,依赖于,self-efficacy,0.6
+instrumental help-seeking,serves,服务,task completion,0.6
+instrumental help-seeking,contrasts_with,与……形成对比,executive help-seeking,0.65
+transfer test,improves,改善,cross-domain knowledge transfer,0.7
+transfer test,contrasts_with,与……形成对比,retention test,0.5
+transfer test,measures,度量,deep learning,0.6
+mastery gain paradox,explains_by,由……解释,immediate feedback,0.6
+mastery gain paradox,manifests_as,表现为,short-term gain,0.65
+desirable difficulties,synonym_of,同义词,desirable difficulty,1.0
+desirable difficulty,exemplifies,例示,spaced practice,0.6
+desirable difficulties,improves,改善,long-term retention,0.7
+desirable difficulties,exemplifies,例示,productive struggle,0.65
+peer instruction,instance_of,实例,collaborative learning,0.75
+peer instruction,contrasts_with,与……形成对比,direct instruction,0.55
+peer instruction,uses,使用,concept question,0.65
+peer tutoring,benefits,有益于,skill,0.6
+peer tutoring,develops,发展,self-explanation,0.65
+distributed cognition,broader_than,范围更广,cognitive offloading,0.7
+distributed cognition,manifests_in,体现于,digital partner,0.6
+wait time,enables,使能,student agency,0.6
+wait time,part_of,属于,dialogic teaching,0.7
+wait time,complements,互补于,retrieval practice,0.55
+scientific reasoning,develops,发展,critical thinking,0.7
+scientific reasoning,uses,使用,evidence-based practice,0.65
+scientific reasoning,strengthens,强化,conceptual change,0.6
+self-determination theory,explains,解释,controlled regulation,0.75
+self-determination theory,informs,为……提供依据,student agency,0.6
+self-determination theory,affects,影响,学习投入,0.65
+motivation,improves,改善,cognitive engagement,0.65
+motivation,theory_under,……的理论基础,self-determination theory,0.7
+academic self-concept,predicts,预测,self-efficacy,0.65
+academic self-concept,affects,影响,学习投入,0.6
+attribution,shapes,塑造,self-worth,0.6
+approach,subtype_of,子类型,motivation,0.7
+approach,exemplifies,例示,curiosity gap,0.55
+approach,buffers,缓冲,test anxiety,0.5
+academic procrastination,relates_to,与……相关,avoidance,0.7
+academic procrastination,increases,增加,test anxiety,0.6
+stereotype threat,predicts,预测,performance-competence divide,0.65
+stereotype threat,undermines,削弱,academic self-concept,0.7
+stereotype threat,contributes_to,有助于,test anxiety,0.6
+feedback,reduces,降低,misconception,0.6
+feedback,improves,改善,performance while practicing,0.6
+feedback,complements,互补于,formative assessment,0.55
+uptake of feedback,variant_of,变体,feedback enactment,0.8
+uptake of feedback,affected_by,受……影响,learner agency,0.65
+uptake of feedback,measured_by,由……测量,self-evaluations,0.7
+AI detector,identifies,识别,homework outsourcing,0.6
+AI detector,threatens,威胁,evaluation literacy,0.55
+integrity failure,recorded_by,由……记录,academic integrity monitoring,0.7
+integrity failure,undermines,削弱,construct validity,0.6
+integrity failure,mitigated_by,被……缓解,tool-invariant assessment,0.7
+responsible deep knowledge tracing,subtype_of,子类型,knowledge tracing,0.8
+responsible deep knowledge tracing,informs,为……提供依据,responsible assessment,0.6
+interpretable knowledge tracing,enables,使能,cognitive model of the learner,0.65
+interpretable knowledge tracing,supports,支持,human-centred learning analytics,0.7
+difficulty-aware,improves,改善,multi-domain knowledge tracing,0.6
+cognitive model of the learner,informs,为……提供依据,personalized learning,0.7
+cognitive model of the learner,explains,解释,cognitive conflict,0.55
+cognitive model of the learner,manifests_in,体现于,学生画像,0.6
+epistemic debt,aggravates,加重,comprehension debt,0.7
+epistemic debt,accumulates_from,积累自,cognitive offloading,0.7
+epistemic debt,accumulates_from,积累自,deskilling,0.6
+AI tutoring,enables,使能,personalized learning,0.7
+productive struggle,related_to,与……相关,desirable difficulty,0.7
+productive struggle,triggers,触发,self-explanation,0.65
+productive struggle,strengthens,强化,durable learning,0.65
+hint abuse,measured_by,由……测量,behavioral streams,0.55
+collative variable,elicits,引出,exploratory questioning,0.65
+collative variable,amplifies,放大,注意力,0.6
+AI competency,assessed_by,由……评估,student-AI interaction competency,0.65
+AI competency,develops,发展,AI-TPACK,0.7
+AI competency,predicts,预测,independent judgment,0.6
+AI literacy over tool design,supports,支持,AI literacy,0.7
+AI literacy over tool design,embodies,体现,student agency,0.7
+human-GAI engagement paradigm,exemplifies,例示,relational epistemic agency,0.6
+human-GAI engagement paradigm,informs,为……提供依据,AI-use declaration,0.55
+human-GAI engagement paradigm,exemplifies,例示,post-human learner,0.6
+social-emotional learning,develops,发展,sense of belonging,0.65
+social-emotional learning,mitigates,缓解,stereotype threat,0.6
+social-emotional learning,complements,互补于,academic self-concept,0.55
+emotional intelligence,supports,支持,self-regulated learning,0.65
+academic writing,depends_on,依赖于,academic integrity,0.6
+passive consumption,opposite_of,与……相反,active learning,0.7
+passive consumption,leads_to,导致,illusion of competence,0.6
+passive consumption,contributes_to,有助于,epistemic debt,0.6
+independent reasoning,requires,需要,epistemic agency,0.65
+independent reasoning,measured_by,由……测量,unaided test,0.7
+independent reasoning,contrasts_with,与……形成对比,cognitive offloading,0.65
+split-attention effect,contrasts_with,与……形成对比,redundancy effect,0.55
+split-attention effect,increases,增加,cognitive load,0.7
+expertise reversal effect,moderates,调节,worked example,0.7
+expertise reversal effect,related_to,与……相关,fragile expert,0.6
+expertise reversal effect,constrains,约束,adaptive learning,0.6
+deep learning,manifests_as,表现为,structural understanding,0.7
+deep learning,supported_by,由……支撑,inquiry learning,0.65
+hidden rubric,harms,损害,construct validity,0.6
+hidden rubric,related_to,与……相关,responsibility accounting,0.6
+hidden rubric,conflicts_with,与……冲突,process-based assessment,0.6
+AI tutoring,synonym_of,同义词,AI tutor,1.0
+miscalibration,synonym_of,同义词,self-estimate miscalibration,0.95
+miscalibration,synonym_of,同义词,metacognitive miscalibration,0.95
+collative variable,synonym_of,同义词,collative variables,1.0
+interpretable knowledge tracing,synonym_of,同义词,explainable knowledge tracing,0.95
+acquisition,process_in,……中的过程,deliberate practice,0.65
+epistemic agency,requires,需要,epistemic friction,0.6
+epistemic agency,contrasts_with,与……形成对比,epistemic dependence,0.55
+epistemic agency,contrasts_with,与……形成对比,epistemic entanglement,0.5
+GenAI as epistemic condition,affects,影响,epistemic plurality,0.5
+GenAI as epistemic condition,affects,影响,epistemic integration,0.55
+truthful assertion,requires,需要,fact evidence,0.52
+belief condition,complements,互补于,evidence condition,0.55
+belief condition,related_to,与……相关,fact evidence,0.48
+apperception,explains,解释,deceptive overgeneralization,0.6
+apperception,explains,解释,misconception,0.58
+imagination,elicit,引出,curiosity gap,0.55
+ill-defined problem,part_of,属于,problem-based learning,0.6
+ill-defined problem,requires,需要,真实探究任务,0.58
+well-defined problem,enables,使能,worked example,0.6
+well-defined problem,part_of,属于,问题解决,0.55
+TPACK,supports,支持,teacher professional development,0.62
+TPACK,informs,为……提供依据,课程知识体系,0.55
+TPACK,related_to,与……相关,teacher AI adoption,0.5
+assessment literacy,subtype_of,子类型,evaluation literacy,0.8
+assessment literacy,supports,支持,formative assessment,0.6
+assessment literacy,informs,为……提供依据,assessment reform,0.55
+AI dual-teacher,exemplifies,例示,epistemic co-agency,0.68
+AI作为认知挑战者,enables,使能,claim test,0.62
+AI作为认知挑战者,supports,支持,批判性思考,0.58
+smart teaching assistant,subtype_of,子类型,数智导师,0.58
+smart teaching assistant,contrasts_with,与……形成对比,Tutor CoPilot,0.52
+digital partner,variant_of,变体,learning companion,0.55
+digital partner,part_of,属于,人机共创,0.52
+智能微课生成,contrasts_with,与……形成对比,教师二次创作,0.52
+智能微课生成,related_to,与……相关,互动课件,0.55
+instructional resource library,related_to,与……相关,quality of learning materials,0.52
+mobile terminal,enables,使能,digital tab,0.58
+mobile terminal,related_to,与……相关,数字白板,0.55
+视频学习,affected_by,受……影响,dual coding,0.58
+视频学习,related_to,与……相关,深度阅读,0.48
+随机点名,increases,增加,wait time,0.55
+随机点名,enhances,增强,学习投入,0.58
+worked example,exemplifies,例示,worked example effect,0.7
+worked example,increases,增加,cognitive load,0.52
+worked example,part_of,属于,fading,0.55
+situated learning,theory_under,……的理论基础,distributed cognition,0.6
+situated learning,part_of,属于,professional skill acquisition,0.55
+dialogic argument,part_of,属于,argumentation,0.68
+dialogic argument,uses,使用,Socratic questioning,0.58
+dialogic argument,elicits,引出,higher-level question,0.55
+retention test,part_of,属于,retrieval practice,0.58
+retention test,supports,支持,durable learning,0.55
+extrinsic motivation,contrasts_with,与……形成对比,autonomous regulation,0.58
+extrinsic motivation,related_to,与……相关,motivation,0.62
+performance goal,subtype_of,子类型,goal orientation,0.62
+performance goal,related_to,与……相关,fixed mindset,0.55
+achievement goal,subtype_of,子类型,goal orientation,0.68
+achievement goal,contrast_with,与……对比,implicit theory of intelligence,0.52
+achievement goal,informs,为……提供依据,self-worth,0.5
+self-worth,related_to,与……相关,locus of control,0.58
+self-worth,affected_by,受……影响,attribution,0.55
+self-worth,threatens,威胁,academic procrastination,0.5
+test anxiety,affects,影响,学习情绪,0.58
+test anxiety,impedes,阻碍,working memory,0.55
+durable skills,measured_by,由……测量,transfer test,0.64
+durable skills,related_to,与……相关,知识迁移,0.62
+active group,contrasts_with,与……形成对比,典型发展对照组,0.55
+active group,related_to,与……相关,基线,0.52
+covert strategy,exemplifies,例示,隐性学习策略,0.68
+covert strategy,contrasts_with,与……形成对比,self-instruction,0.5
+imagination,enables,使能,inquiry learning,0.58
+System One,related_to,与……相关,执行功能,0.55
+System Two,requires,需要,working memory,0.68
+System Two,related_to,与……相关,注意力,0.55
+preschool,context_for,是……的语境,picture description,0.55
+preschool,context_for,是……的语境,pointing,0.55
+hierarchical joint attention coding,used_for,用于,behavior recording,0.58
+重复刻板行为,recorded_in,记录于,behavior recording,0.58
+重复刻板行为,measured_by,由……测量,behavioral streams,0.58
+高孤独症特质,measured_by,由……测量,rating scale,0.5
+高孤独症特质,phenomenon_in,……中的现象,神经发育障碍,0.48
+病理机制,part_of,属于,神经发育障碍,0.58
+条件反射,related_to,与……相关,学习习惯,0.48
+条件反射,contrasts_with,与……形成对比,procedural knowledge,0.5
+认知资源清单,method_of,是……的方法,知识诊断,0.52
+认知资源清单,required_by,为……所需,执行功能,0.48
+认知对象,part_of,属于,认知裂缝,0.52
+认知对象,related_to,与……相关,问题表征,0.5
+语感,part_of,属于,言语加工,0.55
+语感,supports,支持,读写迁移,0.52
+行为选择,part_of,属于,intentional behavior,0.55
+能力压缩,contrasts_with,与……形成对比,能力增强,0.52
+能力压缩,related_to,与……相关,skill formation,0.52
+最近发展区,informs,为……提供依据,因材施教,0.6
+最近发展区,informs,为……提供依据,学习目标,0.55
+自我参照,enhances,增强,深度阅读,0.48
+自我参照,related_to,与……相关,metacognition,0.45
+动态心理表征,subtype_of,子类型,高阶学习状态表征,0.62
+动态心理表征,informs,为……提供依据,学习状态追踪,0.62
+activity theory of learning,related_to,与……相关,distributed cognition,0.55
+activity theory of learning,grounds,为……奠基,collaborative activity,0.58
+实践关系,contrasts_with,与……形成对比,educative relation,0.55
+实践关系,related_to,与……相关,知识生产,0.5
+对象性化活动,part_of,属于,实践活动,0.55
+对象性化活动,informs,为……提供依据,经验,0.55
+文化基因,part_of,属于,文化认同,0.55
+文化基因,informs,为……提供依据,知识生产,0.5
+近邻繁殖,explains,解释,知识生态,0.55
+近邻繁殖,drives,驱动,知识生产,0.5
+经验传承的局限,contrasts_with,与……形成对比,经验综合,0.52
+经验传承的局限,informs,为……提供依据,知识分工,0.5
+经验综合,informs,为……提供依据,知识谱系,0.52
+经验综合,part_of,属于,知识生产,0.55
+交叉科学,related_to,与……相关,产学研融合,0.55
+交叉科学,related_to,与……相关,大传统,0.5
+数学主义,exemplifies,例示,结构化思维,0.62
+数学主义,related_to,与……相关,演绎推理,0.5
+STEM教育,supports,支持,问题解决,0.6
+STEM教育,related_to,与……相关,项目研究,0.55
+小学育人场景重构,enables,使能,单元整体教学,0.55
+小学育人场景重构,related_to,与……相关,数智场域,0.58
+教师参与的课堂设计,part_of,属于,instructional design,0.58
+教师参与的课堂设计,related_to,与……相关,AI collaborative lesson preparation,0.55
+师徒同课异构,part_of,属于,单元集体备课,0.5
+师徒同课异构,related_to,与……相关,循证教研,0.55
+教师教育大模型,contrasts_with,与……形成对比,学校专属教育大模型,0.5
+教师教育大模型,enables,使能,智能评课,0.58
+校本智库,enables,使能,循证教研,0.58
+育人伙伴,part_of,属于,家校共育,0.55
+育人伙伴,enables,使能,成长档案,0.52
+智慧职教,enables,使能,产学研融合,0.55
+智慧职教,part_of,属于,数智化转型,0.52
+smart outdoor environment,enables,使能,感知测量,0.52
+smart outdoor environment,related_to,与……相关,学校数字基建,0.55
+雷达图,visualises,可视化,学校画像,0.55
+雷达图,part_of,属于,学生综合发展评价报告,0.52
+知识产权归属,part_of,属于,责任归属,0.52
+知识产权归属,related_to,与……相关,教育科研诚信审查,0.55
+规模应用与数据反哺,enables,使能,规模化循证,0.58
+question group abstraction,informs,为……提供依据,知识诊断,0.55
+question group abstraction,informs,为……提供依据,cognitive diagnosis,0.58
+Rasch model,used_for,用于,传统心理测量,0.58
+Rasch model,informs,为……提供依据,knowledge tracing,0.55
+学习者先生成,builds_on,建立在……之上,generation effect,0.6
+学习者先生成,facilitates,促进,productive struggle,0.58
+学习风格,contrasts_with,与……形成对比,因材施教,0.5
+学习风格,related_to,与……相关,学习习惯,0.5
+计算教育学,part_of,属于,教育科研,0.52
+计算教育学,uses,使用,knowledge tracing,0.55
+instrumental assistance,contrasts_with,与……形成对比,executive help-seeking,0.52
+instrumental assistance,contrasts_with,与……形成对比,answer offloading,0.55
+overt strategy,enables,使能,self-explanation,0.55
+overt strategy,related_to,与……相关,self-instruction,0.52
+declarative knowledge,informs,为……提供依据,structural understanding,0.58
+declarative knowledge,part_of,属于,知识建构,0.55
+cognitive overreliance,measured_by,由……测量,calibration,0.55
+cognitive outsourcing,instance_of,实例,cognitive offloading,0.68
+cognitive outsourcing,contrasts_with,与……形成对比,cognitive extension,0.55
+error carryover,manifestation_of,表现,session-level carryover effect,0.62
+metacognitive prompts,elicit,引出,metacognition,0.68
+metacognitive prompts,requires,需要,self-regulated learning,0.58
+metacognitive prompts,contrasts_with,与……形成对比,metacognitive scaffolding,0.52
+epistemic auditing,enables,使能,AI verification literacy,0.66
+epistemic auditing,uses,使用,验证工具,0.6
+epistemic auditing,supports,支持,evidence-based practice,0.55
+performance-learning gap,evidenced_by,以……为据,immediate performance,0.62
+performance-learning gap,related_to,与……相关,learning-performance paradox,0.58
+AI-free zone,operationalizes,操作化,unaided assessment,0.68
+AI-free zone,supports,支持,independent judgment,0.58
+AI-free zone,related_to,与……相关,AI-use declaration,0.52
+process-based evaluation,uses,使用,oral defense,0.62
+process-based evaluation,requires,需要,rubric,0.6
+process-based evaluation,measured_by,由……测量,过程性数据,0.6
+proxy failure,instance_of,实例,LLM fallacy,0.55
+overreliance on autopilot,manifestation_of,表现,cognitive surrender,0.58
+overreliance on autopilot,related_to,与……相关,codependency,0.52
+reliance,subtype_of,子类型,epistemic dependence,0.7
+reliance,mitigated_by,被……缓解,calibration,0.5
+epistemological machine,related_to,与……相关,知识哲学,0.55
+epistemological machine,shapes,塑造,知识生产,0.52
+epistemological machine,related_to,与……相关,知识生态,0.5
+AI learning companion,enables,使能,spaced practice,0.45
+AI learning companion,contrasts_with,与……形成对比,answer offloading,0.45
+AI verification literacy,assessed_by,由……评估,evaluative judgment,0.5
+asynchronous learning,enables,使能,self-regulated learning,0.5
+asynchronous learning,supported_by,由……支撑,retrieval practice,0.4
+human-plus,measured_by,由……测量,capability residual,0.45
+human-plus,related_to,与……相关,human-GAI engagement paradigm,0.55
+task completion,measured_by,由……测量,任务表现,0.55
+task completion,contrasts_with,与……形成对比,agentic completion,0.45
+stakeholders,related_to,与……相关,家校共育,0.4
+stakeholders,informs,为……提供依据,responsible assessment,0.45
+stakeholders,related_to,与……相关,智能评价,0.35
+reflection,part_of,属于,metacognition,0.55
+reflection,enables,使能,self-regulated learning,0.5
+reflection,contrasts_with,与……形成对比,cognitive surrender,0.45
+reflection,supports,支持,durable learning,0.45
+student agency,enables,使能,epistemic agency,0.55
+student agency,contrasts_with,与……形成对比,epistemic delegation,0.5
+student agency,part_of,属于,relational epistemic agency,0.5
+spaced practice,enables,使能,long-term retention,0.6
+spaced practice,exemplifies,例示,desirable difficulties,0.55
+spaced practice,supported_by,由……支撑,retrieval practice,0.5
+spaced practice,driven_by,由……驱动,memory recall,0.4
+cognitive conflict,elicits,引出,curiosity gap,0.45
+cognitive conflict,requires,需要,epistemic friction,0.5
+cognitive conflict,relates_to,与……相关,argumentation,0.4
+cognitive conflict,contrasts_with,与……形成对比,epistemic plurality,0.4
+AI collaborative lesson preparation,improves,改善,instructional design,0.5
+AI collaborative lesson preparation,related_to,与……相关,云教研,0.45
+AI intuition,analogue_of,类比,overreliance on autopilot,0.45
+AI intuition,undermines,削弱,calibration,0.45
+AI intuition,part_of,属于,缄默知识,0.5
+AI intuition,contrasts_with,与……形成对比,systems of inference,0.5
+AI literacy framework,informs,为……提供依据,AI-TPACK,0.55
+AI literacy framework,exemplifies,例示,AI competency,0.55
+AI literacy framework,contrasts_with,与……形成对比,数字素养,0.45
+AI literacy framework,informs,为……提供依据,human-GAI engagement paradigm,0.45
+AI-use declaration,contrasts_with,与……形成对比,human-production assumption,0.45
+AI-use declaration,assessed_by,由……评估,academic integrity,0.5
+AI输出作为评价对象,evaluated_by,由……评估,rubric,0.55
+AI输出作为评价对象,contrasts_with,与……形成对比,AI detector,0.45
+AI输出作为评价对象,measured_by,由……测量,evaluative judgment,0.5
+artifact residual,measured_by,由……测量,capability residual,0.55
+artifact residual,contrasts_with,与……形成对比,answer over-disclosure,0.4
+artifact residual,recorded_in,记录于,behavioural traces,0.45
+autistic peers,contextualized_by,由……提供语境,DSM-5,0.5
+autistic peers,assessed_by,由……评估,ADOS-2,0.5
+autistic peers,part_of,属于,peer tutoring,0.4
+autistic peers,affects,影响,joint attention,0.45
+cognitive extension,relates_to,与……相关,exoskeleton,0.55
+cognitive extension,contrasts_with,与……形成对比,epistemic dependence,0.45
+cognitive extension,part_of,属于,situated learning,0.45
+cognitive extension,related_to,与……相关,cognitive stewardship,0.5
+cognitive grounding,contrasts_with,与……形成对比,epistemic entanglement,0.45
+cognitive grounding,supported_by,由……支撑,pointing,0.4
+cognitive grounding,related_to,与……相关,situated learning,0.5
+cognitive grounding,enables,使能,知识建构,0.5
+cognitive stewardship,contrasts_with,与……形成对比,cognitive surrender,0.5
+cognitive stewardship,mitigates,缓解,epistemic overreliance,0.55
+cognitive stewardship,supports,支持,self-regulated learning,0.55
+cognitive stewardship,driven_by,由……驱动,self-monitoring,0.5
+conceptual proof,contrasts_with,与……形成对比,empirical verdict,0.45
+conceptual proof,requires,需要,演绎推理,0.5
+conceptual proof,complements,互补于,evidence-based practice,0.4
+conceptual proof,supported_by,由……支撑,scientific reasoning,0.45
+conditioned reflex,manifests_as,表现为,学习习惯,0.55
+conditioned reflex,measured_by,由……测量,behavior recording,0.5
+conditioned reflex,enables,使能,procedural knowledge,0.5
+conditioned reflex,contrasts_with,与……形成对比,cognitive apprenticeship,0.4
+context tree weighting,informs,为……提供依据,cognitive diagnosis,0.45
+context tree weighting,related_to,与……相关,hierarchical joint attention coding,0.45
+curriculum-grounded marking pipeline,uses,使用,rubric,0.6
+curriculum-grounded marking pipeline,driven_by,由……驱动,课程标准,0.65
+curriculum-grounded marking pipeline,supports,支持,教学评一致性,0.55
+curriculum-grounded marking pipeline,constrained_by,受限于,construct validity,0.55
+digital tab,part_of,属于,学校数字基建,0.6
+digital tab,feeds,供给,家校数据看板,0.5
+digital tab,contrasts_with,与……形成对比,板书,0.35
+ecological co-agency framework,draws_from,借鉴自,distributed cognition,0.5
+ecological co-agency framework,supports,支持,teacher agency,0.45
+epistemic augmentation,measured_by,由……测量,unaided test,0.55
+epistemic augmentation,contrasts_with,与……形成对比,comprehension debt,0.5
+epistemic augmentation,requires,需要,verification-driven learning,0.5
+epistemic augmentation,measured_by,由……测量,transfer test,0.5
+epistemic condition,contrasts_with,与……形成对比,epistemic plurality,0.45
+epistemic condition,part_of,属于,知识生态,0.45
+epistemic condition,informs,为……提供依据,epistemic entanglement,0.45
+epistemic entanglement,amplifies,放大,epistemic debt,0.5
+epistemic entanglement,measured_by,由……测量,AI-use declaration,0.45
+epistemic entanglement,contrasts_with,与……形成对比,judgement-bearing assistance,0.5
+epistemic entanglement,mitigated_by,被……缓解,AI-use declaration,0.5
+epistemic integration,contrasts_with,与……形成对比,epistemic entanglement,0.55
+epistemic integration,assessed_by,由……评估,claim test,0.45
+epistemic plurality,enables,使能,argumentation,0.5
+epistemic plurality,related_to,与……相关,交叉科学,0.4
+frustration tolerance,mitigated_by,被……缓解,adaptive learning,0.5
+frustration tolerance,informs,为……提供依据,learner modelling,0.4
+frustration tolerance,related_to,与……相关,academic procrastination,0.4
+frustration tolerance,affected_by,受……影响,情感状态,0.45
+higher-level question,requires,需要,epistemic proactivity,0.45
+higher-level question,contrasts_with,与……形成对比,exploratory questioning,0.45
+higher-level question,elicits,引出,argumentation,0.5
+higher-level question,evaluated_by,由……评估,rubric,0.45
+interactive scaffolding,driven_by,由……驱动,learner modelling,0.6
+interactive scaffolding,contrasts_with,与……形成对比,direct instruction,0.45
+interactive scaffolding,implemented_by,由……实现,dialogic teaching,0.5
+interactive scaffolding,implemented_by,由……实现,AI tutoring,0.5
+judgement-bearing assistance,distinguishes,区分,delegation boundary,0.5
+judgement-bearing assistance,driven_by,由……驱动,rubric,0.5
+judgement-bearing assistance,provides,提供,证据链,0.45
+learning companion,enables,使能,spaced practice,0.45
+learning companion,driven_by,由……驱动,learner modelling,0.5
+low-level question,requires,需要,memory recall,0.5
+low-level question,contrasts_with,与……形成对比,exploratory questioning,0.4
+low-level question,part_of,属于,classroom discourse,0.45
+middle-school entrance exam,contrasts_with,与……形成对比,competency-based education,0.5
+middle-school entrance exam,affects,影响,学业认同,0.5
+middle-school entrance exam,aggravates,加重,评价方式单一,0.45
+pedagogical symbiosis,supports,支持,teacher agency,0.5
+pedagogical symbiosis,part_of,属于,symbiotic literacy,0.5
+pedagogical symbiosis,driven_by,由……驱动,distributed cognition,0.5
+picture description,elicits,引出,narrative,0.5
+picture description,relates_to,与……相关,joint attention,0.5
+pointing,precedes,先于,referential speech,0.6
+pointing,measured_by,由……测量,visual attention,0.5
+post-human learner,contrasts_with,与……形成对比,human intelligence,0.4
+post-human learner,supported_by,由……支撑,cognitive extension,0.5
+post-human learner,informs,为……提供依据,人机协同结构,0.5
+post-human learner,enables,使能,collective over-reliance,0.4
+referential speech,enabled_by,由……启用,pointing,0.55
+referential speech,driven_by,由……驱动,joint attention,0.55
+referential speech,contrasts_with,与……形成对比,formal conversation task,0.45
+relational epistemic agency,emerges_from,源于,epistemic plurality,0.45
+relational epistemic agency,enables,使能,collaborative learning,0.5
+relational epistemic agency,contrasts_with,与……形成对比,cognitive surrender,0.5
+relational epistemic agency,enables,使能,群体学习,0.45
+sample stimulus,precedes,先于,基线,0.45
+sample stimulus,contrasts_with,与……形成对比,任务态基线,0.4
+sample stimulus,used_by,被……使用,multimodal data collection,0.45
+SES,predicts,预测,academic self-concept,0.45
+SES,affects,影响,self-efficacy,0.4
+SES,predicts,预测,stereotype threat,0.45
+SES,affects,影响,学业认同,0.45
+shallow adaptivity,impairs,损害,因材施教,0.5
+shallow adaptivity,undermines,削弱,personalized learning,0.5
+specialized intelligent classroom,part_of,属于,学校数字基建,0.6
+specialized intelligent classroom,supports,支持,smart teaching environment,0.5
+Tutor CoPilot,driven_by,由……驱动,instructional resource library,0.5
+主题教学,implemented_by,由……实现,problem-based learning,0.55
+主题教学,combines,结合,单元整体教学,0.6
+主题教学,depends_on,依赖于,跨学科教研共同体,0.45
+主题教学,contrasts_with,与……形成对比,subject-based lesson preparation,0.55
+互动课件,enables,使能,immediate feedback,0.55
+互动课件,supported_by,由……支撑,multi-modal learning,0.5
+人机协同结构,driven_by,由……驱动,delegation boundary,0.55
+人机协同结构,constrains,约束,教师角色,0.5
+任务表现,measured_by,由……测量,unaided test,0.5
+任务表现,related_to,与……相关,task completion,0.55
+任务表现,recorded_in,记录于,过程性数据,0.5
+任务表现,informs,为……提供依据,learner modelling,0.45
+传统学习分析,contrasts_with,与……形成对比,explainable knowledge tracing,0.45
+传统学习分析,supports,支持,教师画像,0.5
+公共卫生,complements,互补于,心理健康,0.5
+公共卫生,directs,指导,康复技术,0.45
+公共卫生,depends_on,依赖于,神经发育障碍,0.35
+公共卫生,affected_by,受……影响,SES,0.45
+关键能力,measured_by,由……测量,高阶思维评价,0.55
+关键能力,complements,互补于,知识体系,0.45
+关键能力,predicts,预测,cross-domain knowledge transfer,0.5
+关键能力,assessed_by,由……评估,transfer test,0.5
+兴奋与抑制,underlies,构成基础,注意力,0.5
+兴奋与抑制,measured_by,由……测量,fNIRS,0.45
+兴奋与抑制,affects,影响,情感状态,0.45
+兴奋与抑制,contrasts_with,与……形成对比,cognitive processing theory,0.35
+典型发展对照组,required_by,为……所需,DSM-5,0.5
+典型发展对照组,evidenced_by,以……为据,baseline,0.45
+决策模型,informs,为……提供依据,在线学习诊断,0.5
+分组活动,enables,使能,群体学习,0.55
+分组活动,supports,支持,epistemic plurality,0.45
+刻板行为,recorded_by,由……记录,behavior recording,0.6
+刻板行为,relates_to,与……相关,joint attention,0.4
+多模态探究,requires,需要,multimodal data collection,0.5
+多模态探究,improves,改善,critical thinking,0.45
+大传统,manifests_in,体现于,知识体系,0.45
+大传统,part_of,属于,知识生态,0.45
+大传统,contrasts_with,与……形成对比,知识生成,0.45
+大学组织形态,constrains,约束,知识分工,0.5
+大学组织形态,depends_on,依赖于,digital infrastructure,0.45
+大学组织形态,shaped_by,由……塑造,数智化转型,0.5
+大学组织形态,affects,影响,产学研融合,0.5
+学业负担,measured_by,由……测量,cognitive load,0.6
+学业负担,affected_by,受……影响,cognitive demand,0.55
+学业负担,mitigated_by,被……缓解,AI-assisted writing,0.4
+学业负担,predicts,预测,学业质量,0.45
+学习习惯,measured_by,由……测量,过程性数据,0.45
+学习习惯,enables,使能,long-term retention,0.5
+学习习惯,contrasts_with,与……形成对比,passive consumption,0.4
+学习环境,shaped_by,由……塑造,学校数字基建,0.55
+学习环境,supported_by,由……支撑,social-emotional learning,0.45
+学习环境,measured_by,由……测量,multimodal content analysis,0.5
+学习环境,enables,使能,参与度,0.5
+学校数字基建,supports,支持,specialized intelligent classroom,0.55
+学校数字基建,enabled_by,由……启用,数字化,0.5
+实践活动,driven_by,由……驱动,经验,0.5
+实践活动,requires,需要,真实探究任务,0.5
+实践活动,enables,使能,procedural knowledge,0.5
+实践活动,contextualized_by,由……提供语境,学习环境,0.45
+家校教育,driven_by,由……驱动,家校数据看板,0.5
+家校教育,depends_on,依赖于,学校数字基建,0.45
+家校教育,affects,影响,SES,0.45
+家校教育,manifests_in,体现于,stakeholders,0.4
+对话式测量,driven_by,由……驱动,conversation evaluation,0.55
+对话式测量,improves,改善,evaluation literacy,0.45
+患病负担,relates_to,与……相关,心理健康,0.45
+患病负担,relates_to,与……相关,康复技术,0.4
+情境化,driven_by,由……驱动,learner modelling,0.5
+情境化,personalises,个性化,学习环境,0.5
+情境化,requires,需要,文化理解,0.45
+情感状态,affects,影响,cognitive load,0.5
+情感状态,affects,影响,frustration tolerance,0.5
+教-学协同,requires,需要,学习状态追踪,0.55
+教-学协同,enabled_by,由……启用,learning analytic,0.5
+教-学协同,enables,使能,formative feedback,0.5
+教-学协同,supported_by,由……支撑,教学工具,0.45
+教师画像,driven_by,由……驱动,behavior recording,0.5
+教师画像,supports,支持,教师数字素养,0.45
+教师素养,includes,包含,AI competency,0.55
+教师素养,measured_by,由……测量,教师数字素养,0.5
+教师素养,enables,使能,teacher AI adoption,0.55
+数字白板,part_of,属于,specialized intelligent classroom,0.6
+数字白板,increases,增加,cognitive load,0.55
+数字白板,affects,影响,注意力,0.45
+数字白板,used_for,用于,互动课件,0.45
+数智场域,shaped_by,由……塑造,数智治理,0.5
+数智场域,depends_on,依赖于,学校数字基建,0.5
+数智场域,changes,改变,人才培养模式,0.5
+整本书阅读,supports,支持,知识体系,0.45
+整本书阅读,constrained_by,受限于,课程设置,0.45
+整本书阅读,evaluated_by,由……评估,学业评价,0.4
+智能学伴,driven_by,由……驱动,learner modelling,0.5
+智能学伴,constrains,约束,cognitive surrender,0.45
+智能学伴,enables,使能,spaced practice,0.45
+智能测评,contrasts_with,与……形成对比,传统心理测量,0.5
+智能测评,enables,使能,智慧评价系统,0.45
+状态演化,modelled_by,由……建模,knowledge tracing,0.55
+状态演化,derived_from,衍生自,过程性数据,0.5
+状态演化,informs,为……提供依据,adaptive learning,0.5
+理论转译,enables,使能,cross-domain knowledge transfer,0.5
+知识分工,requires,需要,知识谱系,0.45
+知识分工,mitigates,缓解,cognitive load,0.45
+知识分工,supported_by,由……支撑,vocabulary,0.5
+知识迁移,supports,支持,跨学科,0.5
+知识迁移,measured_by,由……测量,任务表现,0.45
+知识迁移,supported_by,由……支撑,structural understanding,0.5
+知识迁移,driven_by,由……驱动,知识体系,0.45
+结构性挑战,manifests_in,体现于,教育生态,0.45
+结构性挑战,mitigated_by,被……缓解,数智治理,0.45
+结构性挑战,constrains,约束,教师角色,0.4
+群体学习,requires,需要,responsibility accounting,0.5
+群体学习,assessed_by,由……评估,peer assessment,0.5
+群文阅读,combines,结合,议题驱动,0.55
+群文阅读,supports,支持,argumentation,0.5
+群文阅读,constrained_by,受限于,课程标准,0.45
+自然互动,evidenced_by,以……为据,behavioural traces,0.45
+自然互动,enables,使能,social use of language,0.5
+自然互动,supported_by,由……支撑,shared reading,0.45
+议题驱动,supported_by,由……支撑,teacher professional development,0.45
+议题驱动,requires,需要,跨学科,0.5
+议题驱动,evaluated_by,由……评估,rubric,0.4
+课堂工具,enables,使能,immediate feedback,0.55
+课堂工具,supports,支持,课程互动,0.5
+课堂工具,driven_by,由……驱动,formative assessment,0.45
+课堂工具,constrained_by,受限于,cognitive load,0.4
+课程知识体系,shapes,塑造,课程标准,0.55
+课程知识体系,supports,支持,学业质量,0.45
+课程观,grounds,为……奠基,课程设置,0.55
+课程观,driven_by,由……驱动,知识哲学,0.45
+课程观,constrains,约束,instructional design,0.55
+高阶学习状态表征,derived_from,衍生自,过程性数据,0.5
+高阶学习状态表征,part_of,属于,学生画像,0.5
+高阶能力,includes,包含,关键能力,0.55
+高阶能力,enables,使能,问题解决,0.5
+高阶能力,supported_by,由……支撑,inquiry learning,0.45
+高阶能力,enables,使能,cross-domain knowledge transfer,0.5
+epistemic overreliance,mitigated_by,被……缓解,AI verification literacy,0.5
+epistemic overreliance,measured_by,由……测量,capability residual,0.45
+epistemic overreliance,mitigated_by,被……缓解,unaided test,0.45
+cognitive surrender,caused_by,由……引起,overreliance on autopilot,0.55
+cognitive surrender,impairs,损害,independent judgment,0.5
+cognitive surrender,contrasts_with,与……形成对比,metacognitive symbiosis,0.45
+cognitive surrender,affected_by,受……影响,fluency illusion,0.5
+fluency illusion,measured_by,由……测量,self-evaluations,0.45
+fluency illusion,contrasts_with,与……形成对比,retrieval practice,0.45
+fluency illusion,mitigated_by,被……缓解,testing effect,0.45
+speedup illusion,amplifies,放大,cognitive outsourcing,0.5
+speedup illusion,measured_by,由……测量,过程性数据,0.4
+speedup illusion,contrasts_with,与……形成对比,unaided performance,0.45
+speedup illusion,leads_to,导致,学业负担,0.4
+calibration,applies,应用,智能测评,0.5
+calibration,affects,影响,决策模型,0.45
+self-evaluation,requires,需要,rubric,0.5
+self-evaluation,driven_by,由……驱动,feedback literacy,0.45
+self-evaluation,weakened_by,被……削弱,fluency illusion,0.45
+self-evaluation,supported_by,由……支撑,reflective use,0.5
+unaided test,contrasts_with,与……形成对比,AI-assisted writing,0.5
+unaided test,measures,度量,durable learning,0.55
+unaided test,supported_by,由……支撑,spaced practice,0.45
+unaided test,combines,结合,knowledge tracing,0.4
+retrieval practice,strengthens,强化,long-term retention,0.6
+retrieval practice,requires,需要,feedback,0.45
+retrieval practice,contrasts_with,与……形成对比,passive consumption,0.45
+retrieval practice,enables,使能,学习习惯,0.4
+inquiry learning,requires,需要,cognitive conflict,0.5
+inquiry learning,supported_by,由……支撑,问题创设,0.5
+inquiry learning,contrasts_with,与……形成对比,direct instruction,0.5
+mastery learning,implemented_by,由……实现,knowledge tracing,0.55
+mastery learning,driven_by,由……驱动,Bloom's taxonomy,0.45
+mastery learning,informs,为……提供依据,因材施教,0.5
+mastery learning,contrasts_with,与……形成对比,学业评价,0.4
+constructivism,contrasts_with,与……形成对比,数学主义,0.4
+constructivism,enabled_by,由……启用,active learning,0.5
+constructivism,grounds,为……奠基,collaborative knowledge construction,0.5
+constructivism,complements,互补于,direct instruction,0.35
+cognitive apprenticeship,requires,需要,scaffolding,0.55
+cognitive apprenticeship,contrasts_with,与……形成对比,direct instruction,0.4
+cognitive apprenticeship,prerequisite_for,是……的前提,缄默知识,0.45
+concept question,identifies,识别,misconception,0.55
+concept question,requires,需要,Bloom's taxonomy,0.5
+concept question,informs,为……提供依据,概念判断,0.5
+concept question,elicits,引出,argumentation,0.45
+intrinsic motivation,driven_by,由……驱动,curiosity gap,0.45
+intrinsic motivation,motivates,激励,approach,0.45
+intrinsic motivation,supported_by,由……支撑,情感状态,0.4
+mastery goal,supports,支持,formative feedback,0.5
+mastery goal,measured_by,由……测量,任务表现,0.45
+mastery goal,relates_to,与……相关,growth mindset,0.5
+proximal goal,supported_by,由……支撑,feedback,0.45
+proximal goal,achieved_through,通过……实现,immediate feedback,0.5
+proximal goal,enabled_by,由……启用,学习状态追踪,0.5
+formative feedback,driven_by,由……驱动,learner modelling,0.5
+formative feedback,enables,使能,自主学习,0.5
+formative feedback,enabled_by,由……启用,情绪监测,0.4
+formative feedback,measured_by,由……测量,成长档案,0.45
+feedback enactment,requires,需要,evaluative judgment,0.7
+immediate feedback,enables,使能,feedback enactment,0.65
+feedback enactment,benefits_from,受益于,verification-driven learning,0.45
+evaluative judgment,requires,需要,epistemic auditing,0.6
+evaluative judgment,measured_by,由……测量,inter-rater reliability,0.55
+LLM-as-a-Judge for grading,threatens,威胁,construct validity,0.55
+conversation-based assessment,variant_of,变体,oral defense,0.7
+dialogic teaching,enables,使能,conversation-based assessment,0.55
+conversation-based assessment,requires,需要,linguistic communication,0.5
+human-centred learning analytics,prioritizes,优先考虑,learner agency,0.6
+human-centred learning analytics,informs,为……提供依据,personalized learning,0.5
+vibe coding,related_to,与……相关,codependency,0.4
+AI-TPACK,supports,支持,teacher professional development,0.55
+AI-TPACK,informs,为……提供依据,instructional design,0.45
+AI-assisted writing,related_to,与……相关,answer offloading,0.45
+durable learning,measured_by,由……测量,capability residual,0.65
+durable learning,contributes_to,有助于,long-term retention,0.6
+immediate performance,contrasts_with,与……形成对比,durable learning,0.55
+immediate performance,inflates,抬高,fluency illusion,0.5
+student participation,measured_by,由……测量,behavioural engagement,0.55
+student participation,supported_by,由……支撑,cooperative learning,0.5
+teacher agency,contrasts_with,与……形成对比,abdication of scaffolding,0.5
+teacher agency,related_to,与……相关,delegation boundary,0.4
+independent judgment,requires,需要,verification-driven learning,0.55
+independent judgment,related_to,与……相关,claim test,0.45
+cross-domain knowledge transfer,enabled_by,由……启用,problem-based learning,0.45
+cross-domain knowledge transfer,supports,支持,交叉科学,0.45
+multi-modal learning,related_to,与……相关,visual attention,0.4
+segmenting principle,directs,指导,multimedia learning,0.55
+multimedia learning,requires,需要,言语加工,0.45
+autonomous regulation,enabled_by,由……启用,metacognitive scaffolding,0.55
+autonomous regulation,measured_by,由……测量,self-monitoring,0.5
+curiosity gap,supports,支持,discovery learning,0.5
+curiosity gap,elicits,引出,higher-level question,0.45
+process-based assessment,enables,使能,academic integrity monitoring,0.5
+baseline,operationalizes,操作化,任务态,0.6
+baseline,enables,使能,机制检验,0.55
+belief system,shaped_by,由……塑造,cultural encoding,0.6
+collaborative activity,related_to,与……相关,跨时空多主体协同教学,0.45
+competency-based education,supported_by,由……支撑,mastery-based grading,0.6
+competency-based education,informs,为……提供依据,curriculum,0.4
+confidence level,requires,需要,local irreducible uncertainty,0.45
+cultural mediator,requires,需要,linguistic communication,0.5
+cultural mediator,embodies,体现,文化基因,0.45
+distributed responsibility,requires,需要,delegation boundary,0.55
+DSM-5,supports,支持,ADOS-2,0.45
+DSM-5,operationalizes,操作化,临床经验,0.4
+empathy point,manifests_in,体现于,对话式导学,0.45
+epistemic dependence,contrasts_with,与……形成对比,independent reasoning,0.55
+forgetting pattern,mitigated_by,被……缓解,retrieval practice,0.6
+gestalt learning theory,contrasts_with,与……形成对比,连接主义,0.5
+gestalt learning theory,informs,为……提供依据,cognitive structure,0.45
+logical judgment,contrasts_with,与……形成对比,AI intuition,0.5
+logical judgment,requires,需要,演绎推理,0.55
+narrative,enables,使能,qualitative assessment,0.5
+psychometrically-aware AI,requires,需要,differential item functioning,0.55
+psychometrically-aware AI,contrasts_with,与……形成对比,生成式心理测量,0.6
+qualitative assessment,contrasts_with,与……形成对比,automated scoring,0.55
+qualitative assessment,requires,需要,rubric,0.6
+rubric,operationalizes,操作化,学习目标,0.55
+rubric,supported_by,由……支撑,inter-rater reliability,0.5
+shared reading,requires,需要,joint attention,0.55
+shared reading,related_to,与……相关,群文阅读,0.4
+social use of language,emerges_from,源于,语言经验,0.6
+parent-child dialogue,exemplifies,例示,social use of language,0.45
+structural understanding,assessed_by,由……评估,知识诊断,0.45
+structural understanding,assessed_by,由……评估,概念判断,0.45
+subjectivity,informs,为……提供依据,epistemological machine,0.4
+自我参照,exemplifies,例示,subjectivity,0.4
+systems of inference,supported_by,由……支撑,belief system,0.6
+topic mastery,assessed_by,由……评估,formative assessment,0.55
+topic mastery,supported_by,由……支撑,deliberate practice,0.5
+unit-based lesson preparation,requires,需要,课程标准,0.6
+unit-based lesson preparation,supported_by,由……支撑,chapter auto-generation,0.4
+一体化顶层设计,supported_by,由……支撑,学校数字基建,0.45
+产学研融合,enables,使能,知识生产,0.6
+人机共创,requires,需要,epistemic co-agency,0.55
+任务态,recorded_in,记录于,behavioural traces,0.6
+任务态,recorded_by,由……记录,behavior recording,0.45
+伦理关系,requires,需要,责任归属,0.55
+伦理关系,contrasts_with,与……形成对比,数学主义,0.45
+信息化,drives,驱动,digital infrastructure,0.5
+信息化,exemplifies,例示,e-learning,0.45
+做中学,supports,支持,缄默知识,0.5
+真实探究任务,exemplifies,例示,做中学,0.5
+单元整体教学,requires,需要,知识体系,0.6
+单元整体教学,supports,支持,核心素养,0.55
+参与度,measured_by,由……测量,behavioral streams,0.55
+参与度,related_to,与……相关,cognitive engagement,0.5
+可计算性,contrasts_with,与……形成对比,数学主义,0.45
+在线学习诊断,driven_by,由……驱动,learner modelling,0.6
+在线学习诊断,enables,使能,因材施教,0.45
+多场景仿真,assessed_by,由……评估,可复现研究证据,0.45
+大学组织理念,shaped_by,由……塑造,范式转换,0.5
+大学组织理念,supported_by,由……支撑,组织底座,0.4
+学业认同,affected_by,受……影响,stereotype threat,0.55
+学业认同,related_to,与……相关,sense of belonging,0.45
+cognitive processing theory,theory_of,是……的理论,学习机制,0.6
+机制假设,tests,检验,学习机制,0.45
+学习目标,basis_for,是……的依据,学业评价,0.5
+学术性阅读,requires,需要,assessment literacy,0.5
+学术性阅读,supported_by,由……支撑,AI verification literacy,0.45
+学校画像,includes,包含,学业质量,0.45
+学生数字素养,supports,支持,GenAI literacy,0.6
+学生数字素养,measured_by,由……测量,AI-use declaration,0.4
+数据赋分,produces,产生,学生综合发展评价报告,0.5
+学生综合发展评价报告,stored_in,存储于,成长档案,0.6
+学生表征,enables,使能,personalized learning,0.6
+学科教学,supported_by,由……支撑,知识生产,0.45
+学科教学,embodies,体现,学术性阅读,0.4
+对话式导学,requires,需要,问题创设,0.5
+心理健康,supported_by,由……支撑,emotional intelligence,0.5
+心理健康,related_to,与……相关,social disengagement,0.4
+情感活动,measured_by,由……测量,情绪监测,0.55
+情感活动,affects,影响,学习投入,0.45
+意志活动,requires,需要,执行功能,0.6
+意志活动,supported_by,由……支撑,goal,0.45
+教学模式固化,contrasts_with,与……形成对比,差异化,0.5
+教学模式固化,mitigated_by,被……缓解,evidence-based practice,0.55
+数字胜任力,contrasts_with,与……形成对比,AI literacy over tool design,0.45
+数据赋分,requires,需要,过程性数据,0.6
+数据赋分,threatens,威胁,assessment literacy,0.4
+数智时代知识转型,challenges,挑战,人类知识,0.5
+数智时代知识转型,related_to,与……相关,知识哲学,0.45
+智能导师,requires,需要,学习状态追踪,0.6
+智能导师,threatens,威胁,teacher agency,0.45
+生成式心理测量,threatens,威胁,construct validity,0.6
+知识生成,supported_by,由……支撑,知识生产,0.6
+知识生成,requires,需要,argumentation,0.5
+知识精细加工,measured_by,由……测量,retention test,0.6
+知识重构,manifests_in,体现于,范式转换,0.45
+神经发育障碍,contrasts_with,与……形成对比,neurotypical,0.6
+神经发育障碍,evidenced_by,以……为据,fNIRS,0.4
+科学编史学,informs,为……提供依据,assessment literacy,0.4
+结构化思维,manifests_in,体现于,板书,0.45
+自我管理,supports,支持,task completion,0.45
+自我管理,related_to,与……相关,学习习惯,0.4
+自闭症儿童组,exhibits,展现,刻板行为,0.6
+多场景仿真,operationalizes,操作化,规模化循证,0.5
+认知裂缝,measured_by,由……测量,unaided test,0.6
+认知裂缝,mitigated_by,被……缓解,verification-driven learning,0.5
+评价技术,includes,包含,生成式心理测量,0.6
+rubric,operationalizes,操作化,评价技术,0.55
+语言经验,emerges_from,源于,自然互动,0.5
+语言经验,measured_by,由……测量,言语加工,0.45
+课程互动,supported_by,由……支撑,dialogic argument,0.5
+active group,embodies,体现,课程互动,0.45
+跨时空多主体协同教学,enabled_by,由……启用,云课堂,0.55
+身体活动,affects,影响,cognitive activity,0.55
+身体活动,measured_by,由……测量,fNIRS,0.45
+验证工具,implemented_by,由……实现,fact evidence,0.45
+验证工具,undermines,削弱,epistemic dependence,0.45
+高阶思维评价,measures,度量,抽象思维,0.6
+高阶思维评价,supports,支持,知识生产,0.45
+skill formation,supported_by,由……支撑,deliberate practice,0.7
+deskilling,threatens,威胁,skill formation,0.6
+discovery learning,supported_by,由……支撑,scaffolding,0.6
+问题创设,facilitates,促进,discovery learning,0.5
+inquiry-based learning,uses,使用,claim test,0.5
+真实探究任务,embodies,体现,inquiry-based learning,0.45
+cooperative learning,supported_by,由……支撑,peer instruction,0.6
+peer tutoring,embodies,体现,cooperative learning,0.5
+project-based learning,embodies,体现,跨学科,0.55
+project-based learning,supported_by,由……支撑,collaborative knowledge construction,0.5
+dialogic teaching,related_to,与……相关,higher-level question,0.45
+dialogic teaching,contrasts_with,与……形成对比,direct instruction,0.5
+fifth generation of automated scoring,supersedes,取代,传统心理测量,0.6
+stealth assessment,instances,实例化,evidence-centered design,0.55
+evidence-centered design,requires,需要,学习目标,0.5
+process-based assessment,supported_by,由……支撑,behavioural traces,0.55
+process-based assessment,requires,需要,learning analytic,0.5
+explainable knowledge tracing,supports,支持,formative feedback,0.5
+cognitive diagnosis,informs,为……提供依据,multi-domain knowledge tracing,0.55
+multi-domain knowledge tracing,evaluated_by,由……评估,transfer test,0.6
+e-learning,depends_on,依赖于,digital infrastructure,0.5
+e-learning,related_to,与……相关,智慧课堂,0.45
+deliberate practice,supported_by,由……支撑,desirable difficulty,0.7
+deliberate practice,contrasts_with,与……形成对比,scripted learning,0.5
+learning,contrasts_with,与……形成对比,immediate performance,0.5
+learning,supported_by,由……支撑,retrieval practice,0.6
+learning-oriented engagement,contrasts_with,与……形成对比,answer offloading,0.5
+active learning,promotes,促进,learning-oriented engagement,0.55
+learner agency,supported_by,由……支撑,Socratic questioning,0.5
+answer offloading,threatens,威胁,learner agency,0.55
+bodily activity,affected_by,受……影响,情感活动,0.45
+artifact residual,operationalizes,操作化,capability residual,0.55
+capability residual,informs,为……提供依据,unaided assessment,0.6
+epistemic auditing,instances,实例化,claim test,0.6
+claim test,contrasts_with,与……形成对比,truthful assertion,0.5
+cognitive processing theory,explains,解释,cognitive activity,0.6
+cognitive activity,constrained_by,受限于,working memory,0.55
+cognitive diagnosis,identifies,识别,misconception,0.55
+cognitive diagnosis,models,建模,Learner State Representations,0.5
+dual coding principle,exemplifies,例示,cognitive processing theory,0.5
+control group,contrasts_with,与……形成对比,仿真,0.45
+control group,constrains,约束,attribution,0.4
+storytelling,embodies,体现,cultural encoding,0.5
+cultural encoding,related_to,与……相关,文化基因,0.45
+AI-use declaration,operationalizes,操作化,delegation boundary,0.55
+digital board,records,记录,过程性数据,0.45
+digital board,enables,使能,互动课件,0.5
+dialogic teaching,underpins,支撑,educative relation,0.5
+educative relation,related_to,与……相关,epistemic co-agency,0.45
+emotional activity,affects,影响,memory recall,0.45
+empirical verdict,informs,为……提供依据,evidence-based practice,0.55
+学生表征,modelled_by,由……建模,Learner State Representations,0.55
+智能导师,enabled_by,由……启用,knowledge tracing,0.55
+evidence condition,part_of,属于,知识哲学,0.72
+evidence condition,analogue_of,类比,epistemic condition,0.62
+familiarization,prerequisite_for,是……的前提,真实探究任务,0.55
+familiarization,relates_to,与……相关,formal conversation task,0.4
+mastery,instance_of,实例,mastery goal,0.58
+mastery,contrasts_with,与……形成对比,mastery gain paradox,0.48
+mastery-based grading,measured_by,由……测量,学业水平,0.66
+mastery-based grading,contrasts_with,与……形成对比,summative assessment,0.45
+memory recall,contrasts_with,与……形成对比,immediate performance,0.42
+rating scale,instance_of,实例,Rasch model,0.6
+rating scale,measured_by,由……测量,inter-rater reliability,0.62
+rating scale,used_for,用于,感知测量,0.55
+self-evaluations,related_to,与……相关,学生表征,0.62
+self-evaluations,contrasts_with,与……形成对比,AI输出作为评价对象,0.48
+storytelling,enables,使能,问题解决,0.52
+subject-based lesson preparation,subtype_of,子类型,AI collaborative lesson preparation,0.62
+subject-based lesson preparation,supports,支持,课程知识体系,0.66
+thinking,part_of,属于,心理活动,0.82
+thinking,manifests_as,表现为,抽象思维,0.72
+truth condition,part_of,属于,知识哲学,0.7
+truth condition,contrasts_with,与……形成对比,epistemic condition,0.5
+visual attention,subtype_of,子类型,注意力,0.86
+visual attention,relates_to,与……相关,control group,0.3
+volitional activity,part_of,属于,心理活动,0.8
+volitional activity,governs,支配,self-regulated behavior,0.68
+volitional activity,enables,使能,做中学,0.5
+不可替代学习,contrasts_with,与……形成对比,epistemic delegation,0.62
+不可替代学习,bounded_by,受限于,delegation boundary,0.66
+不可替代学习,requires,需要,overt strategy,0.52
+临床经验,contrasts_with,与……形成对比,规模化循证,0.48
+云教研,mitigates,缓解,资源不均衡,0.58
+云教研,part_of,属于,教育生态,0.62
+人机共教,related_to,与……相关,多主体协同教学,0.66
+人机共构,requires,需要,epistemic co-agency,0.7
+人机共构,enables,使能,professional skill acquisition,0.52
+人机协同中的教师角色,supports,支持,学生评价,0.45
+任务态基线,part_of,属于,behavioral streams,0.55
+儿童具身学习,related_to,与……相关,做中学,0.62
+儿童具身学习,manifests_as,表现为,身体活动,0.6
+学业水平,contrasts_with,与……形成对比,self-efficacy,0.52
+学业水平,measured_by,由……测量,confidence level,0.5
+学业水平,informs,为……提供依据,适应性教学策略,0.62
+学习兴趣,amplifies,放大,注意力,0.6
+学习观,variant_of,变体,belief system,0.72
+学生评价,input_to,是……的输入,学生画像,0.7
+学生评价,supported_by,由……支撑,教育科研,0.55
+家校共育,mitigates,缓解,责任归属,0.42
+师生脑耦合,manifests_as,表现为,pointing,0.48
+师生脑耦合,related_to,与……相关,过程性数据,0.42
+康复技术,supports,支持,joint attention,0.55
+康复技术,evaluated_by,由……评估,control group,0.45
+循证教研,uses,使用,claim test,0.58
+循证教研,requires,需要,机制检验,0.66
+思维外显,operationalizes,操作化,thinking,0.8
+思维外显,supports,支持,metacognitive feedback,0.55
+情绪监测,input_to,是……的输入,学生画像,0.6
+情绪监测,relies_on,依赖,过程性数据,0.62
+探究能力,enables,使能,项目研究,0.62
+探究能力,requires,需要,claim test,0.58
+探究能力,part_of,属于,高阶能力,0.6
+教师二次创作,part_of,属于,AI collaborative lesson preparation,0.68
+教师二次创作,improves,改善,quality of learning materials,0.66
+教师二次创作,enables,使能,因材施教,0.55
+教师角色,shaped_by,由……塑造,数智时代知识转型,0.66
+教师角色,requires,需要,AI verification literacy,0.5
+教师角色,related_to,与……相关,subjectivity,0.55
+数字素养,umbrella_for,是……的总称,教师数字素养,0.88
+数字素养,part_of,属于,高阶能力,0.72
+数智导师,operationalizes,操作化,数智育人,0.7
+数智导师,complements,互补于,最近发展区,0.45
+文化认同,related_to,与……相关,sense of belonging,0.72
+文化认同,shaped_by,由……塑造,cross-cultural communication,0.6
+智慧评价系统,operationalizes,操作化,学生评价,0.8
+智慧评价系统,uses,使用,smart teaching assistant,0.6
+智慧评价系统,generates,生成,证据链,0.5
+板书,part_of,属于,课堂工具,0.65
+校本资源库,enables,使能,自主学习,0.52
+演绎推理,subtype_of,子类型,reasoning,0.88
+演绎推理,supports,支持,truthful assertion,0.66
+现代教育技术,part_of,属于,数智化,0.6
+现代教育技术,enables,使能,multimedia learning,0.66
+真实探究任务,enables,使能,缄默知识,0.58
+知识哲学,contrasts_with,与……形成对比,隐性知识,0.48
+社交障碍,assessed_by,由……评估,ADOS-2,0.72
+社交障碍,contrasts_with,与……形成对比,neurotypical,0.55
+神经心理机制,operationalizes,操作化,情感状态,0.55
+经验,part_of,属于,隐性知识,0.62
+经验,supports,支持,做中学,0.55
+经验,contrasts_with,与……形成对比,数学主义,0.45
+自主学习,requires,需要,self-monitoring,0.72
+自主学习,supported_by,由……支撑,成长档案,0.55
+读写迁移,subtype_of,子类型,知识迁移,0.8
+读写迁移,contrasts_with,与……形成对比,learning-performance paradox,0.4
+资源不均衡,aggravates,加重,社交障碍,0.48
+资源不均衡,related_to,与……相关,规模应用与数据反哺,0.5
+跨学科教研共同体,complements,互补于,unit-based lesson preparation,0.62
+跨学科教研共同体,enables,使能,跨时空多主体协同教学,0.66
+跨学科教研共同体,part_of,属于,群体学习,0.58
+适应性教学策略,operationalizes,操作化,差异化,0.82
+问题创设,contrasts_with,与……形成对比,higher-level question,0.42
+问题表征,informs,为……提供依据,知识迁移,0.58
+practical relation,enables,使能,content intelligent creation,0.5
+reasoning,manifests_as,表现为,student reasoning,0.66
+smart management platform,part_of,属于,学校数字基建,0.75
+smart management platform,serves,服务,smart security,0.55
+隐性学习策略,contrasts_with,与……形成对比,overt strategy,0.62
+隐性学习策略,enables,使能,隐性知识,0.66
+隐性知识,supports,支持,professional skill acquisition,0.62
+项目研究,subtype_of,子类型,project-based learning,0.85
+项目研究,requires,需要,higher-level question,0.6
+working memory,enables,使能,generation effect,0.55
+misconception,instance_of,实例,concept,0.6
+reflective use,subtype_of,子类型,verification-driven learning,0.8
+collaborative learning,enables,使能,课程互动,0.58
+active learning,manifests_as,表现为,learning-oriented engagement,0.7
+active learning,requires,需要,student participation,0.62
+growth mindset,motivates,激励,mastery goal,0.55
+responsibility accounting,part_of,属于,责任归属,0.72
+responsibility accounting,addresses,针对,LLM fallacy,0.5
+learning analytic,informs,为……提供依据,数智育人,0.62
+answer over-disclosure,part_of,属于,answer offloading,0.72
+answer over-disclosure,threatens,威胁,independent reasoning,0.62
+answer over-disclosure,impairs,损害,演绎推理,0.55
+Socratic questioning,part_of,属于,dialogic teaching,0.7
+Socratic questioning,contrasts_with,与……形成对比,direct instruction,0.6
+argumentation,supports,支持,知识生产,0.58
+assessment reform,part_of,属于,课堂变革,0.7
+assessment reform,motivates,激励,responsible assessment,0.68
+Conditions of Knowledge,grounds,为……奠基,claim test,0.6
+Conditions of Knowledge,used_by,被……使用,循证教研,0.5
+Learner State Representations,modelled_by,由……建模,item response theory,0.68
+behavior recording,aggravates,加重,诊断延迟,0.55
+behavior recording,records,记录,任务态,0.62
+behavioural traces,input_to,是……的输入,神经心理机制,0.62
+behavioural traces,aggravates,加重,诊断延迟,0.55
+behavioural traces,supports,支持,智慧评价系统,0.58
+cerebral cortex,grounds,为……奠基,认知神经机制,0.7
+cerebral cortex,supports,支持,语言经验,0.5
+cerebral cortex,related_to,与……相关,neurotypical,0.42
+classic developmental theories,includes,包含,epistemology,0.55
+classic developmental theories,explains,解释,心理活动,0.55
+conversational agency,requires,需要,student agency,0.68
+conversational agency,contrasts_with,与……形成对比,教学工具,0.5
+excitation and inhibition,grounds,为……奠基,认知神经机制,0.72
+excitation and inhibition,informs,为……提供依据,对象性化活动,0.45
+fact evidence,contrasts_with,与……形成对比,科学解释,0.5
+fact evidence,supports,支持,claim test,0.66
+fact evidence,informs,为……提供依据,学生评价,0.55
+linguistic communication,part_of,属于,social use of communication,0.72
+linguistic communication,manifests_as,表现为,empathy point,0.5
+social disengagement,contrasts_with,与……形成对比,学习兴趣,0.42
+social disengagement,symptom_of,是……的症状,神经发育障碍,0.62
+social learning theory,explains,解释,professional skill acquisition,0.55
+social learning theory,grounds,为……奠基,知识生产,0.48
+social learning theory,supports,支持,云教研,0.45
+不可替代性,contrasts_with,与……形成对比,delegation boundary,0.55
+不可替代性,supports,支持,参与度,0.45
+云课堂,enables,使能,数智导师,0.62
+云课堂,part_of,属于,asynchronous learning,0.66
+云课堂,supports,支持,visual attention,0.42
+发展模拟,informs,为……提供依据,学习机制,0.55
+基线,supports,支持,control group,0.6
+基线,contrasts_with,与……形成对比,范式转换,0.45
+学业质量,operationalizes,操作化,核心素养,0.62
+学习情绪,related_to,与……相关,神经发育障碍,0.42
+学习情绪,affected_by,受……影响,状态演化,0.45
+定性评估,relates_to,与……相关,process-based evaluation,0.62
+实证校准,contrasts_with,与……形成对比,miscalibration,0.62
+实证校准,requires,需要,过程性数据,0.6
+家校协同,enables,使能,小学育人场景重构,0.62
+家校协同,part_of,属于,教育生态,0.6
+家校协同,related_to,与……相关,情绪监测,0.48
+教学工具,encompasses,涵盖,content intelligent creation,0.6
+教学工具,informs,为……提供依据,课程设置,0.5
+数智化转型,part_of,属于,课堂变革,0.68
+文化理解,related_to,与……相关,文化基因,0.58
+文化理解,enables,使能,群体学习,0.5
+智慧作业,part_of,属于,课程互动,0.62
+智慧作业,operationalizes,操作化,因材施教,0.66
+智慧作业,related_to,与……相关,适应性教学策略,0.6
+智能析课,analogue_of,类比,multimodal content analysis,0.62
+智能评价,operationalizes,操作化,学业评价,0.72
+智能评价,uses,使用,rubric,0.62
+智能评价,related_to,与……相关,成长档案,0.55
+深度阅读,contrasts_with,与……形成对比,Generation-Then-Comprehension,0.45
+深度阅读,related_to,与……相关,群文阅读,0.55
+理论修正,bounded_by,受限于,construct validity,0.62
+理论修正,contrasts_with,与……形成对比,attribution theory,0.4
+理论修正,related_to,与……相关,深度阅读,0.42
+知识建构,informs,为……提供依据,学习观,0.55
+知识建构,supported_by,由……支撑,phase-aware knowledge tracing,0.5
+知识生态,analogue_of,类比,ecological co-agency framework,0.68
+知识生态,related_to,与……相关,human-production assumption,0.45
+知识诊断,subtype_of,子类型,knowledge tracing,0.72
+知识诊断,enables,使能,concept-level deficiency prediction,0.7
+社会性,contrasts_with,与……形成对比,autistic peers,0.42
+社会性,measured_by,由……测量,hierarchical joint attention coding,0.58
+社会性,part_of,属于,social-emotional learning,0.7
+科学解释,grounds,为……奠基,理论修正,0.6
+科学解释,relates_to,与……相关,claim test,0.58
+classroom discourse,requires,需要,referential speech,0.6
+classroom discourse,measured_by,由……测量,language level,0.55
+classroom discourse,bounds,界定,wait time,0.62
+classroom discourse,operationalizes,操作化,formal conversation task,0.5
+object-oriented activity,grounds,为……奠基,五育,0.45
+object-oriented activity,contrasts_with,与……形成对比,epistemic proactivity,0.42
+object-oriented activity,related_to,与……相关,思维外显,0.52
+object-oriented activity,grounds,为……奠基,课程观,0.5
+智能评课,uses,使用,digital board,0.5
+智能评课,analogue_of,类比,classroom discourse,0.55
+智能评课,informs,为……提供依据,inquiry-based learning,0.48
+epistemic co-agency,subtype_of,子类型,epistemic agency,0.7
+skill acquisition,assessed_by,由……评估,transfer test,0.45
+教育实验,uses,使用,智慧课堂,0.4
+教学评一致性,supports,支持,学业评价,0.45
+brain activity,manifests_in,体现于,师生脑耦合,0.5
+personalized learning,bounded_by,受限于,数字素养,0.4
+可复现研究证据,measured_by,由……测量,实证校准,0.45
+direct instruction,supports,支持,mastery learning,0.5
+self-regulated learning,predicts,预测,long-term retention,0.45
+unaided performance,measured_by,由……测量,retention test,0.5
+item response theory,informs,为……提供依据,学生画像,0.4
+智能备课,requires,需要,课程标准,0.5
+言语加工,assessed_by,由……评估,语言运用,0.4
+语言运用,supported_by,由……支撑,shared reading,0.45
+epistemology,contrasts_with,与……形成对比,GenAI as epistemic condition,0.4
+社会创新需求,constrains,约束,课程标准,0.45
+知识谱系,contrasts_with,与……形成对比,知识分工,0.45
+long-term retention,predicts,预测,学业质量,0.45
+teacher AI adoption,predicts,预测,教师角色,0.4
+家校数据看板,visualises,可视化,学生画像,0.5
+智能教育,part_of,属于,数智场域,0.45
+育人成效的可计算表征,measured_by,由……测量,学习力,0.45
+construct validity,draws_from,借鉴自,学习科学,0.4
+knowledge tracing,supports,支持,学习力,0.4
+范式转换,related_to,与……相关,epistemology,0.35
+digital infrastructure,underpins,支撑,智慧职教,0.4
+能力增强,measured_by,由……测量,育人成效的可计算表征,0.45
+课程设置,impedes,阻碍,跨学科,0.4
+AI literacy,requires,需要,epistemic auditing,0.4
+instructional design,enables,使能,因材施教,0.5
+vocabulary,prerequisite_for,是……的前提,抽象思维,0.45
+认知责任,mitigates,缓解,epistemic delegation,0.5
+immediate feedback,improves,改善,self-regulated learning,0.55
+因材施教,requires,需要,知识诊断,0.5
+学习力,measured_by,由……测量,成长档案,0.45
+formative assessment,draws_from,借鉴自,learning analytic,0.45
+学业评价,contrasts_with,与……形成对比,数据赋分,0.4
+self-explanation,supports,支持,metacognition,0.55
+language level,informs,为……提供依据,因材施教,0.45
+superior temporal gyrus,measured_by,由……测量,fNIRS,0.6
+五育,measured_by,由……测量,雷达图,0.45
+母语能力,develops,发展,深度阅读,0.45
+核心素养,assessed_by,由……评估,学业质量,0.45
+批判性思考,part_of,属于,higher-order thinking,0.6
+组织底座,enables,使能,协同育人,0.45
+performance-competence divide,predicts,预测,illusion of competence,0.45
+Bloom's taxonomy,informs,为……提供依据,智能测评,0.4
+collaborative knowledge construction,enables,使能,知识生成,0.55
+illusion of competence,measured_by,由……测量,self-estimate,0.5
+显著性差异,enables,使能,规模化循证,0.5
+parent-child dialogue,supports,支持,读写迁移,0.45
+inquiry,requires,需要,真实探究任务,0.5
+self-efficacy,predicts,预测,学习投入,0.55
+higher-order thinking,broader_than,范围更广,高阶思维评价,0.85
+cognitive offloading,threatens,威胁,知识迁移,0.45
+academic integrity,requires,需要,证据链,0.5
+执行功能,enables,使能,self-monitoring,0.55
+协同育人,enables,使能,学习投入,0.4
+scaffolding,contrasts_with,与……形成对比,abdication of scaffolding,0.5
+mental activity,measured_by,由……测量,fNIRS,0.45
+评价方式单一,threatens,威胁,核心素养,0.5
+practical activity,requires,需要,身体活动,0.5
+learner modelling,uses,使用,cognitive diagnosis,0.5
+学习投入,predicts,预测,学业质量,0.5
+rubric-based grading,contrasts_with,与……形成对比,数据赋分,0.4
+cognitive structure,informs,为……提供依据,learner modelling,0.5
+cognitive load,related_to,与……相关,dual coding,0.45
+抽象思维,constrained_by,受限于,cognitive load,0.4
+critical thinking,enables,使能,argumentation,0.55
+单元集体备课,improves,改善,教学评一致性,0.45
+学习科学,draws_from,借鉴自,认知神经机制,0.5
+数字化,enables,使能,smart campus,0.5
+answer offloading,threatens,威胁,independent judgment,0.5
+conceptual change,informs,为……提供依据,概念判断,0.45
+curriculum,enables,使能,跨学科教研共同体,0.4
+teacher professional development,draws_from,借鉴自,可复现研究证据,0.5
+metacognition,related_to,与……相关,working memory,0.45
+AI tutor,broader_than,范围更广,智能导师,0.8
+epistemic delegation,mitigated_by,被……缓解,epistemic auditing,0.5
+课程标准,enables,使能,课程知识体系,0.5
+学生画像,informs,为……提供依据,差异化,0.5
+adaptive learning,enabled_by,由……启用,学习状态追踪,0.5
+social use of communication,broader_than,范围更广,social use of language,0.85
+deskilling,mitigated_by,被……缓解,deliberate practice,0.5
+跨学科,enables,使能,multi-domain knowledge tracing,0.45
+ADOS-2,type_of,类型,conversation-based assessment,0.72
+过程性数据,informs,为……提供依据,家校数据看板,0.5
+Bloom's taxonomy,operationalizes,操作化,核心素养,0.45
+adaptive learning,draws_from,借鉴自,学生画像,0.5
+automated scoring,enables,使能,formative assessment,0.45
+cognitive offloading,related_to,与……相关,exoskeleton,0.4
+cognitive structure,informs,为……提供依据,学习状态追踪,0.4
+conceptual change,impedes,阻碍,知识迁移,0.4
+critical thinking,assessed_by,由……评估,高阶思维评价,0.5
+curriculum,draws_from,借鉴自,知识体系,0.45
+deskilling,impairs,损害,能力增强,0.5
+formal conversation task,requires,需要,语言运用,0.45
+gaze,informs,为……提供依据,学习投入,0.45
+instructional design,draws_from,借鉴自,教师画像,0.4
+performance-competence divide,measured_by,由……测量,unaided performance,0.55
+rubric-based grading,informs,为……提供依据,学业评价,0.5
+scaffolding,requires,需要,cognitive diagnosis,0.45
+self-efficacy,enhances,增强,能力增强,0.45
+self-explanation,enabled_by,由……启用,collaborative knowledge construction,0.4
+summative assessment,draws_from,借鉴自,item response theory,0.4
+teacher professional development,informs,为……提供依据,教育生态,0.4
+vocabulary,part_of,属于,语言运用,0.65
+五育,part_of,属于,教育生态,0.5
+人才培养模式,requires,需要,课程设置,0.6
+执行功能,measured_by,由……测量,fNIRS,0.45
+批判性思考,measured_by,由……测量,argumentation,0.4
+教育科研,feeds,供给,知识谱系,0.4
+数字化,driven_by,由……驱动,digital infrastructure,0.5
+显著性差异,computed_by,由……计算,教育实验,0.55
+母语能力,related_to,与……相关,cross-cultural communication,0.4
+评价方式单一,impairs,损害,教学评一致性,0.5
+过程性数据,informs,为……提供依据,formative assessment,0.5
+ADOS-2,requires,需要,社交障碍,0.4
+AI tutor,draws_from,借鉴自,learner modelling,0.5
+adaptive learning,enables,使能,因材施教,0.55
+answer offloading,mitigated_by,被……缓解,AI-free zone,0.5
+deskilling,threatens,威胁,核心素养,0.4
+higher-order thinking,supports,支持,argumentation,0.45
+illusion of competence,measured_by,由……测量,confidence level,0.45
+metacognition,contrasts_with,与……形成对比,cognitive offloading,0.4
+smart campus,informs,为……提供依据,家校数据看板,0.4
+social use of communication,informs,为……提供依据,language level,0.5
+学习科学,enabled_by,由……启用,教育实验,0.5
+抽象思维,part_of,属于,higher-order thinking,0.6
+AI tutor,threatens,威胁,自主学习,0.4
+formative assessment,enables,使能,数据赋分,0.4
+inter-rater reliability,constrains,约束,automated scoring,0.55
+学业评价,uses,使用,knowledge tracing,0.45
+学习力,related_to,与……相关,学习科学,0.45
+过程性数据,informs,为……提供依据,self-regulated learning,0.4

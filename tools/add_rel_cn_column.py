@@ -14,8 +14,8 @@
     python tools/add_rel_cn_column.py# 就地改写 data/csv-edu
     python tools/add_rel_cn_column.py --check# 只校验，不写入
 
-⚠️ 保持 **UTF-8 无 BOM + CRLF**：原文件就是这个格式（BOM 是原神 data/csv 的
-形态，两者不一致），换行符一改整个文件在 git 里就是一次全文件 diff。
+⚠️ 保持 **UTF-8 无 BOM + CRLF**：源文件就是这个格式，换行符一改
+整个文件在 git 里就是一次全文件 diff。
 """
 
 import argparse

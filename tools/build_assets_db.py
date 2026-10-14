@@ -8,7 +8,7 @@
     png/<角色>/*.png                 -> kind='frame'（普通帧，按固定帧率播放）
     apng/<角色>/*.png                -> kind='apng'（动画 PNG，自带帧时长与循环）
     music/<角色>/*.mp3-> kind='voice'，按文件名前缀归类 category
-    music/<区域>/background.mp3      -> kind='bgm'（区域：蒙德/璃月/稻妻）
+    music/<区域>/background.mp3      -> kind='bgm'（区域名即目录名，不写死）
 
 category 取值：greeting（早/中/晚/晚安）、chat（闲聊*）、know（想要了解*）。
 """
@@ -18,7 +18,6 @@ import os
 import sqlite3
 import sys
 
-BGM_AREAS = ('蒙德', '璃月', '稻妻')
 GREETING_NAMES = ('早上好', '中午好', '晚上好', '晚安')
 
 SCHEMA = """
@@ -80,11 +79,11 @@ def iter_assets(src_root, img_dir='png', music_dir='music', apng_dir='apng'):
             role_dir = os.path.join(music_root, role)
             if not os.path.isdir(role_dir):
                 continue
-            # 含 background.mp3 的目录视为地区 BGM（兼容第三方自定义地区，如 须弥）
-            if role in BGM_AREAS or os.path.isfile(os.path.join(role_dir, 'background.mp3')):
-                bgm_path = os.path.join(role_dir, 'background.mp3')
-                if os.path.isfile(bgm_path):
-                    yield role, 'bgm', 'background.mp3', None, bgm_path
+            # music/<目录>/background.mp3 视为该地区的背景音乐。
+            # ⚠️ 判定**只看文件名**、不维护地区白名单：地区名由素材包自定义，
+            # 写死名单会让新素材的 BGM 退化成角色语音（播放入口完全不同）。
+            if os.path.isfile(os.path.join(role_dir, 'background.mp3')):
+                yield role, 'bgm', 'background.mp3', None, os.path.join(role_dir, 'background.mp3')
                 continue
             for name in sorted(os.listdir(role_dir)):
                 if name.lower().endswith('.mp3'):

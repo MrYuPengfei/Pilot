@@ -37,8 +37,10 @@ from kg_store import (NODE_TYPES, get_default_store, reset_default_store,
 from kg_editor import NodeEditDialog, EdgeEditDialog
 from kg_view import KGCanvas
 
-APP_VERSION = '3.8.4'
-REPO_URL = 'https://github.com/MrYuPengfei/Pilot-KG-Genshin.git'
+APP_VERSION = '5.0'
+# 著作权人。闭源项目不再对外公布源码仓库，故没有 REPO_URL 一类的公开地址；
+# 面板与帮助页里凡需署名的位置一律用这个常量。
+COPYRIGHT_HOLDER = '于鹏飞'
 
 
 def rel_label(kg, rel):
@@ -61,18 +63,13 @@ ATTR_LABELS = {
     'description': '描述', 'description-chinese': '中文描述',
     'label': '类型', 'type': '类型', 'icon': '图标', 'id': '编号',
     'name_cn': '中文名', 'name_en': '英文名',
-    # 原神图谱
+    # 实体通用描述
     'introduction': '简介', 'nick_name': '别称', 'title': '称号',
-    'gender': '性别', 'rarity': '稀有度', 'pool': '卡池', 'element': '元素',
-    'constellation': '星座', 'constellation2': '套装', 'country': '国家',
-    'special_cuisine': '特色料理', 'equip_date': '上线时间', 'tag': '标签',
-    'weapon_type': '武器类型', 'organization': '所属组织',
-    'break_material': '突破材料', 'skill_material': '天赋材料',
-    'weapon_choice': '推荐武器', 'army': '所属势力', 'eng_name': '英文名',
-    'story': '背景故事', 'role': '定位', 'profession': '职业',
-    'condition': '获取条件', 'using': '使用方法', 'material': '材料',
-    'refine': '精炼', 'task': '任务', 'dropping': '掉落', 'attack': '攻击',
-    'weakness': '弱点', 'effect': '效果', 'getting': '获取',
+    'gender': '性别', 'country': '国家', 'organization': '所属组织',
+    'eng_name': '英文名', 'story': '背景故事', 'role': '定位',
+    'profession': '职业', 'condition': '获取条件', 'using': '使用方法',
+    'material': '材料', 'task': '任务', 'effect': '效果',
+    'tag': '标签', 'army': '所属势力',
 }
 
 
@@ -85,7 +82,6 @@ def attr_label(key):
 # 文字长短仍会让观感不一致（v3.7 逐页统一时踩过）。
 BTN_W: int = 132
 BTN_H: int = 32
-REPO_PAGE = 'https://github.com/MrYuPengfei/'
 
 # 帮助文档文件名（v3.8 起 HTML 独立成文件，不再硬编码在本模块里）
 HELP_FILE = 'help.html'
@@ -129,13 +125,16 @@ def help_file_candidates(base_dir):
     ]
 
 
-def load_help_html(base_dir, app_version=APP_VERSION, repo_url=REPO_URL,
-                   repo_page=REPO_PAGE):
+def load_help_html(base_dir, app_version=APP_VERSION,
+                   holder=COPYRIGHT_HOLDER):
     """读取帮助文档 HTML 并填入版本等占位符；读不到时返回兜底提示页。
 
     文件里的占位符写成 ``{{APP_VERSION}}`` 这种**双花括号**形式——
     若沿用单花括号，HTML 里的 CSS（如 ``body { margin: 0 }``）
     会在替换时把内容吃掉。
+
+    v5.0 起项目闭源，帮助页不再引用公开仓库地址，
+    ``{{COPYRIGHT_HOLDER}}`` 取代了原先的 ``{{REPO_URL}}``。
 
     **不抛异常**：帮助页读不到只是文档缺失，不能因此让程序起不来。
     """
@@ -158,8 +157,7 @@ def load_help_html(base_dir, app_version=APP_VERSION, repo_url=REPO_URL,
                        f'{html.escape(str(e))}</p>')
     return (content
             .replace('{{APP_VERSION}}', app_version)
-            .replace('{{REPO_URL}}', repo_url)
-            .replace('{{REPO_PAGE}}', repo_page))
+            .replace('{{COPYRIGHT_HOLDER}}', holder))
 
 class ManagerPanel(QMainWindow):
     """管理面板主窗口（v3.8 起由 QDialog 升级而来）。
@@ -594,7 +592,7 @@ class ManagerPanel(QMainWindow):
         cn_type = NODE_TYPES.get(key[0], (key[0],))[0]
         cn_name = self.kg.node_cn_name(key)
         en_name = self.kg.node_en_name(key)
-        # 主键是英文名（edu）/ 中文名（原神暂无译名）。标题给全名：
+        # 主键是英文名（译名齐全时）/ 中文名（暂无译名时）。标题给全名：
         # 主名用 node_display（英文优先、无英文名退回中文），另一语言作副标题。
         title = html.escape(self.kg.node_display(key))
         other = cn_name if en_name else ''

@@ -10,7 +10,7 @@ from PySide6.QtGui import QPixmap, QIcon, QCursor, QAction
 from PySide6.QtWidgets import (QSystemTrayIcon, QMenuBar, QMenu, QApplication, QMainWindow)
 import datetime
 
-from asset_importer import import_assetsy
+from asset_importer import import_assets
 from tools.apng_codec import ApngError, decode as apng_decode
 from config_store import ConfigStore
 from manager_panel import ManagerPanel
@@ -25,7 +25,7 @@ APNG_DECODE_BUDGET_MS = 4000
 # 单实例互斥量名字，**必须与 setup.iss 的 AppMutex 完全一致**（含 Global\ 前缀）。
 # 安装/卸载向导据此判断程序是否在运行：没这个互斥量时 Inno 只能靠进程名
 # 匹配，偶尔漏判正在运行的实例，于是文件被占用、删不掉——卸载不干净。
-APP_MUTEX_NAME = r'Global\PilotKG_Genshin_2B18A692_647A_4A78_BAF2_489F44D660B4'
+APP_MUTEX_NAME = r'Global\Pilot_5_0_2B18A692_647A_4A78_BAF2_489F44D660B4'
 _app_mutex_handle = None
 
 

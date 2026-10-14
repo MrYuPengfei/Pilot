@@ -1,12 +1,12 @@
 # 部署到 Windows（PyInstaller + Inno Setup 6）
 
-适用版本：**v3.8**。整体链路：`pilot.py` → PyInstaller 打包成 `dist/原神桌面伙伴/` → Inno Setup 编译 `setup.iss` 生成安装向导 `inno_build/原神桌面伙伴安装向导.exe`。
+适用版本：**v5.0**。整体链路：`pilot.py` → PyInstaller 打包成 `dist/Pilot/` → Inno Setup 编译 `setup.iss` 生成安装向导 `inno_build/Pilot安装向导.exe`。
 
 | 环节 | 工具 | 产物 | 典型耗时 |
 | --- | --- | --- | --- |
-| 资源入库 | `tools/build_assets_db.py` | `assets.db`（约 460MB） | 约 15 秒 |
-| 打包 | PyInstaller 6+（onedir） | `dist/原神桌面伙伴/`（约 500MB） | 约 3 分钟 |
-| 制作安装包 | Inno Setup 6 | `inno_build/原神桌面伙伴安装向导.exe`（约 480MB） | 约 2~3 分钟 |
+| 资源入库 | `tools/build_assets_db.py` | `assets.db`（约 15MB） | 约 15 秒 |
+| 打包 | PyInstaller 6+（onedir） | `dist/Pilot/`（约 180MB） | 约 3 分钟 |
+| 制作安装包 | Inno Setup 6 | `inno_build/Pilot安装向导.exe`（约 80MB） | 约 2~3 分钟 |
 
 ---
 
@@ -14,13 +14,12 @@
 
 | 文件 | 字段 | 作用 |
 | --- | --- | --- |
-| `manager_panel.py` | `APP_VERSION = '3.8'` | 面板标题、状态栏、帮助页显示的版本号 |
-| `setup.iss` | `#define AppVersion "3.8"` | 安装包属性、"新版本"提示 |
-| `pyproject.toml` | `version = "3.8.0"` | 包元数据（可带第三位补丁号） |
+| `manager_panel.py` | `APP_VERSION = '5.0'` | 面板标题、状态栏、帮助页显示的版本号 |
+| `setup.iss` | `#define AppVersion "5.0"` | 安装包属性、"新版本"提示 |
+| `pyproject.toml` | `version = "5.0"` | 包元数据（可带第三位补丁号） |
 
-> `pyproject.toml` 用三段式 `3.8.0`，另两处用两段式 `3.8`——这是有意的，测试只校验两者**前缀一致**
-> （`tests/test_v38.py::test_version_three_places_match`）。
-> 三处漏改不会导致构建失败，但会让用户看到互相矛盾的版本号。
+> 三处版本号必须一致。漏改不会导致构建失败，但会让用户看到互相矛盾的版本号
+> （面板显示一个版本、安装包属性又是另一个）。
 
 ---
 
@@ -114,7 +113,7 @@ rm -rf "$LOCALAPPDATA/pyinstaller"        # Windows 上即 %LOCALAPPDATA%\pyinst
 
 ```shell
 uv run --with pyinstaller pyinstaller pilot.py \
-    --name "原神桌面伙伴" --onedir --noconsole \
+    --name "Pilot" --onedir --noconsole \
     --icon=ico/icon256.ico --noconfirm \
     --add-data "assets.db;." \
     --add-data "kg.db;." \
@@ -126,7 +125,7 @@ uv run --with pyinstaller pyinstaller pilot.py \
 
 说明：
 
-- 用 **onedir**（单文件夹）模式，启动快。产物为 `dist/原神桌面伙伴/原神桌面伙伴.exe` + `_internal/`（`assets.db`、`kg.db`、`config.db`、`icon256.ico` 都在 `_internal` 里，**没有任何 CSV/YAML，也没有 data/**）。
+- 用 **onedir**（单文件夹）模式，启动快。产物为 `dist/Pilot/Pilot.exe` + `_internal/`（`assets.db`、`kg.db`、`config.db`、`icon256.ico` 都在 `_internal` 里，**没有任何 CSV/YAML，也没有 data/**）。
 - 不再需要 2.0 之前那种为每个角色写一条 `--add-data` 的长命令。
 - `resource_store.py`、`asset_importer.py`、`config_store.py`、`kg_store.py`、`kg_editor.py`、`kg_view.py`、`tools.build_assets_db` 会依 import 关系自动进包，无需额外参数。
 - `tools.build_databases.py` / `tools.build_assets_db.py` / `tools.build_data_pack.py` 都是构建与发布工具，**不应进包**；如误被分析进去可在 `excludes` 里排除。
@@ -136,19 +135,19 @@ uv run --with pyinstaller pyinstaller pilot.py \
 ```shell
 # ① 全部自有模块在 PYZ 里（pilot 是入口脚本，编译进 EXE，不在 PYZ 中，属正常）
 for m in manager_panel resource_store asset_importer config_store kg_store kg_editor kg_view; do
-  grep -q "'$m'" "build/原神桌面伙伴/PYZ-00.toc" && echo "OK  $m" || echo "MISS $m"
+  grep -q "'$m'" "build/Pilot/PYZ-00.toc" && echo "OK  $m" || echo "MISS $m"
 done
-grep -c "tools.build_assets_db" "build/原神桌面伙伴/PYZ-00.toc"
+grep -c "tools.build_assets_db" "build/Pilot/PYZ-00.toc"
 
 # ② 数据文件在 _internal 里就位
-ls -la "dist/原神桌面伙伴/_internal/assets.db" \
-       "dist/原神桌面伙伴/_internal/kg.db" \
-       "dist/原神桌面伙伴/_internal/config.db" \
-       "dist/原神桌面伙伴/_internal/icon256.ico"
+ls -la "dist/Pilot/_internal/assets.db" \
+       "dist/Pilot/_internal/kg.db" \
+       "dist/Pilot/_internal/config.db" \
+       "dist/Pilot/_internal/icon256.ico"
 # 安装包不应含任何 CSV / YAML（v3.5 硬性要求）
-find "dist/原神桌面伙伴/_internal" -maxdepth 2 \( -name "*.csv" -o -name "*.yaml" -o -name "*.yml" -o -name "*.json" \) \
+find "dist/Pilot/_internal" -maxdepth 2 \( -name "*.csv" -o -name "*.yaml" -o -name "*.yml" -o -name "*.json" \) \
   | head -5 | grep . && echo "异常：包内存在 CSV/YAML" || echo "OK  包内无 CSV/YAML"
-ls -d "dist/原神桌面伙伴/_internal/data" 2>/dev/null && echo "异常：包内存在 data/" || echo "OK  无 data/"
+ls -d "dist/Pilot/_internal/data" 2>/dev/null && echo "异常：包内存在 data/" || echo "OK  无 data/"
 ```
 
 另外看构建日志应出现 `Building PYZ because PYZ-00.toc is non existent`；
@@ -171,7 +170,7 @@ ls -d "dist/原神桌面伙伴/_internal/data" 2>/dev/null && echo "异常：包
 
 也可以在 Inno 的 GUI 里打开 `setup.iss` 直接编译。
 
-- 产物：`inno_build/原神桌面伙伴安装向导.exe`（约 480MB，编译约 2~3 分钟）。
+- 产物：`inno_build/Pilot安装向导.exe`（约 80MB，编译约 2~3 分钟）。
 - 校验版本：Inno 编译日志首行会显示 `Setup Version`，应与 `AppVersion` 一致。
 - `setup.iss` 中的路径全部相对于项目根目录，**必须在根目录执行编译**。
 
@@ -179,7 +178,7 @@ ls -d "dist/原神桌面伙伴/_internal/data" 2>/dev/null && echo "异常：包
 
 ## 安装行为说明（2.0 起的变化）
 
-- **安装目录默认为 `%LOCALAPPDATA%\Programs\原神桌面伙伴`**（每用户安装，免管理员权限）。
+- **安装目录默认为 `%LOCALAPPDATA%\Programs\Pilot`**（每用户安装，免管理员权限）。
   原因是程序运行时要写 `config.db`（保存设置）、`assets.db`（导入素材包）与 `kg.db`（图谱编辑），
   装进 `Program Files` 会因权限不足导致保存失败——**请勿把 `DefaultDirName` 改回 `{commonpf}`**。
 - `PrivilegesRequired=lowest`，但保留了 `dialogn`，允许用户主动提权安装到其他位置。
@@ -205,20 +204,20 @@ ls -d "dist/原神桌面伙伴/_internal/data" 2>/dev/null && echo "异常：包
 
 ```shell
 # 静默安装到默认用户目录
-inno_build/原神桌面伙伴安装向导.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
+inno_build/Pilot安装向导.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
 
-# 检查关键文件（应存在且约 460MB）
-ls -la "$LOCALAPPDATA/Programs/原神桌面伙伴/_internal/assets.db"
-ls "$LOCALAPPDATA/Programs/原神桌面伙伴/_internal/data/csv" | wc -l         # 应为 27
+# 检查关键文件（应存在且约 15MB）
+ls -la "$LOCALAPPDATA/Programs/Pilot/_internal/assets.db"
+ls "$LOCALAPPDATA/Programs/Pilot/_internal/data/csv" | wc -l         # 应为 0（安装包不含 data/）
 
 # 静默卸载
-"$LOCALAPPDATA/Programs/原神桌面伙伴/unins000.exe" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
+"$LOCALAPPDATA/Programs/Pilot/unins000.exe" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
 ```
 
-`/DIR=` 可指定安装目录做隔离测试；若不指定则落到 `%LOCALAPPDATA%\Programs\原神桌面伙伴`。
+`/DIR=` 可指定安装目录做隔离测试；若不指定则落到 `%LOCALAPPDATA%\Programs\Pilot`。
 
 > **卸载是异步的**：直接 `ls` 可能早于卸载完成而误判「目录还在」，脚本里应轮询确认目录消失。
-> 实测卸载约 3 秒完成，安装约 1.5 分钟（解压 500MB）。
+> 实测卸载约 3 秒完成，安装约 1.5 分钟（解压 180MB）。
 
 ## 本次构建实测记录（v3.7，2026-10-05 22:02~22:09 全链路，含当日全部修复）
 
@@ -234,7 +233,7 @@ ls "$LOCALAPPDATA/Programs/原神桌面伙伴/_internal/data/csv" | wc -l       
 | **包内 CSV/YAML 检查** | **数量 = 0**，且**无 `data/` 目录**（v3.5 硬性要求达成） |
 | 产物 exe 离屏运行 | 存活 25 秒正常，**输出零 Qt 警告**；三个库在 `_internal` 内就位 |
 | Inno Setup 编译 | 成功，**125.2 秒** |
-| 安装包 | `inno_build/原神桌面伙伴安装向导.exe`，**503,155,522 字节（479.6 MB）** |
+| 安装包 | `inno_build/Pilot安装向导.exe`，**503,155,522 字节（479.6 MB）** |
 | 静默安装 | 成功（**71 秒**）；安装目录三库齐备，**CSV/YAML 数量 = 0、无 `data/`** |
 | 已安装程序离屏启动 | 存活 25 秒正常、**输出零 Qt 警告** |
 | 静默卸载 | 成功；文件数归 0（卸载程序异步，需轮询约 10~30 秒） |
@@ -257,7 +256,7 @@ ls "$LOCALAPPDATA/Programs/原神桌面伙伴/_internal/data/csv" | wc -l       
 >     kg_view.py tools/ tests/          # 应无输出
 > uv run python -W error::SyntaxWarning -m compileall -q pilot.py manager_panel.py tools/
 > ```
-> `tools/mihoyo_spider.py` 有 8 处「局部变量未使用」是**有意保留**的（其用途在 v3.4 迁入时
+> `tools/` 下历史脚本有若干处「局部变量未使用」是**有意保留**的（其用途在 v3.4 迁入时
 > 已随相关逻辑一起注释掉，该脚本本就不可直接运行），不必清理。
 
 > `pilot` 作为入口脚本不进入 PYZ（它被编译进 EXE 本身），校验时不必检查。
@@ -280,7 +279,7 @@ ls "$LOCALAPPDATA/Programs/原神桌面伙伴/_internal/data/csv" | wc -l       
 | 配置被重置 / 当前人物不对 | `config.db` 未随包分发，程序回退到内置默认值（七七 + 按资源库补齐登记） | 跑 `uv run python tools/build_databases.py --only config` 后重新打包 |
 | 面板/托盘里没有新导入的人物 | `assets.db` 不可写 | 装到了 `Program Files`；改装到 `%LOCALAPPDATA%\Programs` |
 | 退出后设置没保存 | 同上，配置文件不可写 | 同上；`DefaultDirName` 不要改回 `{commonpf}` |
-| 覆盖安装失败提示文件占用 | 旧进程未退出 | 已配 `CloseApplications=yes`；仍失败则手动结束 `原神桌面伙伴.exe` 后重试 |
+| 覆盖安装失败提示文件占用 | 旧进程未退出 | 已配 `CloseApplications=yes`；仍失败则手动结束 `Pilot.exe` 后重试 |
 | 卸载后目录仍在 | 卸载程序异步退出 | 轮询等待，不要立即判定失败 |
 | 单个人物无动画/窗口不显示 | 该角色只有 1 帧 | 属正常：`pilot.py` 已做单帧保护，按静态图显示 |
 | 传了 `/DIR=` 却装到了默认目录 | **bash 会吞掉反斜杠**：`"C:\\Users\\..."` 被解析成 `C:Users...` | 改用**正斜杠**或单引号：`/DIR='C:/Users/<用户名>/AppData/Local/Programs/pilot_test'`；或直接用默认目录 |
@@ -290,11 +289,11 @@ ls "$LOCALAPPDATA/Programs/原神桌面伙伴/_internal/data/csv" | wc -l       
 安装完成后不必手动点开，可用离屏方式验证整链路初始化（托盘、SQLite、帧缓存、音频）：
 
 ```shell
-cd "$LOCALAPPDATA/Programs/原神桌面伙伴"
-QT_QPA_PLATFORM=offscreen SDL_AUDIODRIVER=dummy "./原神桌面伙伴.exe" &
+cd "$LOCALAPPDATA/Programs/Pilot"
+QT_QPA_PLATFORM=offscreen SDL_AUDIODRIVER=dummy "./Pilot.exe" &
 sleep 20
-tasklist | grep -qi "原神桌面伙伴" && echo "OK: 进程存活 20s" || echo "FAIL: 进程已退出"
-taskkill //IM "原神桌面伙伴.exe" //F
+tasklist | grep -qi "Pilot" && echo "OK: 进程存活 20s" || echo "FAIL: 进程已退出"
+taskkill //IM "Pilot.exe" //F
 ```
 
 > `SDL_AUDIODRIVER=dummy` 避免无音频设备的环境初始化失败；
@@ -306,7 +305,7 @@ taskkill //IM "原神桌面伙伴.exe" //F
 uv run pytest -q                                  # 19 passed
 uv run python tools/build_assets_db.py            # 若 assets.db 不存在
 rm -rf build dist "$LOCALAPPDATA/pyinstaller"     # 必须！
-uv run --with pyinstaller pyinstaller pilot.py --name "原神桌面伙伴" \
+uv run --with pyinstaller pyinstaller Pilot.spec \
     --onedir --noconsole --icon=ico/icon256.ico --noconfirm \
     --add-data "data/config.yaml;data" --add-data "assets.db;." --add-data "kg.db;." \
     --add-data "ico/icon256.ico;." --add-data "data/csv;data/csv"

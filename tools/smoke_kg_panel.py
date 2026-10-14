@@ -30,10 +30,10 @@ class FakeStore:
         self.base_dir = base_dir
 
     def list_roles(self):
-        return ['钟离']
+        return ['测试角色A']
 
     def list_bgm_areas(self):
-        return ['璃月']
+        return ['测试地区B']
 
     def list_frames(self, role):
         return ['0001.png']
@@ -66,7 +66,7 @@ class FakePilot(QWidget):
         self.store = FakeStore(base_dir)
         # v3.4 起面板会取 pilot.config_store（配置导入导出用）
         self.config_store = ConfigStore(base_dir)
-        self.role_name = '钟离'
+        self.role_name = '测试角色A'
         self._frames = []
         self.index = 0
         self.audio_player = True
@@ -118,19 +118,19 @@ def main():
                                    seed_dir=os.path.join(ROOT, 'data', 'csv'))
     kg_store._default = real_store      # 让面板拿到这份临时库
 
-    panel = ManagerPanel(FakePilot(workdir), {'frame_scale': {'钟离': [60, 1.0]},
+    panel = ManagerPanel(FakePilot(workdir), {'frame_scale': {'测试角色A': [60, 1.0]},
                                               'bg_music': None})
     ok = panel._ensure_kg_loaded()
     print('加载图谱:', ok, '| 状态:', panel.kg_status.text())
     assert ok
 
     # 定位实体
-    panel.kg_search.setText('钟离')
+    panel.kg_search.setText('测试角色A')
     panel._on_kg_search()
     print('当前实体:', panel._kg_current)
     print('关系条数:', len(panel._kg_rel_edges), '| 前3条:',
           [panel.kg_rel_list.item(i).text() for i in range(min(3, panel.kg_rel_list.count()))])
-    assert panel._kg_current == ('character', '钟离')
+    assert panel._kg_current == ('character', '测试角色A')
     assert panel._kg_rel_edges
 
     # 按钮启用状态
@@ -145,13 +145,13 @@ def main():
 
     # 新增关系：锚点为当前实体
     anchor = panel._kg_current
-    real_store.add_edge(('character', '钟离'), 'smoke_rel', anchor)
+    real_store.add_edge(('character', '测试角色A'), 'smoke_rel', anchor)
     panel._kg_after_change(keep_key=anchor, keep_edge=('smoke_rel', anchor))
     print('关系列表条数:', len(panel._kg_rel_edges))
     assert any(r == 'smoke_rel' for r, _, _ in panel._kg_rel_edges)
 
     # 方向无关的删除
-    n = real_store.delete_edge_touching(anchor, 'smoke_rel', ('character', '钟离'))
+    n = real_store.delete_edge_touching(anchor, 'smoke_rel', ('character', '测试角色A'))
     print('删除关系行数:', n)
     assert n == 1
 

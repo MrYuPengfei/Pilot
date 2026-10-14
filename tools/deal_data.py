@@ -1,52 +1,35 @@
-import re
+"""素材整理辅助（v5.0 起仅保留通用工具函数）。
 
-import requests
-import pandas as pd
-import os
-def download(url,path):
-    res = requests.get(url, stream=True)
-    if res.status_code == 200:
-        with open(path, 'wb') as f:
-            for chunk in res.iter_content():
-                f.write(chunk)
-        f.close()
-        print(f'{path}下载完成...')
-    else:
-        print('链接不可访问...')
+历史上的下载逻辑针对特定游戏的第三方版权素材，与本项目当前的闭源许可声明
+及第三方素材授权清单（见 ``CREDITS.md``）不相容，故在此版本中移除，
+只保留与数据源无关的通用小工具。
 
-def add_zero(name,num=4):
+素材获取方式改为：使用**已获授权**的素材包（CC0 / CC-BY 等），按
+``tools/build_assets_db.py`` 文档里的目录约定放入，再用它打包进 ``assets.db``。
+"""
+
+import sys
+
+
+def add_zero(name, num=4):
+    """把文件名的数字部分左侧补零到 ``num`` 位。
+
+    用于动画帧排序：``9.png`` → ``0009.png``、``12.png`` → ``0012.png``。
+    补零后字典序才等于播放顺序，否则 ``10.png`` 会排在 ``2.png`` 前面。
+
+    已经是 ``num`` 位（或更长）的名字原样返回——不截断，避免丢信息。
+    """
     length = name.split('.')[0]
-    if len(length)==1:
-        return '000'+name
-    elif len(length)==2:
-        return '00'+name
-    elif len(length)==3:
-        return '0'+name
-    else:
+    if len(length) >= num:
         return name
+    return '0' * (num - len(length)) + name
+
+
+def main():
+    print(__doc__.strip())
+    print('\n保留的通用工具：add_zero(name, num=4) —— 动画帧名左侧补零。')
+    return 0
 
 
 if __name__ == '__main__':
-    roles = ['珊瑚宫心海','可莉','芭芭拉','刻晴','万叶','迪卢克','阿贝多','八重神子','班尼特','达达利亚','迪奥娜','菲谢尔','甘雨','胡桃','荒泷一斗','雷电将军','莫娜','七七','琴','神里绫华','神里绫人','温迪','宵宫','魈','心海','行秋','夜兰','优菈','早柚','钟离']
-    df = pd.read_csv('/Users/maoyufeng/slash/ys_audio_cp.csv')
-    # df = df[df['title'].str.contains('闲聊') | df['title'].str.contains('早上好') | df['title'].str.contains('中午好')
-    #         | df['title'].str.contains('晚上好') | df['title'].str.contains('晚安')]
-    df = df[df['title'].str.contains('想要了解')]
-    df = df[df['name'].isin(roles)]
-    for _,row in df.iterrows():
-        name = row[1]
-        title = re.sub(r'[^\u4e00-\u9fa5]+','',row[2])
-        url = row[3]
-        if not os.path.exists(f'./music/{name}'):
-            os.mkdir(f'./music/{name}')
-        download(url=url,path=f'./music/{name}/{title}.mp3')
-
-    # path = './png/七七'
-    # img_list = [i for i in os.listdir(path) if i.endswith('png')]
-    # for img in img_list:
-    #     try:
-    #         name = img.split('-')[1]
-    #         name = add_zero(name)
-    #         os.rename(os.path.join(path, img), os.path.join(path, name))
-    #     except:
-    #         pass
+    sys.exit(main())

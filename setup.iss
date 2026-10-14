@@ -38,14 +38,16 @@
 ; =============================================================
 
 #define AppName "Pilot"
-#define AppVersion "3.8.4"
+#define AppVersion "5.0"
 #define AppPublisher "于鹏飞"
-#define AppURL "https://github.com/MrYuPengfei/Pilot-KG-Genshin"
+; 项目自 v5.0 起闭源，不再对外公布源码仓库地址，故不设 AppURL。
+; 相应地 [Setup] 里也没有 AppPublisherURL / AppSupportURL / AppUpdatesURL——
+; 指向一个公开仓库会与闭源许可声明自相矛盾。
 #define AppExeName "Pilot.exe"
 ; 卸载时判断「程序是否在运行」用；与 pilot.py 的 create_app_mutex 保持一致。
 ; 注意 Inno 的 { } 与常量展开会互相干扰，这里把整个名字定义成一个常量，
 ; 不要写成 Global\{#AppName}_... —— 前缀的 Global\{ 会被当成常量起始而报错。
-#define AppMutexName "Global\PilotKG_Genshin_2B18A692_647A_4A78_BAF2_489F44D660B4"
+#define AppMutexName "Global\Pilot_5_0_2B18A692_647A_4A78_BAF2_489F44D660B4"
 
 [Setup]
 ; AppId 唯一标识本应用，升级安装/卸载都依赖它，发布后不要修改
@@ -54,9 +56,6 @@ AppName={#AppName}
 AppVersion={#AppVersion}
 AppVerName={#AppName} {#AppVersion}
 AppPublisher={#AppPublisher}
-AppPublisherURL={#AppURL}
-AppSupportURL={#AppURL}
-AppUpdatesURL={#AppURL}
 
 ; 安装到当前用户目录：免管理员权限，且程序可写自身配置与资源库
 DefaultDirName={localappdata}\Programs\{#AppName}
@@ -82,8 +81,6 @@ UninstallLogging=yes
 ; 界面与外观
 LicenseFile=LICENSE
 SetupIconFile=res\icon256.ico
-WizardImageFile=res\icon256.bmp
-WizardSmallImageFile=res\icon256.bmp
 WizardStyle=modern
 UninstallDisplayIcon={app}\icon256.ico
 

@@ -4,17 +4,16 @@
 它们，程序启动时读文件播种到 SQLite。v3.5 明确发布策略：安装包只带 SQLite 库，
 CSV/JSON 降级为**本地构建输入**，用本脚本在打包前生成库文件。
 
-    data/csv/*.csv   ──[本脚本]──▶  kg.db      （知识图谱，随包分发）
-    data/config.json ──[本脚本]──▶  config.db  （出厂配置，随包分发）
-    png/ + music/    ──[build_assets_db.py]──▶ assets.db（资源，随包分发）
+    data/csv-edu/*.csv ──[本脚本]──▶  kg.db      （知识图谱，随包分发）
+    data/config.json   ──[本脚本]──▶  config.db  （出厂配置，随包分发）
+    png/ + music/      ──[build_assets_db.py]──▶ assets.db（资源，随包分发）
 
 此后程序运行时**只读 SQLite**，不再依赖任何 CSV/JSON。它们的用途变成：
 ① 构建输入；② 用户手动导入的交换格式（面板「导入 CSV / 导入配置」）；③ 服务器下发
    的载荷格式——这是后续 C/S 架构的接入点：服务器只需下发与本地同构的 CSV/JSON，
    客户端用同样的 import 接口入库即可，无需为「远程数据」另写一套格式。
 
-**v3.8：配置种子由 ``data/config.json`` 改为 ``data/config.json``**，
-配置的导入导出也统一为 JSON，YAML 彻底退役。
+配置的导入导出统一为 JSON，YAML 彻底退役。
 
 用法::
 
@@ -36,10 +35,8 @@ sys.path.insert(0, ROOT)
 from config_store import ConfigStore                # noqa: E402
 from kg_store import KGStore                        # noqa: E402
 
-CSV_DIR = os.path.join(ROOT, 'data', 'csv')
-# 第二套图谱：AI / 教育 / 数据库领域（v3.8.3 起一并入库）。
-# 与原神图谱合并进同一个 kg.db——面板里两类实体共存、可互相检索。
-CSV_DIR_EDU = os.path.join(ROOT, 'data', 'csv-edu')
+# 知识图谱 CSV：AI / 教育 / 数据库领域的实体与关系。
+CSV_DIR = os.path.join(ROOT, 'data', 'csv-edu')
 SEED_JSON = os.path.join(ROOT, 'data', 'config.json')
 KG_DB = os.path.join(ROOT, 'kg.db')
 CONFIG_DB = os.path.join(ROOT, 'config.db')
@@ -58,9 +55,8 @@ def _version():
         return '0.0.0'
 
 
-def build_kg(force=False, check_only=False, verbose=True, backup=True,
-             only_edu=False):
-    """由 data/csv + data/csv-edu 一起构建 kg.db。返回报告 dict。
+def build_kg(force=False, check_only=False, verbose=True, backup=True):
+    """由 data/csv-edu 构建 kg.db。返回报告 dict。
 
     ⚠️ **会丢弃程序里对图谱做的编辑**。知识图谱在运行时可由用户编辑
     （管理面板「知识图谱」页），而 CSV 只是当初的初始数据——两者并非同一份内容。
@@ -69,21 +65,8 @@ def build_kg(force=False, check_only=False, verbose=True, backup=True,
 
     日常打包其实**不需要**重建：kg.db 已随源码分发，直接构建即可
     （不加 ``--force`` 时本函数会跳过）。
-
-    两套 CSV 是**先后导入、同一事务外两次调用**：原神图谱先（提供主键与
-    12 种内置类型），edu 后（``ai`` / ``education`` / ``database`` 作为新类型
-    自动注册）。⚠️ 不能合成一次 ``import_csv([dir1, dir2])``——该方法只接受
-    单个路径，分两次导入也便于报告里分别给出两套数据各自的节点/关系数。
-
-    :param only_edu: 只用 ``data/csv-edu``（跳过原神图谱）。用于把桌宠
-        换成「教育/AI 领域」主题的构建——此时不导入原神 CSV，
-        ``replace=True`` 也就不再需要（空库起步）。
     """
-    use_csv = CSV_DIR if not only_edu else None
-    if only_edu:
-        if not os.path.isdir(CSV_DIR_EDU):
-            raise FileNotFoundError(f'教育图谱 CSV 目录不存在：{CSV_DIR_EDU}')
-    elif not os.path.isdir(CSV_DIR):
+    if not os.path.isdir(CSV_DIR):
         raise FileNotFoundError(
             f'知识图谱 CSV 目录不存在：{CSV_DIR}\n'
             f'CSV 是构建输入，不随安装包分发。若要重建知识图谱库，请先备齐 CSV。')
@@ -99,23 +82,16 @@ def build_kg(force=False, check_only=False, verbose=True, backup=True,
                   f'{report["nodes"]} 节点 / {report["edges"]} 关系')
         return report
 
-    csv_count = (len([f for f in os.listdir(CSV_DIR) if f.endswith('.csv')])
-                 if use_csv else 0)
-    # edu 是必需项而非可选：--only-edu 时更是在入口就校验过目录存在。
-    # 但测试用的临时数据目录可能没建csv-edu，故仍做存在性判断，避免
-    # 在 listdir处抛 FileNotFoundError。
-    edu_present = os.path.isdir(CSV_DIR_EDU)
-    edu_count = (len([f for f in os.listdir(CSV_DIR_EDU) if f.endswith('.csv')])
-                 if edu_present else 0)
+    csv_count = len([f for f in os.listdir(CSV_DIR) if f.endswith('.csv')])
     if check_only:
         store = KGStore(KG_DB, auto_seed=False) if os.path.isfile(KG_DB) else None
-        report = {'csv_files': csv_count, 'edu_csv_files': edu_count,
+        report = {'csv_files': csv_count,
                   'nodes': len(store.nodes) if store else 0,
                   'edges': len(store._edges) if store else 0}
         if store:
             store.close()
         if verbose:
-            print(f'  [检查] CSV 原神 {csv_count} 个 / edu {edu_count} 个；kg.db '
+            print(f'  [检查] CSV {csv_count} 个；kg.db '
                   f'{"存在" if report["nodes"] else "不存在/为空"}'
                   f'（{report["nodes"]} 节点 / {report["edges"]} 关系）')
         return report
@@ -136,25 +112,8 @@ def build_kg(force=False, check_only=False, verbose=True, backup=True,
         os.remove(tmp_db)
     store = KGStore(tmp_db, auto_seed=False)
     try:
-        # 先原神（replace 清空），再 edu 合并进来。
-        # only_edu 时跳过原神那次，空库起步、不需要 replace。
-        if use_csv:
-            report = store.import_csv(use_csv, replace=True)
-        else:
-            report = {'nodes_added': 0, 'edges_added': 0,
-                      'rel_cn_added': 0, 'stubs': 0}
-        edu_report = None
-        if edu_present:
-            edu_report = store.import_csv(CSV_DIR_EDU)
-            report['edu'] = {
-                'nodes_added': edu_report['nodes_added'],
-                'edges_added': edu_report['edges_added'],
-                'rel_cn_added': edu_report['rel_cn_added'],
-                'stubs': edu_report['stubs'],
-            }
-        built_from = ('data/csv-edu（仅教育图谱）' if only_edu
-                      else ('data/csv + data/csv-edu' if edu_present else 'data/csv'))
-        store.set_meta('built_from', built_from)
+        report = store.import_csv(CSV_DIR, replace=True)
+        store.set_meta('built_from', 'data/csv-edu')
         store.set_meta('app_version', _version())
         store.close()
         os.replace(tmp_db, KG_DB)
@@ -166,13 +125,11 @@ def build_kg(force=False, check_only=False, verbose=True, backup=True,
 
     final = KGStore(KG_DB, auto_seed=False)
     result = {'path': KG_DB, 'nodes': len(final.nodes), 'edges': len(final._edges),
-              'csv_files': csv_count, 'edu_csv_files': edu_count,
-              'backup': backup_path, **report}
+              'csv_files': csv_count, 'backup': backup_path, **report}
     final.close()
     if verbose:
-        extra = f' + edu {edu_count} 个' if edu_present else ''
         print(f'  已生成 kg.db：{result["nodes"]} 节点 / {result["edges"]} 关系'
-              f'（{_human(os.path.getsize(KG_DB))}，来自 {csv_count}{extra} CSV）')
+              f'（{_human(os.path.getsize(KG_DB))}，来自 {csv_count} 个 CSV）')
     return result
 
 
@@ -260,8 +217,7 @@ def build_config(force=False, check_only=False, verbose=True, backup=True):
     return result
 
 
-def build(only=None, force=False, check_only=False, verbose=True, backup=True,
-          only_edu=False):
+def build(only=None, force=False, check_only=False, verbose=True, backup=True):
     """构建（或检查）全部数据库。
 
     ⚠️ **打包时的正确用法是「不加 --force」**：kg.db / config.db 已在库里，
@@ -281,8 +237,7 @@ def build(only=None, force=False, check_only=False, verbose=True, backup=True,
     if only in (None, 'all', 'kg'):
         if verbose:
             print('知识图谱库 kg.db：')
-        results['kg'] = build_kg(force, check_only, verbose, backup,
-                                 only_edu=only_edu)
+        results['kg'] = build_kg(force, check_only, verbose, backup)
     if only in (None, 'all', 'config'):
         if verbose:
             print('配置库 config.db：')
@@ -294,7 +249,7 @@ def build(only=None, force=False, check_only=False, verbose=True, backup=True,
 
 def main(argv=None):
     parser = argparse.ArgumentParser(
-        description='由 data/csv 与 data/config.json 构建 kg.db 与 config.db',
+        description='由 data/csv-edu 与 data/config.json 构建 kg.db 与 config.db',
         epilog='日常打包不加 --force：库已存在时只检查不重建，'
                '程序里的编辑（新增实体、改名、调帧率缩放）会保留。'
                '确需丢弃现有内容从 CSV/JSON 重新生成时才加 --force（会先自动备份）。')
@@ -302,15 +257,11 @@ def main(argv=None):
     parser.add_argument('--force', action='store_true',
                         help='强制重建：用 CSV/JSON 覆盖已存在的库（会先自动备份）')
     parser.add_argument('--check', action='store_true', help='只校验输入与产物，不写入')
-    parser.add_argument('--only-edu', action='store_true',
-                        help='知识图谱只用 data/csv-edu（跳过 data/csv 的原神图谱），'
-                             '用于改造成教育/AI 主题的构建')
     parser.add_argument('--no-backup', action='store_true',
                         help='--force 时不备份现有库（不建议）')
     args = parser.parse_args(argv)
     try:
-        build(args.only, args.force, args.check, backup=not args.no_backup,
-              only_edu=args.only_edu)
+        build(args.only, args.force, args.check, backup=not args.no_backup)
     except Exception as e:
         print(f'构建失败：{e}', file=sys.stderr)
         return 1

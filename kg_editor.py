@@ -87,7 +87,7 @@ class EntityPicker(QWidget):
     def _find_candidate_row(self, text):
         """按候选文本定位模型行号；找不到返回 -1。
 
-        ``text`` 是补全框里的显示文本（形如「钟离 [人物]」）。
+        ``text`` 是补全框里的显示文本（形如「实体名 [类型]」）。
         """
         if not text:
             return -1
